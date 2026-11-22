@@ -802,6 +802,11 @@ color:var(--ink-2)}
 .rt tr.pick td:first-child{box-shadow:inset 3px 0 0 var(--shu)}
 .rt td em{margin-left:8px;padding:1px 7px;border-radius:999px;background:var(--shu);color:#fff;font-style:normal;font-size:11px;font-weight:700;
 vertical-align:2px}
+.kb .tt.rt{box-shadow:none;background:var(--paper)}
+.kb td:first-child{white-space:nowrap}
+.kb td small{display:block;font-size:12px;color:var(--ink-3)}
+.tt-lk{display:inline-flex;align-items:center;gap:6px;min-height:44px;margin-top:6px;font-size:13.5px;font-weight:700;color:var(--accent)}
+.det dd a{color:var(--accent);font-weight:700;text-underline-offset:3px}
 /* SPLIT SEGMENT (yen converter) */
 .fx-seg{display:flex;flex-wrap:wrap;align-items:center;gap:6px;min-height:44px;margin:0;padding:0;border:0}
 .fx-seg legend{float:left;margin-right:6px;padding:0;font-size:14.5px;color:var(--ink-2)}
@@ -1331,7 +1336,8 @@ aria-describedby="fxHint fxErr"><span>台幣</span>
 <section class="appendix wrap" id="appendix" aria-labelledby="ap-h">
 <div class="sec-head reveal">
 <div><div class="eyebrow">Appendix · Timetables</div><h2 class="sec" id="ap-h">附錄・電車時刻</h2></div>
-<p>依 JR 西日本與南海的週末假日時刻整理，年末年始可能臨時調整；出發前幾天再用官網或 Google 地圖確認一次。</p>
+<p>HARUKA 與回程依 JR 西日本與南海的週末假日時刻，12/28 轉乘依京都巴士與叡山電車的平日時刻整理；年末年始可能臨時調整，出發前幾天再用官網<!--
+-->或 Google 地圖確認一次。</p>
 </div>
 <article class="tt reveal" aria-labelledby="ttH">
 <header class="tt-h">
@@ -1344,6 +1350,17 @@ aria-describedby="fxHint fxErr"><span>台幣</span>
 <ol class="hgrid" id="harukaGrid"></ol>
 <p class="tt-note"><svg class="i" aria-hidden="true"><use href="#i-info"/></svg><span>單程優惠票 ¥2,700（外國護照限定），乘車日 1 個月前開放<!--
 -->在 JR 西日本網站預約，在關西機場站出示護照取票，搭自由席。抵達時間以京都站為準。</span></p>
+</article>
+<article class="tt reveal" id="kbTT" aria-labelledby="kbH">
+<header class="tt-h">
+<div><small>12/28（一）· 國際會館 → 大原 → 貴船 → 出町柳</small><h3 id="kbH">大原・貴船 轉乘時刻</h3></div>
+<p>去程建議 <b>14:07</b> 從大原搭巴士，14:58 到貴船口；回程搭 <b>17:23</b> 巴士下山，接 17:46 的叡山電車，18:16 到出町柳。貴船下山的巴<!--
+-->士 17:38 是末班。</p>
+</header>
+<div class="ret kb" id="kbGrid"></div>
+<p class="tt-note"><svg class="i" aria-hidden="true"><use href="#i-info"/></svg><span>12/28（一）京都巴士走平日班表（12/29–1/3 才改休日班表<!--
+-->），官網頁面要在下拉選單選「平日現行ダイヤ」。叡山電車的年末班表約 12 月中公告，去年從 12/27 起全部改土休日班表；如果 12/28 也改，去程時刻不變<!--
+-->，回程改成 17:21、17:36、17:51，搭 17:23 的巴士接 17:36 那班，18:05 到出町柳。時刻取自 2026 年 11 月官網，巴士到站時間為約略值。</span></p>
 </article>
 <div class="ret" id="returnGrid"></div>
 </section>
@@ -1957,305 +1974,297 @@ const IMG = {"nachi": {"s": "https://thumb.wikimedia.org/wikipedia/commons/thumb
 "mageinfo&utm_content=thumbnail", "l": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c3/Pontocho_Alley_at_night%2C_Kyoto_%2852409059926%29" +
 ".jpg/1920px-Pontocho_Alley_at_night%2C_Kyoto_%2852409059926%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
 "cap": "先斗町夜晚的巷弄", "by": "Sergiy Galyonkin from Raleigh, USA", "lic": "CC BY-SA 2.0", "page": "https://commons.wikimedia.org/wiki/File:Pont" +
-"ocho_Alley_at_night,_Kyoto_(52409059926).jpg"}, "k_nishiki": {"s": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d4/Nishiki_ichiba_Kyoto_" +
-"JPN.jpg/960px-Nishiki_ichiba_Kyoto_JPN.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail", "l": "https://thumb.wik" +
-"imedia.org/wikipedia/commons/thumb/d/d4/Nishiki_ichiba_Kyoto_JPN.jpg/1920px-Nishiki_ichiba_Kyoto_JPN.jpg?utm_source=commons.wikimedia.org&utm_camp" +
-"aign=imageinfo&utm_content=thumbnail", "cap": "錦市場商店街", "by": "ignis", "lic": "CC BY-SA 3.0", "page": "https://commons.wikimedia.org/wiki/Fi" +
-"le:Nishiki_ichiba_Kyoto_JPN.jpg"}, "k_nishiki_ayu": {"s": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/cd/Nishiki_market_Kyoto_hdsr_2019" +
-"_06_02_9999_31.jpg/960px-Nishiki_market_Kyoto_hdsr_2019_06_02_9999_31.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thum" +
-"bnail", "l": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/cd/Nishiki_market_Kyoto_hdsr_2019_06_02_9999_31.jpg/1920px-Nishiki_market_Kyot" +
-"o_hdsr_2019_06_02_9999_31.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail", "cap": "錦市場鹽烤香魚", "by": "Hypp" +
-"olyte de Saint-Rambert", "lic": "CC BY-SA 4.0", "page": "https://commons.wikimedia.org/wiki/File:Nishiki_market_Kyoto_hdsr_2019_06_02_9999_31.jpg"},
-"e_meriken": {"s": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d7/Kobe_Meriken-Park_Oriental_Hotel_at_night_-_Aug_3%2C_2025.jpg/960px-Ko" +
-"be_Meriken-Park_Oriental_Hotel_at_night_-_Aug_3%2C_2025.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail", "l":
-"https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d7/Kobe_Meriken-Park_Oriental_Hotel_at_night_-_Aug_3%2C_2025.jpg/1920px-Kobe_Meriken-Park_Or" +
-"iental_Hotel_at_night_-_Aug_3%2C_2025.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail", "cap": "美利堅公園夜景",
-"by": "Masahiko OHKUBO", "lic": "CC BY 4.0", "page": "https://commons.wikimedia.org/wiki/File:Kobe_Meriken-Park_Oriental_Hotel_at_night_-_Aug_3,_20" +
-"25.jpg"}, "e_kitano": {"s": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/ee/Weathercock_House_Kobe_Kitano_Ijinkan_%E9%A2%A8%E8%A6%8B%E9%" +
-"B6%8F%E3%81%AE%E9%A4%A8%EF%BC%88%E6%97%A7%E3%83%88%E3%83%BC%E3%83%9E%E3%82%B9%E4%BD%8F%E5%AE%85%EF%BC%89.jpg/960px-Weathercock_House_Kobe_Kitano_I" +
-"jinkan_%E9%A2%A8%E8%A6%8B%E9%B6%8F%E3%81%AE%E9%A4%A8%EF%BC%88%E6%97%A7%E3%83%88%E3%83%BC%E3%83%9E%E3%82%B9%E4%BD%8F%E5%AE%85%EF%BC%89.jpg?utm_sour" +
-"ce=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail", "l": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/ee/Weathercock" +
-"_House_Kobe_Kitano_Ijinkan_%E9%A2%A8%E8%A6%8B%E9%B6%8F%E3%81%AE%E9%A4%A8%EF%BC%88%E6%97%A7%E3%83%88%E3%83%BC%E3%83%9E%E3%82%B9%E4%BD%8F%E5%AE%85%E" +
-"F%BC%89.jpg/1920px-Weathercock_House_Kobe_Kitano_Ijinkan_%E9%A2%A8%E8%A6%8B%E9%B6%8F%E3%81%AE%E9%A4%A8%EF%BC%88%E6%97%A7%E3%83%88%E3%83%BC%E3%83%9" +
-"E%E3%82%B9%E4%BD%8F%E5%AE%85%EF%BC%89.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail", "cap": "北野風見雞之館",
-"by": "Manish Prabhune", "lic": "CC BY 4.0", "page": "https://commons.wikimedia.org/wiki/File:Weathercock_House_Kobe_Kitano_Ijinkan_%E9%A2%A8%E8%A6" +
-"%8B%E9%B6%8F%E3%81%AE%E9%A4%A8%EF%BC%88%E6%97%A7%E3%83%88%E3%83%BC%E3%83%9E%E3%82%B9%E4%BD%8F%E5%AE%85%EF%BC%89.jpg"}, "e_nunobiki": {"s": "https:" +
-"//thumb.wikimedia.org/wikipedia/commons/thumb/4/4d/Kobe_Nunobiki_Herb_Garden_Ropeway_-_panoramio.jpg/960px-Kobe_Nunobiki_Herb_Garden_Ropeway_-_pan" +
-"oramio.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail", "l": "https://thumb.wikimedia.org/wikipedia/commons/thu" +
-"mb/4/4d/Kobe_Nunobiki_Herb_Garden_Ropeway_-_panoramio.jpg/1920px-Kobe_Nunobiki_Herb_Garden_Ropeway_-_panoramio.jpg?utm_source=commons.wikimedia.or" +
-"g&utm_campaign=imageinfo&utm_content=thumbnail", "cap": "從香草園望神戶夜景", "by": "Daniel Gerhard", "lic": "CC BY-SA 3.0", "page": "https://comm" +
-"ons.wikimedia.org/wiki/File:Kobe_Nunobiki_Herb_Garden_Ropeway_-_panoramio.jpg"}, "e_nankin": {"s": "https://thumb.wikimedia.org/wikipedia/commons/" +
-"thumb/8/85/Kobe_Nankinmachi_at_night.jpg/960px-Kobe_Nankinmachi_at_night.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=t" +
-"humbnail", "l": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/85/Kobe_Nankinmachi_at_night.jpg/1920px-Kobe_Nankinmachi_at_night.jpg?utm_s" +
-"ource=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail", "cap": "南京町夜色", "by": "Laitr Keiows", "lic": "CC BY-SA 3.0", "page":
-"https://commons.wikimedia.org/wiki/File:Kobe_Nankinmachi_at_night.jpg"}, "e_kyoryuchi": {"s": "https://thumb.wikimedia.org/wikipedia/commons/thumb" +
-"/e/e6/Former_Foreign_Settlement_of_Kobe_Hyogo_Japan_A1_01bs3450.jpg/960px-Former_Foreign_Settlement_of_Kobe_Hyogo_Japan_A1_01bs3450.jpg?utm_source" +
-"=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail", "l": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e6/Former_Foreig" +
-"n_Settlement_of_Kobe_Hyogo_Japan_A1_01bs3450.jpg/1920px-Former_Foreign_Settlement_of_Kobe_Hyogo_Japan_A1_01bs3450.jpg?utm_source=commons.wikimedia" +
-".org&utm_campaign=imageinfo&utm_content=thumbnail", "cap": "舊居留地洋館街", "by": "663highland", "lic": "CC BY 2.5", "page": "https://commons.wik" +
-"imedia.org/wiki/File:Former_Foreign_Settlement_of_Kobe_Hyogo_Japan_A1_01bs3450.jpg"}, "e_maya": {"s": "https://thumb.wikimedia.org/wikipedia/commo" +
-"ns/thumb/c/ca/Kikuseidai.jpg/960px-Kikuseidai.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail", "l": "https://th" +
-"umb.wikimedia.org/wikipedia/commons/thumb/c/ca/Kikuseidai.jpg/1920px-Kikuseidai.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_co" +
-"ntent=thumbnail", "cap": "摩耶山掬星台", "by": "KENPEI", "lic": "CC BY-SA 3.0", "page": "https://commons.wikimedia.org/wiki/File:Kikuseidai.jpg"},
-"e_nightview": {"s": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/dc/Kobe_Chuo_and_Suma_at_night.jpeg/960px-Kobe_Chuo_and_Suma_at_night.j" +
-"peg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail", "l": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/dc" +
-"/Kobe_Chuo_and_Suma_at_night.jpeg/1920px-Kobe_Chuo_and_Suma_at_night.jpeg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thum" +
-"bnail", "cap": "神戶市區夜景", "by": "Laitr Keiows", "lic": "CC BY-SA 3.0", "page": "https://commons.wikimedia.org/wiki/File:Kobe_Chuo_and_Suma_at" +
-"_night.jpeg"}, "e_sandbar": {"s": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/10/Amanohashidate_-_Amanohashidate7592.jpg/960px-Amanohas" +
-"hidate_-_Amanohashidate7592.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail", "l": "https://thumb.wikimedia.org/" +
-"wikipedia/commons/thumb/1/10/Amanohashidate_-_Amanohashidate7592.jpg/1920px-Amanohashidate_-_Amanohashidate7592.jpg?utm_source=commons.wikimedia.o" +
-"rg&utm_campaign=imageinfo&utm_content=thumbnail", "cap": "天橋立松林沙洲", "by": "lumoplank", "lic": "CC0", "page": "https://commons.wikimedia.org" +
-"/wiki/File:Amanohashidate_-_Amanohashidate7592.jpg"}, "e_viewland": {"s": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b7/Amanohashidate" +
-"_View_Land09n4592.jpg/960px-Amanohashidate_View_Land09n4592.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail", "l":
-"https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b7/Amanohashidate_View_Land09n4592.jpg/1920px-Amanohashidate_View_Land09n4592.jpg?utm_source" +
-"=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail", "cap": "天橋立 View Land", "by": "663highland", "lic": "CC BY 2.5", "page":
-"https://commons.wikimedia.org/wiki/File:Amanohashidate_View_Land09n4592.jpg"}, "e_chionji": {"s": "https://thumb.wikimedia.org/wikipedia/commons/t" +
-"humb/0/0e/Chion-ji_shoromon2026-02_ac_%281%29.jpg/960px-Chion-ji_shoromon2026-02_ac_%281%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imag" +
-"einfo&utm_content=thumbnail", "l": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/0e/Chion-ji_shoromon2026-02_ac_%281%29.jpg/1920px-Chion-" +
-"ji_shoromon2026-02_ac_%281%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail", "cap": "冬日智恩寺", "by": "Astu" +
-"rio Cantabrio", "lic": "CC BY-SA 4.0", "page": "https://commons.wikimedia.org/wiki/File:Chion-ji_shoromon2026-02_ac_(1).jpg"}, "e_monjuso": {"s":
-"https://thumb.wikimedia.org/wikipedia/commons/thumb/a/aa/Monjuso_Miyazu_Kyoto_Pref01s3s4200.jpg/960px-Monjuso_Miyazu_Kyoto_Pref01s3s4200.jpg?utm_s" +
-"ource=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail", "l": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/aa/Monjuso_" +
-"Miyazu_Kyoto_Pref01s3s4200.jpg/1920px-Monjuso_Miyazu_Kyoto_Pref01s3s4200.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=t" +
-"humbnail", "cap": "文珠地區溫泉旅館", "by": "663highland", "lic": "CC BY 2.5", "page": "https://commons.wikimedia.org/wiki/File:Monjuso_Miyazu_Kyo" +
-"to_Pref01s3s4200.jpg"}, "w_awashima": {"s": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/76/Awashima_jinja_shrine_2.jpg/960px-Awashima_j" +
-"inja_shrine_2.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail", "l": "https://thumb.wikimedia.org/wikipedia/comm" +
-"ons/thumb/7/76/Awashima_jinja_shrine_2.jpg/1920px-Awashima_jinja_shrine_2.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=" +
-"thumbnail", "cap": "加太淡嶋神社社殿", "by": "Motokoka", "lic": "CC BY-SA 4.0", "page": "https://commons.wikimedia.org/wiki/File:Awashima_jinja_sh" +
-"rine_2.jpg"}, "w_kadaport": {"s": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d7/%E5%8A%A0%E5%A4%AA%E6%B8%AF%E3%81%AE%E6%9C%9D_%28Kada_" +
-"Port_in_the_morning%29_21_Aug%2C_2013_-_panoramio.jpg/960px-%E5%8A%A0%E5%A4%AA%E6%B8%AF%E3%81%AE%E6%9C%9D_%28Kada_Port_in_the_morning%29_21_Aug%2C" +
-"_2013_-_panoramio.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail", "l": "https://thumb.wikimedia.org/wikipedia/" +
-"commons/thumb/d/d7/%E5%8A%A0%E5%A4%AA%E6%B8%AF%E3%81%AE%E6%9C%9D_%28Kada_Port_in_the_morning%29_21_Aug%2C_2013_-_panoramio.jpg/1920px-%E5%8A%A0%E5" +
-"%A4%AA%E6%B8%AF%E3%81%AE%E6%9C%9D_%28Kada_Port_in_the_morning%29_21_Aug%2C_2013_-_panoramio.jpg?utm_source=commons.wikimedia.org&utm_campaign=imag" +
-"einfo&utm_content=thumbnail", "cap": "加太港的早晨", "by": "Hiroaki Kaneko", "lic": "CC BY-SA 3.0", "page": "https://commons.wikimedia.org/wiki/Fi" +
-"le:%E5%8A%A0%E5%A4%AA%E6%B8%AF%E3%81%AE%E6%9C%9D_(Kada_Port_in_the_morning)_21_Aug,_2013_-_panoramio.jpg"}, "w_wakayamajo": {"s": "https://thumb.w" +
-"ikimedia.org/wikipedia/commons/thumb/c/c0/Wakayama_Castle_-_Apr_4%2C_2017_%282%29.jpg/960px-Wakayama_Castle_-_Apr_4%2C_2017_%282%29.jpg?utm_source" +
-"=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail", "l": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c0/Wakayama_Cast" +
-"le_-_Apr_4%2C_2017_%282%29.jpg/1920px-Wakayama_Castle_-_Apr_4%2C_2017_%282%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_cont" +
-"ent=thumbnail", "cap": "和歌山城天守夜間點燈", "by": "mk_is_here", "lic": "CC BY 2.0", "page": "https://commons.wikimedia.org/wiki/File:Wakayama_C" +
-"astle_-_Apr_4,_2017_(2).jpg"}, "w_kuroshio": {"s": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/66/Porto_Europe_-_Kuroshio-Ichiba_-_Insi" +
-"de.jpg/960px-Porto_Europe_-_Kuroshio-Ichiba_-_Inside.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail", "l": "htt" +
-"ps://thumb.wikimedia.org/wikipedia/commons/thumb/6/66/Porto_Europe_-_Kuroshio-Ichiba_-_Inside.jpg/1920px-Porto_Europe_-_Kuroshio-Ichiba_-_Inside.j" +
-"pg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail", "cap": "黒潮市場內部", "by": "Yanajin33", "lic": "CC BY-SA 3.0",
-"page": "https://commons.wikimedia.org/wiki/File:Porto_Europe_-_Kuroshio-Ichiba_-_Inside.jpg"}, "w_yuasa": {"s": "https://thumb.wikimedia.org/wikip" +
-"edia/commons/thumb/d/d1/Kadocho_Yuasa_2025-10_ac_%281%29.jpg/960px-Kadocho_Yuasa_2025-10_ac_%281%29.jpg?utm_source=commons.wikimedia.org&utm_campa" +
-"ign=imageinfo&utm_content=thumbnail", "l": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d1/Kadocho_Yuasa_2025-10_ac_%281%29.jpg/1920px-K" +
-"adocho_Yuasa_2025-10_ac_%281%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail", "cap": "湯淺醬油老街・角長",
-"by": "Asturio Cantabrio", "lic": "CC BY-SA 4.0", "page": "https://commons.wikimedia.org/wiki/File:Kadocho_Yuasa_2025-10_ac_(1).jpg"}, "w_yuasa2": {
-"s": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/9d/260516_Kadocho_Yuasa_Wakayama_pref_Japan01s3.jpg/960px-260516_Kadocho_Yuasa_Wakayama" +
-"_pref_Japan01s3.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail", "l": "https://thumb.wikimedia.org/wikipedia/co" +
-"mmons/thumb/9/9d/260516_Kadocho_Yuasa_Wakayama_pref_Japan01s3.jpg/1920px-260516_Kadocho_Yuasa_Wakayama_pref_Japan01s3.jpg?utm_source=commons.wikim" +
-"edia.org&utm_campaign=imageinfo&utm_content=thumbnail", "cap": "湯淺大仙堀醬油藏", "by": "663highland", "lic": "CC BY-SA 4.0", "page": "https://co" +
-"mmons.wikimedia.org/wiki/File:260516_Kadocho_Yuasa_Wakayama_pref_Japan01s3.jpg"}, "w_adventure": {"s": "https://thumb.wikimedia.org/wikipedia/comm" +
-"ons/thumb/5/54/Adventure_World%2C_Shirahama%2C_Wakayama_-_Apr_24%2C_2015.jpg/960px-Adventure_World%2C_Shirahama%2C_Wakayama_-_Apr_24%2C_2015.jpg?u" +
-"tm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail", "l": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/54/Adve" +
-"nture_World%2C_Shirahama%2C_Wakayama_-_Apr_24%2C_2015.jpg/1920px-Adventure_World%2C_Shirahama%2C_Wakayama_-_Apr_24%2C_2015.jpg?utm_source=commons." +
-"wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail", "cap": "白濱 Adventure World", "by": "Hideto KOBAYASHI", "lic": "CC BY 2.0", "page":
-"https://commons.wikimedia.org/wiki/File:Adventure_World,_Shirahama,_Wakayama_-_Apr_24,_2015.jpg"}, "w_rinku": {"s": "https://thumb.wikimedia.org/w" +
-"ikipedia/commons/thumb/3/3d/Rinku_premium_outlets02s3200.jpg/960px-Rinku_premium_outlets02s3200.jpg?utm_source=commons.wikimedia.org&utm_campaign=" +
-"imageinfo&utm_content=thumbnail", "l": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/3d/Rinku_premium_outlets02s3200.jpg/1920px-Rinku_pre" +
-"mium_outlets02s3200.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail", "cap": "臨空城 Premium Outlets", "by": "66" +
-"3highland", "lic": "CC BY 2.5", "page": "https://commons.wikimedia.org/wiki/File:Rinku_premium_outlets02s3200.jpg"}, "k_sanzenin_snow": {"s": "htt" +
-"ps://thumb.wikimedia.org/wikipedia/commons/thumb/f/f7/%E4%B8%89%E5%8D%83%E9%99%A2_-_panoramio.jpg/960px-%E4%B8%89%E5%8D%83%E9%99%A2_-_panoramio.jp" +
-"g?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail", "l": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f7/%" +
-"E4%B8%89%E5%8D%83%E9%99%A2_-_panoramio.jpg/1920px-%E4%B8%89%E5%8D%83%E9%99%A2_-_panoramio.jpg?utm_source=commons.wikimedia.org&utm_campaign=imagei" +
-"nfo&utm_content=thumbnail", "cap": "雪中的三千院往生極樂院", "by": "くろふね", "lic": "CC BY 3.0", "page": "https://commons.wikimedia.org/wiki/Fil" +
-"e:%E4%B8%89%E5%8D%83%E9%99%A2_-_panoramio.jpg"}, "k_sanzenin_gate": {"s": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8f/%E4%B8%89%E5%8" +
-"D%83%E9%99%A2_-_panoramio_%283%29.jpg/960px-%E4%B8%89%E5%8D%83%E9%99%A2_-_panoramio_%283%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imag" +
-"einfo&utm_content=thumbnail", "l": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8f/%E4%B8%89%E5%8D%83%E9%99%A2_-_panoramio_%283%29.jpg/1" +
-"920px-%E4%B8%89%E5%8D%83%E9%99%A2_-_panoramio_%283%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail", "cap":
-"雪中的三千院御殿門", "by": "くろふね", "lic": "CC BY 3.0", "page": "https://commons.wikimedia.org/wiki/File:%E4%B8%89%E5%8D%83%E9%99%A2_-_panorami" +
-"o_(3).jpg"}, "shinsaibashi": {"s": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/34/Shinsaibashi-suji_Shopping_Street_20190201.jpg/960px-" +
-"Shinsaibashi-suji_Shopping_Street_20190201.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail", "l": "https://thumb" +
-".wikimedia.org/wikipedia/commons/thumb/3/34/Shinsaibashi-suji_Shopping_Street_20190201.jpg/1920px-Shinsaibashi-suji_Shopping_Street_20190201.jpg?u" +
-"tm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail", "cap": "心齋橋筋商店街", "by": "そらみみ", "lic": "CC BY-SA 4.0",
-"page": "https://commons.wikimedia.org/wiki/File:Shinsaibashi-suji_Shopping_Street_20190201.jpg"}, "outlet": {"s": "https://thumb.wikimedia.org/wik" +
-"ipedia/commons/thumb/1/16/Kobe-Sanda_Premium_Outlets002.jpg/960px-Kobe-Sanda_Premium_Outlets002.jpg?utm_source=commons.wikimedia.org&utm_campaign=" +
-"imageinfo&utm_content=thumbnail", "l": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/16/Kobe-Sanda_Premium_Outlets002.jpg/1920px-Kobe-San" +
-"da_Premium_Outlets002.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail", "cap": "神戶三田 Premium Outlets", "by":
-"Hashi photo", "lic": "CC BY 3.0", "page": "https://commons.wikimedia.org/wiki/File:Kobe-Sanda_Premium_Outlets002.jpg"}, "rinku": {"s": "https://th" +
-"umb.wikimedia.org/wikipedia/commons/thumb/6/6c/Rinku_premium_outlets01s3200.jpg/960px-Rinku_premium_outlets01s3200.jpg?utm_source=commons.wikimedi" +
-"a.org&utm_campaign=imageinfo&utm_content=thumbnail", "l": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/6c/Rinku_premium_outlets01s3200.j" +
-"pg/1920px-Rinku_premium_outlets01s3200.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail", "cap": "臨空城 Premium " +
-"Outlets", "by": "663highland", "lic": "CC BY 2.5", "page": "https://commons.wikimedia.org/wiki/File:Rinku_premium_outlets01s3200.jpg"}, "rapit": {
-"s": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/7a/Nankai_50000_series_50002F.jpg/960px-Nankai_50000_series_50002F.jpg?utm_source=commo" +
-"ns.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail", "l": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/7a/Nankai_50000_series" +
-"_50002F.jpg/1920px-Nankai_50000_series_50002F.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail", "cap": "南海 Rap" +
-"i:t 特急", "by": "日根野", "lic": "CC BY-SA 4.0", "page": "https://commons.wikimedia.org/wiki/File:Nankai_50000_series_50002F.jpg"}, "kix": {"s":
-"https://thumb.wikimedia.org/wikipedia/commons/thumb/7/78/Kansai_Airport_Terminal_1_Departure_2025.JPG/960px-Kansai_Airport_Terminal_1_Departure_20" +
-"25.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail", "l": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7" +
-"/78/Kansai_Airport_Terminal_1_Departure_2025.JPG/1920px-Kansai_Airport_Terminal_1_Departure_2025.JPG?utm_source=commons.wikimedia.org&utm_campaign" +
-"=imageinfo&utm_content=thumbnail", "cap": "關西機場第一航廈出境大廳", "by": "Fotointheworld", "lic": "CC BY 4.0", "page": "https://commons.wikimed" +
-"ia.org/wiki/File:Kansai_Airport_Terminal_1_Departure_2025.JPG"}, "namba": {"s": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b5/Takashim" +
-"aya_osaka02_1920.jpg/960px-Takashimaya_osaka02_1920.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail", "l": "http" +
-"s://thumb.wikimedia.org/wikipedia/commons/thumb/b/b5/Takashimaya_osaka02_1920.jpg/1920px-Takashimaya_osaka02_1920.jpg?utm_source=commons.wikimedia" +
-".org&utm_campaign=imageinfo&utm_content=thumbnail", "cap": "南海難波站・高島屋大阪店", "by": "663highland", "lic": "CC BY 2.5", "page": "https://c" +
-"ommons.wikimedia.org/wiki/File:Takashimaya_osaka02_1920.jpg"}, "kasuga": {"s": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a5/Lanterns_" +
-"Kasuga-taisha_Nara.jpg/960px-Lanterns_Kasuga-taisha_Nara.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail", "l":
-"https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a5/Lanterns_Kasuga-taisha_Nara.jpg/1920px-Lanterns_Kasuga-taisha_Nara.jpg?utm_source=commons" +
-".wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail", "cap": "春日大社的石燈籠", "by": "Gzzz", "lic": "CC BY-SA 4.0", "page": "https://com" +
-"mons.wikimedia.org/wiki/File:Lanterns_Kasuga-taisha_Nara.jpg"}, "umeda": {"s": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1d/JP-Osaka-" +
-"Umeda-Hankyu-Department-Store.jpg/960px-JP-Osaka-Umeda-Hankyu-Department-Store.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_con" +
-"tent=thumbnail", "l": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1d/JP-Osaka-Umeda-Hankyu-Department-Store.jpg/1920px-JP-Osaka-Umeda-H" +
-"ankyu-Department-Store.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail", "cap": "阪急うめだ本店", "by": "Kanchi1" +
-"979", "lic": "CC BY-SA 4.0", "page": "https://commons.wikimedia.org/wiki/File:JP-Osaka-Umeda-Hankyu-Department-Store.jpg"}, "tsutenkaku": {"s": "h" +
-"ttps://thumb.wikimedia.org/wikipedia/commons/thumb/2/2b/Shinsekai_and_Tsutenkaku_Tower.jpg/960px-Shinsekai_and_Tsutenkaku_Tower.jpg?utm_source=com" +
-"mons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail", "l": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/2b/Shinsekai_and_Tsu" +
-"tenkaku_Tower.jpg/1920px-Shinsekai_and_Tsutenkaku_Tower.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail", "cap":
-"新世界與通天閣", "by": "Sakai Yayoi", "lic": "CC0", "page": "https://commons.wikimedia.org/wiki/File:Shinsekai_and_Tsutenkaku_Tower.jpg"}, "harukas":
-{"s": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/cd/Abeno_Harukas_building_%40_Osaka_%2813382596043%29.jpg/960px-Abeno_Harukas_building" +
-"_%40_Osaka_%2813382596043%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail", "l": "https://thumb.wikimedia.org" +
-"/wikipedia/commons/thumb/c/cd/Abeno_Harukas_building_%40_Osaka_%2813382596043%29.jpg/1920px-Abeno_Harukas_building_%40_Osaka_%2813382596043%29.jpg" +
-"?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail", "cap": "阿倍野 HARUKAS", "by": "Guilhem Vellut from Annecy, France",
-"lic": "CC BY 2.0", "page": "https://commons.wikimedia.org/wiki/File:Abeno_Harukas_building_@_Osaka_(13382596043).jpg"}, "k_tower": {"s": "https://" +
-"thumb.wikimedia.org/wikipedia/commons/thumb/1/14/Kyoto_Tower_seen_from_the_Sky_garden_of_Kyoto_Station_Building_at_night_20260921.jpg/960px-Kyoto_" +
-"Tower_seen_from_the_Sky_garden_of_Kyoto_Station_Building_at_night_20260921.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content" +
-"=thumbnail", "l": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/14/Kyoto_Tower_seen_from_the_Sky_garden_of_Kyoto_Station_Building_at_nigh" +
-"t_20260921.jpg/1920px-Kyoto_Tower_seen_from_the_Sky_garden_of_Kyoto_Station_Building_at_night_20260921.jpg?utm_source=commons.wikimedia.org&utm_ca" +
-"mpaign=imageinfo&utm_content=thumbnail", "cap": "從京都車站空中庭園望京都塔", "by": "掬茶", "lic": "CC BY-SA 4.0", "page": "https://commons.wikime" +
-"dia.org/wiki/File:Kyoto_Tower_seen_from_the_Sky_garden_of_Kyoto_Station_Building_at_night_20260921.jpg"}, "k_stairs": {"s": "https://thumb.wikimed" +
-"ia.org/wikipedia/commons/thumb/4/46/Grand_staircase_of_Kyoto_Station_at_night_20260921.jpg/960px-Grand_staircase_of_Kyoto_Station_at_night_2026092" +
-"1.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail", "l": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/" +
-"46/Grand_staircase_of_Kyoto_Station_at_night_20260921.jpg/1920px-Grand_staircase_of_Kyoto_Station_at_night_20260921.jpg?utm_source=commons.wikimed" +
-"ia.org&utm_campaign=imageinfo&utm_content=thumbnail", "cap": "京都車站大階梯夜間燈飾", "by": "掬茶", "lic": "CC BY-SA 4.0", "page": "https://commo" +
-"ns.wikimedia.org/wiki/File:Grand_staircase_of_Kyoto_Station_at_night_20260921.jpg"}, "k_station": {"s": "https://thumb.wikimedia.org/wikipedia/com" +
-"mons/thumb/a/a4/Overview_of_the_grand_staircase_of_Kyoto_Station_at_night_20260921a.jpg/960px-Overview_of_the_grand_staircase_of_Kyoto_Station_at_" +
-"night_20260921a.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail", "l": "https://thumb.wikimedia.org/wikipedia/co" +
-"mmons/thumb/a/a4/Overview_of_the_grand_staircase_of_Kyoto_Station_at_night_20260921a.jpg/1920px-Overview_of_the_grand_staircase_of_Kyoto_Station_a" +
-"t_night_20260921a.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail", "cap": "京都車站大樓夜景", "by": "掬茶", "lic":
-"CC BY-SA 4.0", "page": "https://commons.wikimedia.org/wiki/File:Overview_of_the_grand_staircase_of_Kyoto_Station_at_night_20260921a.jpg"},
-"k_shinkyogoku": {"s": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/ed/Shinkyogoku_shopping_arcade%2C_Kyoto%2C_August_2019.jpg/960px-Shin" +
-"kyogoku_shopping_arcade%2C_Kyoto%2C_August_2019.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail", "l": "https://" +
-"thumb.wikimedia.org/wikipedia/commons/thumb/e/ed/Shinkyogoku_shopping_arcade%2C_Kyoto%2C_August_2019.jpg/1920px-Shinkyogoku_shopping_arcade%2C_Kyo" +
-"to%2C_August_2019.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail", "cap": "新京極商店街", "by": "NevinThompson",
-"lic": "CC BY-SA 4.0", "page": "https://commons.wikimedia.org/wiki/File:Shinkyogoku_shopping_arcade,_Kyoto,_August_2019.jpg"}, "k_kamogawa": {"s":
-"https://thumb.wikimedia.org/wikipedia/commons/thumb/2/24/Night_by_the_Kamogawa_River_%2853448413279%29.jpg/960px-Night_by_the_Kamogawa_River_%2853" +
-"448413279%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail", "l": "https://thumb.wikimedia.org/wikipedia/commo" +
-"ns/thumb/2/24/Night_by_the_Kamogawa_River_%2853448413279%29.jpg/1920px-Night_by_the_Kamogawa_River_%2853448413279%29.jpg?utm_source=commons.wikime" +
-"dia.org&utm_campaign=imageinfo&utm_content=thumbnail", "cap": "夜晚的鴨川", "by": "Michael Coghlan from Adelaide, Australia", "lic": "CC BY-SA 2.0",
-"page": "https://commons.wikimedia.org/wiki/File:Night_by_the_Kamogawa_River_(53448413279).jpg"}, "k_gion_night": {"s": "https://thumb.wikimedia.or" +
-"g/wikipedia/commons/thumb/2/2a/Japan_A_Night_in_Gion_%2813934184196%29.jpg/960px-Japan_A_Night_in_Gion_%2813934184196%29.jpg?utm_source=commons.wi" +
-"kimedia.org&utm_campaign=imageinfo&utm_content=thumbnail", "l": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/2a/Japan_A_Night_in_Gion_%2" +
-"813934184196%29.jpg/1920px-Japan_A_Night_in_Gion_%2813934184196%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbna" +
-"il", "cap": "祇園白川・巽橋一帶夜景", "by": "Yiannis Theologos Michellis", "lic": "CC0", "page": "https://commons.wikimedia.org/wiki/File:Japan_A_" +
-"Night_in_Gion_(13934184196).jpg"}, "k_fushimi_night": {"s": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/fa/More_Gates_at_Night_-_Fushim" +
-"i_Inari_Shrine_%2827311123557%29.jpg/960px-More_Gates_at_Night_-_Fushimi_Inari_Shrine_%2827311123557%29.jpg?utm_source=commons.wikimedia.org&utm_c" +
-"ampaign=imageinfo&utm_content=thumbnail", "l": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/fa/More_Gates_at_Night_-_Fushimi_Inari_Shrin" +
-"e_%2827311123557%29.jpg/1920px-More_Gates_at_Night_-_Fushimi_Inari_Shrine_%2827311123557%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imag" +
-"einfo&utm_content=thumbnail", "cap": "夜晚的伏見稻荷千本鳥居", "by": "Ajay Suresh from New York, NY, USA", "lic": "CC BY 2.0", "page": "https://co" +
-"mmons.wikimedia.org/wiki/File:More_Gates_at_Night_-_Fushimi_Inari_Shrine_(27311123557).jpg"}, "o_kuromon": {"s": "https://thumb.wikimedia.org/wiki" +
-"pedia/commons/thumb/f/f4/Kuromon-ichiba_in_201408.JPG/960px-Kuromon-ichiba_in_201408.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&u" +
-"tm_content=thumbnail", "l": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f4/Kuromon-ichiba_in_201408.JPG/1920px-Kuromon-ichiba_in_201408" +
-".JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail", "cap": "黑門市場入口", "by": "Mc681", "lic": "CC BY-SA 4.0",
-"page": "https://commons.wikimedia.org/wiki/File:Kuromon-ichiba_in_201408.JPG"}, "o_umeda_night": {"s": "https://thumb.wikimedia.org/wikipedia/comm" +
-"ons/thumb/e/e1/Night_view_from_Umeda_Sky_Building_%28south_side%29_20250830.jpg/960px-Night_view_from_Umeda_Sky_Building_%28south_side%29_20250830" +
-".jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail", "l": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e" +
-"1/Night_view_from_Umeda_Sky_Building_%28south_side%29_20250830.jpg/1920px-Night_view_from_Umeda_Sky_Building_%28south_side%29_20250830.jpg?utm_sou" +
-"rce=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail", "cap": "梅田藍天大廈空中庭園南側夜景", "by": "掬茶", "lic": "CC BY-SA 4.0",
-"page": "https://commons.wikimedia.org/wiki/File:Night_view_from_Umeda_Sky_Building_(south_side)_20250830.jpg"}, "o_shinsekai_night": {"s": "https:" +
-"//thumb.wikimedia.org/wikipedia/commons/thumb/9/95/Shinsekai_and_Tsutenkaku_at_night_2019-04-12.jpg/960px-Shinsekai_and_Tsutenkaku_at_night_2019-0" +
-"4-12.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail", "l": "https://thumb.wikimedia.org/wikipedia/commons/thumb" +
-"/9/95/Shinsekai_and_Tsutenkaku_at_night_2019-04-12.jpg/1920px-Shinsekai_and_Tsutenkaku_at_night_2019-04-12.jpg?utm_source=commons.wikimedia.org&ut" +
-"m_campaign=imageinfo&utm_content=thumbnail", "cap": "夜晚的新世界與通天閣", "by": "Dick Thomas Johnson from Tokyo, Japan", "lic": "CC BY 2.0",
-"page": "https://commons.wikimedia.org/wiki/File:Shinsekai_and_Tsutenkaku_at_night_2019-04-12.jpg"}, "o_amemura": {"s": "https://thumb.wikimedia.or" +
-"g/wikipedia/commons/thumb/2/21/Amerikamura_%28Busy%29.jpg/960px-Amerikamura_%28Busy%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo" +
-"&utm_content=thumbnail", "l": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/21/Amerikamura_%28Busy%29.jpg/1920px-Amerikamura_%28Busy%29.j" +
-"pg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail", "cap": "美國村", "by": "BradBeattie at English Wikipedia", "lic":
-"CC BY-SA 3.0", "page": "https://commons.wikimedia.org/wiki/File:Amerikamura_(Busy).jpg"}, "o_horie": {"s": "https://thumb.wikimedia.org/wikipedia/" +
-"commons/thumb/e/e5/Minamihorie-1.jpg/960px-Minamihorie-1.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail", "l":
-"https://upload.wikimedia.org/wikipedia/commons/e/e5/Minamihorie-1.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
-"cap": "南堀江的家具雜貨街", "by": "W236", "lic": "CC BY-SA 3.0", "page": "https://commons.wikimedia.org/wiki/File:Minamihorie-1.jpg"},
-"o_shitennoji": {"s": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/6b/View_of_Abeno_Harukas_and_Shitenn%C5%8D-ji_five-storied_pagoda_at_d" +
-"usk%2C_January_2024_%28clone_version%29_-_9978.jpg/960px-View_of_Abeno_Harukas_and_Shitenn%C5%8D-ji_five-storied_pagoda_at_dusk%2C_January_2024_%2" +
-"8clone_version%29_-_9978.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail", "l": "https://thumb.wikimedia.org/wik" +
-"ipedia/commons/thumb/6/6b/View_of_Abeno_Harukas_and_Shitenn%C5%8D-ji_five-storied_pagoda_at_dusk%2C_January_2024_%28clone_version%29_-_9978.jpg/19" +
-"20px-View_of_Abeno_Harukas_and_Shitenn%C5%8D-ji_five-storied_pagoda_at_dusk%2C_January_2024_%28clone_version%29_-_9978.jpg?utm_source=commons.wiki" +
-"media.org&utm_campaign=imageinfo&utm_content=thumbnail", "cap": "黃昏的四天王寺五重塔", "by": "Laitche", "lic": "CC BY-SA 4.0", "page": "https://c" +
-"ommons.wikimedia.org/wiki/File:View_of_Abeno_Harukas_and_Shitenn%C5%8D-ji_five-storied_pagoda_at_dusk,_January_2024_(clone_version)_-_9978.jpg"},
-"o_kitagane": {"s": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/6b/Stone_Stage_and_North_Bell_Tower_of_Shitennoji_Temple.JPG/960px-Stone" +
-"_Stage_and_North_Bell_Tower_of_Shitennoji_Temple.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail", "l": "https:/" +
-"/thumb.wikimedia.org/wikipedia/commons/thumb/6/6b/Stone_Stage_and_North_Bell_Tower_of_Shitennoji_Temple.JPG/1920px-Stone_Stage_and_North_Bell_Towe" +
-"r_of_Shitennoji_Temple.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail", "cap": "四天王寺北鐘堂", "by": "そらみみ",
-"lic": "CC BY-SA 3.0", "page": "https://commons.wikimedia.org/wiki/File:Stone_Stage_and_North_Bell_Tower_of_Shitennoji_Temple.JPG"}, "o_kaiyukan": {
-"s": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/7d/Two_whale-sharks_kayukan.JPG/960px-Two_whale-sharks_kayukan.JPG?utm_source=commons.w" +
-"ikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail", "l": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/7d/Two_whale-sharks_kayuka" +
-"n.JPG/1920px-Two_whale-sharks_kayukan.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail", "cap": "海遊館的兩隻鯨鯊",
-"by": "Glaoadare", "lic": "CC BY-SA 3.0", "page": "https://commons.wikimedia.org/wiki/File:Two_whale-sharks_kayukan.JPG"}, "k_hosenin": {"s": "http" +
-"s://thumb.wikimedia.org/wikipedia/commons/thumb/7/77/Kyoto_%2816042896668%29.jpg/960px-Kyoto_%2816042896668%29.jpg?utm_source=commons.wikimedia.or" +
-"g&utm_campaign=imageinfo&utm_content=thumbnail", "l": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/77/Kyoto_%2816042896668%29.jpg/1920px" +
-"-Kyoto_%2816042896668%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail", "cap": "寶泉院客殿看出去的額緣庭園",
-"by": "Moyan Brenn from Italy", "lic": "CC BY 2.0", "page": "https://commons.wikimedia.org/wiki/File:Kyoto_(16042896668).jpg"}, "o_kofukuji": {"s":
-"https://thumb.wikimedia.org/wikipedia/commons/thumb/8/80/Kofuku-ji%2C_chukondou-2.jpg/960px-Kofuku-ji%2C_chukondou-2.jpg?utm_source=commons.wikime" +
-"dia.org&utm_campaign=imageinfo&utm_content=thumbnail", "l": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/80/Kofuku-ji%2C_chukondou-2.jpg" +
-"/1920px-Kofuku-ji%2C_chukondou-2.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail", "cap": "興福寺中金堂", "by":
-"Saigen Jiro", "lic": "CC0", "page": "https://commons.wikimedia.org/wiki/File:Kofuku-ji,_chukondou-2.jpg"}, "o_nigatsudo": {"s": "https://thumb.wik" +
-"imedia.org/wikipedia/commons/thumb/a/a3/Todai-ji_Nigatsudo_%2852541498651%29.jpg/960px-Todai-ji_Nigatsudo_%2852541498651%29.jpg?utm_source=commons" +
-".wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail", "l": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a3/Todai-ji_Nigatsudo_%2" +
-"852541498651%29.jpg/1920px-Todai-ji_Nigatsudo_%2852541498651%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
-"cap": "通往東大寺二月堂的石板坡道", "by": "Raita Futo from Tokyo, Japan", "lic": "CC BY 2.0", "page": "https://commons.wikimedia.org/wiki/File:Tod" +
-"ai-ji_Nigatsudo_(52541498651).jpg"}, "o_grandfront": {"s": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f8/Grand_Front_Osaka_in_201409.J" +
-"PG/960px-Grand_Front_Osaka_in_201409.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail", "l": "https://thumb.wikim" +
-"edia.org/wikipedia/commons/thumb/f/f8/Grand_Front_Osaka_in_201409.JPG/1920px-Grand_Front_Osaka_in_201409.JPG?utm_source=commons.wikimedia.org&utm_" +
-"campaign=imageinfo&utm_content=thumbnail", "cap": "Grand Front 大阪", "by": "Mc681", "lic": "CC BY-SA 4.0", "page": "https://commons.wikimedia.org" +
-"/wiki/File:Grand_Front_Osaka_in_201409.JPG"}, "g_ajari": {"s": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a4/Ajarimochi.jpg/960px-Ajar" +
-"imochi.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail", "l": "https://thumb.wikimedia.org/wikipedia/commons/thu" +
-"mb/a/a4/Ajarimochi.jpg/1920px-Ajarimochi.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail", "cap": "満月的阿闍梨餅",
-"by": "Kykk wiki", "lic": "CC0", "page": "https://commons.wikimedia.org/wiki/File:Ajarimochi.jpg"}, "g_hijiri": {"s": "https://thumb.wikimedia.org/" +
-"wikipedia/commons/thumb/9/9d/%E8%81%96%E8%AD%B7%E9%99%A2_%E7%94%9F%E5%85%AB%E3%83%84%E6%A9%8B_%E5%95%86%E5%93%81%E8%A6%8B%E6%9C%AC_%283235077824%2" +
-"9.jpg/960px-%E8%81%96%E8%AD%B7%E9%99%A2_%E7%94%9F%E5%85%AB%E3%83%84%E6%A9%8B_%E5%95%86%E5%93%81%E8%A6%8B%E6%9C%AC_%283235077824%29.jpg?utm_source=" +
-"commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail", "l": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/9d/%E8%81%96%E8%A" +
-"D%B7%E9%99%A2_%E7%94%9F%E5%85%AB%E3%83%84%E6%A9%8B_%E5%95%86%E5%93%81%E8%A6%8B%E6%9C%AC_%283235077824%29.jpg/1920px-%E8%81%96%E8%AD%B7%E9%99%A2_%E" +
-"7%94%9F%E5%85%AB%E3%83%84%E6%A9%8B_%E5%95%86%E5%93%81%E8%A6%8B%E6%9C%AC_%283235077824%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imagein" +
-"fo&utm_content=thumbnail", "cap": "聖護院生八橋「聖」的商品樣本", "by": "Michael", "lic": "CC BY 2.0", "page": "https://commons.wikimedia.org/wiki" +
-"/File:%E8%81%96%E8%AD%B7%E9%99%A2_%E7%94%9F%E5%85%AB%E3%83%84%E6%A9%8B_%E5%95%86%E5%93%81%E8%A6%8B%E6%9C%AC_(3235077824).jpg"}, "g_yuko": {"s": "h" +
-"ttps://thumb.wikimedia.org/wikipedia/commons/thumb/e/ec/Nama_Yatsuhashi_for_sale_in_Sakuranocho.jpg/960px-Nama_Yatsuhashi_for_sale_in_Sakuranocho." +
-"jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail", "l": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/ec" +
-"/Nama_Yatsuhashi_for_sale_in_Sakuranocho.jpg/1920px-Nama_Yatsuhashi_for_sale_in_Sakuranocho.jpg?utm_source=commons.wikimedia.org&utm_campaign=imag" +
-"einfo&utm_content=thumbnail", "cap": "井筒生八橋「夕子」的貨架", "by": "Yuet Man Lee", "lic": "CC BY-SA 4.0", "page": "https://commons.wikimedia.o" +
-"rg/wiki/File:Nama_Yatsuhashi_for_sale_in_Sakuranocho.jpg"}, "g_yaki": {"s": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/33/Yatsuhashi_%" +
-"28347613370%29.jpg/960px-Yatsuhashi_%28347613370%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail", "l": "http" +
-"s://thumb.wikimedia.org/wikipedia/commons/thumb/3/33/Yatsuhashi_%28347613370%29.jpg/1920px-Yatsuhashi_%28347613370%29.jpg?utm_source=commons.wikim" +
-"edia.org&utm_campaign=imageinfo&utm_content=thumbnail", "cap": "烤八橋（示意，圖為井筒的包裝）", "by": "Toshiyuki IMAI from Kyoto, Japan", "lic":
-"CC BY-SA 2.0", "page": "https://commons.wikimedia.org/wiki/File:Yatsuhashi_(347613370).jpg"}, "g_kyobaum": {"s": "https://thumb.wikimedia.org/wiki" +
-"pedia/commons/thumb/b/b4/Otabe_Arashiyama_Shop%2C_Kyoto_-_Oct_16%2C_2005.jpg/960px-Otabe_Arashiyama_Shop%2C_Kyoto_-_Oct_16%2C_2005.jpg?utm_source=" +
-"commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail", "l": "https://upload.wikimedia.org/wikipedia/commons/b/b4/Otabe_Arashiyama_Sh" +
-"op%2C_Kyoto_-_Oct_16%2C_2005.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original", "cap": "美十「おたべ」嵐山店（京ば" +
-"あむ同公司）", "by": "Ail Lee", "lic": "CC BY 2.0", "page": "https://commons.wikimedia.org/wiki/File:Otabe_Arashiyama_Shop,_Kyoto_-_Oct_16,_2005.j" +
-"pg"}, "g_hagoromo": {"s": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/cd/Okinawa_beniimo_langue_de_chat.jpg/960px-Okinawa_beniimo_langu" +
-"e_de_chat.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail", "l": "https://thumb.wikimedia.org/wikipedia/commons/" +
-"thumb/c/cd/Okinawa_beniimo_langue_de_chat.jpg/1920px-Okinawa_beniimo_langue_de_chat.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&ut" +
-"m_content=thumbnail", "cap": "夾心貓舌餅（示意）", "by": "Syced", "lic": "CC0", "page": "https://commons.wikimedia.org/wiki/File:Okinawa_beniimo_l" +
-"angue_de_chat.jpg"}, "g_ogura": {"s": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/0c/Okaki_for_sale_in_Kawagoe.jpg/960px-Okaki_for_sale" +
-"_in_Kawagoe.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail", "l": "https://thumb.wikimedia.org/wikipedia/common" +
-"s/thumb/0/0c/Okaki_for_sale_in_Kawagoe.jpg/1920px-Okaki_for_sale_in_Kawagoe.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_conten" +
-"t=thumbnail", "cap": "日式米果（示意）", "by": "nakimusi", "lic": "CC BY 2.0", "page": "https://commons.wikimedia.org/wiki/File:Okaki_for_sale_in_" +
-"Kawagoe.jpg"}, "g_mchoco": {"s": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/01/Royce_chocolate.jpg/960px-Royce_chocolate.jpg?utm_sourc" +
-"e=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail", "l": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/01/Royce_chocol" +
-"ate.jpg/1920px-Royce_chocolate.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail", "cap": "生巧克力（示意，圖為 RO" +
-"YCE'）", "by": "Antonio733", "lic": "CC BY-SA 4.0", "page": "https://commons.wikimedia.org/wiki/File:Royce_chocolate.jpg"}, "g_tsuki": {"s": "http" +
-"s://thumb.wikimedia.org/wikipedia/commons/thumb/0/0f/Tsuki_Gesho_Namba.jpg/960px-Tsuki_Gesho_Namba.jpg?utm_source=commons.wikimedia.org&utm_campai" +
-"gn=imageinfo&utm_content=thumbnail", "l": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/0f/Tsuki_Gesho_Namba.jpg/1920px-Tsuki_Gesho_Namba" +
-".jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail", "cap": "月化粧難波直營店", "by": "Mr.ちゅらさん", "lic": "CC " +
-"BY-SA 4.0", "page": "https://commons.wikimedia.org/wiki/File:Tsuki_Gesho_Namba.jpg"}, "g_okoshi": {"s": "https://thumb.wikimedia.org/wikipedia/com" +
-"mons/thumb/6/64/Awaokoshi_01.jpg/960px-Awaokoshi_01.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail", "l": "http" +
-"s://thumb.wikimedia.org/wikipedia/commons/thumb/6/64/Awaokoshi_01.jpg/1920px-Awaokoshi_01.jpg?utm_source=commons.wikimedia.org&utm_campaign=imagei" +
-"nfo&utm_content=thumbnail", "cap": "粟おこし", "by": "Mugu-shisai", "lic": "CC BY-SA 3.0", "page": "https://commons.wikimedia.org/wiki/File:Awaoko" +
-"shi_01.jpg"}, "g_petit": {"s": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/41/%E5%A4%A7%E9%98%AA%E5%9C%9F%E7%94%A3_%E5%A0%82%E5%B3%B6%E" +
-"3%83%AD%E3%83%BC%E3%83%AB_2014-06-08.jpg/960px-%E5%A4%A7%E9%98%AA%E5%9C%9F%E7%94%A3_%E5%A0%82%E5%B3%B6%E3%83%AD%E3%83%BC%E3%83%AB_2014-06-08.jpg?u" +
-"tm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail", "l": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/41/%E5%" +
-"A4%A7%E9%98%AA%E5%9C%9F%E7%94%A3_%E5%A0%82%E5%B3%B6%E3%83%AD%E3%83%BC%E3%83%AB_2014-06-08.jpg/1920px-%E5%A4%A7%E9%98%AA%E5%9C%9F%E7%94%A3_%E5%A0%8" +
-"2%E5%B3%B6%E3%83%AD%E3%83%BC%E3%83%AB_2014-06-08.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail", "cap": "Mon c" +
-"her 堂島ロール（示意，プティロール為常溫小份版）", "by": "Nori Norisa from 熊谷市, Japan", "lic": "CC BY 2.0", "page": "https://commons.wikimedia." +
-"org/wiki/File:%E5%A4%A7%E9%98%AA%E5%9C%9F%E7%94%A3_%E5%A0%82%E5%B3%B6%E3%83%AD%E3%83%BC%E3%83%AB_2014-06-08.jpg"}, "g_tako": {"s": "https://thumb." +
-"wikimedia.org/wikipedia/commons/thumb/b/bb/Tako_senbei_-_for_sale_in_Tokyo_-_July_1_2020.jpeg/960px-Tako_senbei_-_for_sale_in_Tokyo_-_July_1_2020." +
-"jpeg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail", "l": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b" +
-"b/Tako_senbei_-_for_sale_in_Tokyo_-_July_1_2020.jpeg/1920px-Tako_senbei_-_for_sale_in_Tokyo_-_July_1_2020.jpeg?utm_source=commons.wikimedia.org&ut" +
-"m_campaign=imageinfo&utm_content=thumbnail", "cap": "章魚仙貝（示意）", "by": "Nesnad", "lic": "CC BY 4.0", "page": "https://commons.wikimedia.org" +
-"/wiki/File:Tako_senbei_-_for_sale_in_Tokyo_-_July_1_2020.jpeg"}, "g_pretz": {"s": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/9b/Pretz_" +
-"Roast_and_Salad_Packages.jpg/960px-Pretz_Roast_and_Salad_Packages.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
-"l": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/9b/Pretz_Roast_and_Salad_Packages.jpg/1920px-Pretz_Roast_and_Salad_Packages.jpg?utm_sou" +
-"rce=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail", "cap": "固力果 Pretz（示意，圖為一般口味）", "by": "Davidng913", "lic":
-"CC BY-SA 4.0", "page": "https://commons.wikimedia.org/wiki/File:Pretz_Roast_and_Salad_Packages.jpg"}};
+"ocho_Alley_at_night,_Kyoto_(52409059926).jpg"}, "e_meriken": {"s": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d7/Kobe_Meriken-Park_Ori" +
+"ental_Hotel_at_night_-_Aug_3%2C_2025.jpg/960px-Kobe_Meriken-Park_Oriental_Hotel_at_night_-_Aug_3%2C_2025.jpg?utm_source=commons.wikimedia.org&utm_" +
+"campaign=imageinfo&utm_content=thumbnail", "l": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d7/Kobe_Meriken-Park_Oriental_Hotel_at_nigh" +
+"t_-_Aug_3%2C_2025.jpg/1920px-Kobe_Meriken-Park_Oriental_Hotel_at_night_-_Aug_3%2C_2025.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo" +
+"&utm_content=thumbnail", "cap": "美利堅公園夜景", "by": "Masahiko OHKUBO", "lic": "CC BY 4.0", "page": "https://commons.wikimedia.org/wiki/File:Ko" +
+"be_Meriken-Park_Oriental_Hotel_at_night_-_Aug_3,_2025.jpg"}, "e_kitano": {"s": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/ee/Weatherco" +
+"ck_House_Kobe_Kitano_Ijinkan_%E9%A2%A8%E8%A6%8B%E9%B6%8F%E3%81%AE%E9%A4%A8%EF%BC%88%E6%97%A7%E3%83%88%E3%83%BC%E3%83%9E%E3%82%B9%E4%BD%8F%E5%AE%85" +
+"%EF%BC%89.jpg/960px-Weathercock_House_Kobe_Kitano_Ijinkan_%E9%A2%A8%E8%A6%8B%E9%B6%8F%E3%81%AE%E9%A4%A8%EF%BC%88%E6%97%A7%E3%83%88%E3%83%BC%E3%83%" +
+"9E%E3%82%B9%E4%BD%8F%E5%AE%85%EF%BC%89.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail", "l": "https://thumb.wik" +
+"imedia.org/wikipedia/commons/thumb/e/ee/Weathercock_House_Kobe_Kitano_Ijinkan_%E9%A2%A8%E8%A6%8B%E9%B6%8F%E3%81%AE%E9%A4%A8%EF%BC%88%E6%97%A7%E3%8" +
+"3%88%E3%83%BC%E3%83%9E%E3%82%B9%E4%BD%8F%E5%AE%85%EF%BC%89.jpg/1920px-Weathercock_House_Kobe_Kitano_Ijinkan_%E9%A2%A8%E8%A6%8B%E9%B6%8F%E3%81%AE%E" +
+"9%A4%A8%EF%BC%88%E6%97%A7%E3%83%88%E3%83%BC%E3%83%9E%E3%82%B9%E4%BD%8F%E5%AE%85%EF%BC%89.jpg?utm_source=commons.wikimedia.org&utm_campaign=imagein" +
+"fo&utm_content=thumbnail", "cap": "北野風見雞之館", "by": "Manish Prabhune", "lic": "CC BY 4.0", "page": "https://commons.wikimedia.org/wiki/File:" +
+"Weathercock_House_Kobe_Kitano_Ijinkan_%E9%A2%A8%E8%A6%8B%E9%B6%8F%E3%81%AE%E9%A4%A8%EF%BC%88%E6%97%A7%E3%83%88%E3%83%BC%E3%83%9E%E3%82%B9%E4%BD%8F" +
+"%E5%AE%85%EF%BC%89.jpg"}, "e_nunobiki": {"s": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4d/Kobe_Nunobiki_Herb_Garden_Ropeway_-_panora" +
+"mio.jpg/960px-Kobe_Nunobiki_Herb_Garden_Ropeway_-_panoramio.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail", "l":
+"https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4d/Kobe_Nunobiki_Herb_Garden_Ropeway_-_panoramio.jpg/1920px-Kobe_Nunobiki_Herb_Garden_Ropewa" +
+"y_-_panoramio.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail", "cap": "從香草園望神戶夜景", "by": "Daniel Gerha" +
+"rd", "lic": "CC BY-SA 3.0", "page": "https://commons.wikimedia.org/wiki/File:Kobe_Nunobiki_Herb_Garden_Ropeway_-_panoramio.jpg"}, "e_nankin": {"s":
+"https://thumb.wikimedia.org/wikipedia/commons/thumb/8/85/Kobe_Nankinmachi_at_night.jpg/960px-Kobe_Nankinmachi_at_night.jpg?utm_source=commons.wiki" +
+"media.org&utm_campaign=imageinfo&utm_content=thumbnail", "l": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/85/Kobe_Nankinmachi_at_night." +
+"jpg/1920px-Kobe_Nankinmachi_at_night.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail", "cap": "南京町夜色", "by":
+"Laitr Keiows", "lic": "CC BY-SA 3.0", "page": "https://commons.wikimedia.org/wiki/File:Kobe_Nankinmachi_at_night.jpg"}, "e_kyoryuchi": {"s": "http" +
+"s://thumb.wikimedia.org/wikipedia/commons/thumb/e/e6/Former_Foreign_Settlement_of_Kobe_Hyogo_Japan_A1_01bs3450.jpg/960px-Former_Foreign_Settlement" +
+"_of_Kobe_Hyogo_Japan_A1_01bs3450.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail", "l": "https://thumb.wikimedia" +
+".org/wikipedia/commons/thumb/e/e6/Former_Foreign_Settlement_of_Kobe_Hyogo_Japan_A1_01bs3450.jpg/1920px-Former_Foreign_Settlement_of_Kobe_Hyogo_Jap" +
+"an_A1_01bs3450.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail", "cap": "舊居留地洋館街", "by": "663highland",
+"lic": "CC BY 2.5", "page": "https://commons.wikimedia.org/wiki/File:Former_Foreign_Settlement_of_Kobe_Hyogo_Japan_A1_01bs3450.jpg"}, "e_maya": {"s":
+"https://thumb.wikimedia.org/wikipedia/commons/thumb/c/ca/Kikuseidai.jpg/960px-Kikuseidai.jpg?utm_source=commons.wikimedia.org&utm_campaign=imagein" +
+"fo&utm_content=thumbnail", "l": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/ca/Kikuseidai.jpg/1920px-Kikuseidai.jpg?utm_source=commons." +
+"wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail", "cap": "摩耶山掬星台", "by": "KENPEI", "lic": "CC BY-SA 3.0", "page": "https://common" +
+"s.wikimedia.org/wiki/File:Kikuseidai.jpg"}, "e_nightview": {"s": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/dc/Kobe_Chuo_and_Suma_at_n" +
+"ight.jpeg/960px-Kobe_Chuo_and_Suma_at_night.jpeg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail", "l": "https://thu" +
+"mb.wikimedia.org/wikipedia/commons/thumb/d/dc/Kobe_Chuo_and_Suma_at_night.jpeg/1920px-Kobe_Chuo_and_Suma_at_night.jpeg?utm_source=commons.wikimedi" +
+"a.org&utm_campaign=imageinfo&utm_content=thumbnail", "cap": "神戶市區夜景", "by": "Laitr Keiows", "lic": "CC BY-SA 3.0", "page": "https://commons." +
+"wikimedia.org/wiki/File:Kobe_Chuo_and_Suma_at_night.jpeg"}, "e_sandbar": {"s": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/10/Amanohash" +
+"idate_-_Amanohashidate7592.jpg/960px-Amanohashidate_-_Amanohashidate7592.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=t" +
+"humbnail", "l": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/10/Amanohashidate_-_Amanohashidate7592.jpg/1920px-Amanohashidate_-_Amanohas" +
+"hidate7592.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail", "cap": "天橋立松林沙洲", "by": "lumoplank", "lic":
+"CC0", "page": "https://commons.wikimedia.org/wiki/File:Amanohashidate_-_Amanohashidate7592.jpg"}, "e_viewland": {"s": "https://thumb.wikimedia.org" +
+"/wikipedia/commons/thumb/b/b7/Amanohashidate_View_Land09n4592.jpg/960px-Amanohashidate_View_Land09n4592.jpg?utm_source=commons.wikimedia.org&utm_c" +
+"ampaign=imageinfo&utm_content=thumbnail", "l": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b7/Amanohashidate_View_Land09n4592.jpg/1920p" +
+"x-Amanohashidate_View_Land09n4592.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail", "cap": "天橋立 View Land",
+"by": "663highland", "lic": "CC BY 2.5", "page": "https://commons.wikimedia.org/wiki/File:Amanohashidate_View_Land09n4592.jpg"}, "e_chionji": {"s":
+"https://thumb.wikimedia.org/wikipedia/commons/thumb/0/0e/Chion-ji_shoromon2026-02_ac_%281%29.jpg/960px-Chion-ji_shoromon2026-02_ac_%281%29.jpg?utm" +
+"_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail", "l": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/0e/Chion-" +
+"ji_shoromon2026-02_ac_%281%29.jpg/1920px-Chion-ji_shoromon2026-02_ac_%281%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_conte" +
+"nt=thumbnail", "cap": "冬日智恩寺", "by": "Asturio Cantabrio", "lic": "CC BY-SA 4.0", "page": "https://commons.wikimedia.org/wiki/File:Chion-ji_sh" +
+"oromon2026-02_ac_(1).jpg"}, "e_monjuso": {"s": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/aa/Monjuso_Miyazu_Kyoto_Pref01s3s4200.jpg/96" +
+"0px-Monjuso_Miyazu_Kyoto_Pref01s3s4200.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail", "l": "https://thumb.wik" +
+"imedia.org/wikipedia/commons/thumb/a/aa/Monjuso_Miyazu_Kyoto_Pref01s3s4200.jpg/1920px-Monjuso_Miyazu_Kyoto_Pref01s3s4200.jpg?utm_source=commons.wi" +
+"kimedia.org&utm_campaign=imageinfo&utm_content=thumbnail", "cap": "文珠地區溫泉旅館", "by": "663highland", "lic": "CC BY 2.5", "page": "https://co" +
+"mmons.wikimedia.org/wiki/File:Monjuso_Miyazu_Kyoto_Pref01s3s4200.jpg"}, "w_awashima": {"s": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7" +
+"/76/Awashima_jinja_shrine_2.jpg/960px-Awashima_jinja_shrine_2.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+"l": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/76/Awashima_jinja_shrine_2.jpg/1920px-Awashima_jinja_shrine_2.jpg?utm_source=commons.wi" +
+"kimedia.org&utm_campaign=imageinfo&utm_content=thumbnail", "cap": "加太淡嶋神社社殿", "by": "Motokoka", "lic": "CC BY-SA 4.0", "page": "https://co" +
+"mmons.wikimedia.org/wiki/File:Awashima_jinja_shrine_2.jpg"}, "w_kadaport": {"s": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d7/%E5%8A%" +
+"A0%E5%A4%AA%E6%B8%AF%E3%81%AE%E6%9C%9D_%28Kada_Port_in_the_morning%29_21_Aug%2C_2013_-_panoramio.jpg/960px-%E5%8A%A0%E5%A4%AA%E6%B8%AF%E3%81%AE%E6" +
+"%9C%9D_%28Kada_Port_in_the_morning%29_21_Aug%2C_2013_-_panoramio.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+"l": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d7/%E5%8A%A0%E5%A4%AA%E6%B8%AF%E3%81%AE%E6%9C%9D_%28Kada_Port_in_the_morning%29_21_Aug%" +
+"2C_2013_-_panoramio.jpg/1920px-%E5%8A%A0%E5%A4%AA%E6%B8%AF%E3%81%AE%E6%9C%9D_%28Kada_Port_in_the_morning%29_21_Aug%2C_2013_-_panoramio.jpg?utm_sou" +
+"rce=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail", "cap": "加太港的早晨", "by": "Hiroaki Kaneko", "lic": "CC BY-SA 3.0",
+"page": "https://commons.wikimedia.org/wiki/File:%E5%8A%A0%E5%A4%AA%E6%B8%AF%E3%81%AE%E6%9C%9D_(Kada_Port_in_the_morning)_21_Aug,_2013_-_panoramio." +
+"jpg"}, "w_wakayamajo": {"s": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c0/Wakayama_Castle_-_Apr_4%2C_2017_%282%29.jpg/960px-Wakayama_" +
+"Castle_-_Apr_4%2C_2017_%282%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail", "l": "https://thumb.wikimedia.o" +
+"rg/wikipedia/commons/thumb/c/c0/Wakayama_Castle_-_Apr_4%2C_2017_%282%29.jpg/1920px-Wakayama_Castle_-_Apr_4%2C_2017_%282%29.jpg?utm_source=commons." +
+"wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail", "cap": "和歌山城天守夜間點燈", "by": "mk_is_here", "lic": "CC BY 2.0", "page": "https" +
+"://commons.wikimedia.org/wiki/File:Wakayama_Castle_-_Apr_4,_2017_(2).jpg"}, "w_kuroshio": {"s": "https://thumb.wikimedia.org/wikipedia/commons/thu" +
+"mb/6/66/Porto_Europe_-_Kuroshio-Ichiba_-_Inside.jpg/960px-Porto_Europe_-_Kuroshio-Ichiba_-_Inside.jpg?utm_source=commons.wikimedia.org&utm_campaig" +
+"n=imageinfo&utm_content=thumbnail", "l": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/66/Porto_Europe_-_Kuroshio-Ichiba_-_Inside.jpg/192" +
+"0px-Porto_Europe_-_Kuroshio-Ichiba_-_Inside.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail", "cap": "黒潮市場內" +
+"部", "by": "Yanajin33", "lic": "CC BY-SA 3.0", "page": "https://commons.wikimedia.org/wiki/File:Porto_Europe_-_Kuroshio-Ichiba_-_Inside.jpg"},
+"w_yuasa": {"s": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d1/Kadocho_Yuasa_2025-10_ac_%281%29.jpg/960px-Kadocho_Yuasa_2025-10_ac_%281" +
+"%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail", "l": "https://thumb.wikimedia.org/wikipedia/commons/thumb/" +
+"d/d1/Kadocho_Yuasa_2025-10_ac_%281%29.jpg/1920px-Kadocho_Yuasa_2025-10_ac_%281%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_" +
+"content=thumbnail", "cap": "湯淺醬油老街・角長", "by": "Asturio Cantabrio", "lic": "CC BY-SA 4.0", "page": "https://commons.wikimedia.org/wiki/Fil" +
+"e:Kadocho_Yuasa_2025-10_ac_(1).jpg"}, "w_yuasa2": {"s": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/9d/260516_Kadocho_Yuasa_Wakayama_pr" +
+"ef_Japan01s3.jpg/960px-260516_Kadocho_Yuasa_Wakayama_pref_Japan01s3.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbn" +
+"ail", "l": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/9d/260516_Kadocho_Yuasa_Wakayama_pref_Japan01s3.jpg/1920px-260516_Kadocho_Yuasa_" +
+"Wakayama_pref_Japan01s3.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail", "cap": "湯淺大仙堀醬油藏", "by": "663h" +
+"ighland", "lic": "CC BY-SA 4.0", "page": "https://commons.wikimedia.org/wiki/File:260516_Kadocho_Yuasa_Wakayama_pref_Japan01s3.jpg"}, "w_adventure":
+{"s": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/54/Adventure_World%2C_Shirahama%2C_Wakayama_-_Apr_24%2C_2015.jpg/960px-Adventure_World" +
+"%2C_Shirahama%2C_Wakayama_-_Apr_24%2C_2015.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail", "l": "https://thumb" +
+".wikimedia.org/wikipedia/commons/thumb/5/54/Adventure_World%2C_Shirahama%2C_Wakayama_-_Apr_24%2C_2015.jpg/1920px-Adventure_World%2C_Shirahama%2C_W" +
+"akayama_-_Apr_24%2C_2015.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail", "cap": "白濱 Adventure World", "by":
+"Hideto KOBAYASHI", "lic": "CC BY 2.0", "page": "https://commons.wikimedia.org/wiki/File:Adventure_World,_Shirahama,_Wakayama_-_Apr_24,_2015.jpg"},
+"w_rinku": {"s": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/3d/Rinku_premium_outlets02s3200.jpg/960px-Rinku_premium_outlets02s3200.jpg?" +
+"utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail", "l": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/3d/Rin" +
+"ku_premium_outlets02s3200.jpg/1920px-Rinku_premium_outlets02s3200.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+"cap": "臨空城 Premium Outlets", "by": "663highland", "lic": "CC BY 2.5", "page": "https://commons.wikimedia.org/wiki/File:Rinku_premium_outlets02s" +
+"3200.jpg"}, "k_sanzenin_snow": {"s": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f7/%E4%B8%89%E5%8D%83%E9%99%A2_-_panoramio.jpg/960px-%" +
+"E4%B8%89%E5%8D%83%E9%99%A2_-_panoramio.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail", "l": "https://thumb.wik" +
+"imedia.org/wikipedia/commons/thumb/f/f7/%E4%B8%89%E5%8D%83%E9%99%A2_-_panoramio.jpg/1920px-%E4%B8%89%E5%8D%83%E9%99%A2_-_panoramio.jpg?utm_source=" +
+"commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail", "cap": "雪中的三千院往生極樂院", "by": "くろふね", "lic": "CC BY 3.0", "page":
+"https://commons.wikimedia.org/wiki/File:%E4%B8%89%E5%8D%83%E9%99%A2_-_panoramio.jpg"}, "k_sanzenin_gate": {"s": "https://thumb.wikimedia.org/wikip" +
+"edia/commons/thumb/8/8f/%E4%B8%89%E5%8D%83%E9%99%A2_-_panoramio_%283%29.jpg/960px-%E4%B8%89%E5%8D%83%E9%99%A2_-_panoramio_%283%29.jpg?utm_source=c" +
+"ommons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail", "l": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8f/%E4%B8%89%E5%8D" +
+"%83%E9%99%A2_-_panoramio_%283%29.jpg/1920px-%E4%B8%89%E5%8D%83%E9%99%A2_-_panoramio_%283%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imag" +
+"einfo&utm_content=thumbnail", "cap": "雪中的三千院御殿門", "by": "くろふね", "lic": "CC BY 3.0", "page": "https://commons.wikimedia.org/wiki/File:" +
+"%E4%B8%89%E5%8D%83%E9%99%A2_-_panoramio_(3).jpg"}, "shinsaibashi": {"s": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/34/Shinsaibashi-su" +
+"ji_Shopping_Street_20190201.jpg/960px-Shinsaibashi-suji_Shopping_Street_20190201.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_c" +
+"ontent=thumbnail", "l": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/34/Shinsaibashi-suji_Shopping_Street_20190201.jpg/1920px-Shinsaibas" +
+"hi-suji_Shopping_Street_20190201.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail", "cap": "心齋橋筋商店街", "by":
+"そらみみ", "lic": "CC BY-SA 4.0", "page": "https://commons.wikimedia.org/wiki/File:Shinsaibashi-suji_Shopping_Street_20190201.jpg"}, "outlet": {"s":
+"https://thumb.wikimedia.org/wikipedia/commons/thumb/1/16/Kobe-Sanda_Premium_Outlets002.jpg/960px-Kobe-Sanda_Premium_Outlets002.jpg?utm_source=comm" +
+"ons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail", "l": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/16/Kobe-Sanda_Premium" +
+"_Outlets002.jpg/1920px-Kobe-Sanda_Premium_Outlets002.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail", "cap":
+"神戶三田 Premium Outlets", "by": "Hashi photo", "lic": "CC BY 3.0", "page": "https://commons.wikimedia.org/wiki/File:Kobe-Sanda_Premium_Outlets002" +
+".jpg"}, "rinku": {"s": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/6c/Rinku_premium_outlets01s3200.jpg/960px-Rinku_premium_outlets01s32" +
+"00.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail", "l": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6" +
+"/6c/Rinku_premium_outlets01s3200.jpg/1920px-Rinku_premium_outlets01s3200.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=t" +
+"humbnail", "cap": "臨空城 Premium Outlets", "by": "663highland", "lic": "CC BY 2.5", "page": "https://commons.wikimedia.org/wiki/File:Rinku_premiu" +
+"m_outlets01s3200.jpg"}, "rapit": {"s": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/7a/Nankai_50000_series_50002F.jpg/960px-Nankai_50000" +
+"_series_50002F.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail", "l": "https://thumb.wikimedia.org/wikipedia/com" +
+"mons/thumb/7/7a/Nankai_50000_series_50002F.jpg/1920px-Nankai_50000_series_50002F.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_c" +
+"ontent=thumbnail", "cap": "南海 Rapi:t 特急", "by": "日根野", "lic": "CC BY-SA 4.0", "page": "https://commons.wikimedia.org/wiki/File:Nankai_50000" +
+"_series_50002F.jpg"}, "kix": {"s": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/78/Kansai_Airport_Terminal_1_Departure_2025.JPG/960px-Ka" +
+"nsai_Airport_Terminal_1_Departure_2025.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail", "l": "https://thumb.wik" +
+"imedia.org/wikipedia/commons/thumb/7/78/Kansai_Airport_Terminal_1_Departure_2025.JPG/1920px-Kansai_Airport_Terminal_1_Departure_2025.JPG?utm_sourc" +
+"e=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail", "cap": "關西機場第一航廈出境大廳", "by": "Fotointheworld", "lic": "CC BY 4.0",
+"page": "https://commons.wikimedia.org/wiki/File:Kansai_Airport_Terminal_1_Departure_2025.JPG"}, "namba": {"s": "https://thumb.wikimedia.org/wikipe" +
+"dia/commons/thumb/b/b5/Takashimaya_osaka02_1920.jpg/960px-Takashimaya_osaka02_1920.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm" +
+"_content=thumbnail", "l": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b5/Takashimaya_osaka02_1920.jpg/1920px-Takashimaya_osaka02_1920.j" +
+"pg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail", "cap": "南海難波站・高島屋大阪店", "by": "663highland", "lic":
+"CC BY 2.5", "page": "https://commons.wikimedia.org/wiki/File:Takashimaya_osaka02_1920.jpg"}, "kasuga": {"s": "https://thumb.wikimedia.org/wikipedi" +
+"a/commons/thumb/a/a5/Lanterns_Kasuga-taisha_Nara.jpg/960px-Lanterns_Kasuga-taisha_Nara.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo" +
+"&utm_content=thumbnail", "l": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a5/Lanterns_Kasuga-taisha_Nara.jpg/1920px-Lanterns_Kasuga-tai" +
+"sha_Nara.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail", "cap": "春日大社的石燈籠", "by": "Gzzz", "lic": "CC B" +
+"Y-SA 4.0", "page": "https://commons.wikimedia.org/wiki/File:Lanterns_Kasuga-taisha_Nara.jpg"}, "umeda": {"s": "https://thumb.wikimedia.org/wikiped" +
+"ia/commons/thumb/1/1d/JP-Osaka-Umeda-Hankyu-Department-Store.jpg/960px-JP-Osaka-Umeda-Hankyu-Department-Store.jpg?utm_source=commons.wikimedia.org" +
+"&utm_campaign=imageinfo&utm_content=thumbnail", "l": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1d/JP-Osaka-Umeda-Hankyu-Department-St" +
+"ore.jpg/1920px-JP-Osaka-Umeda-Hankyu-Department-Store.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail", "cap":
+"阪急うめだ本店", "by": "Kanchi1979", "lic": "CC BY-SA 4.0", "page": "https://commons.wikimedia.org/wiki/File:JP-Osaka-Umeda-Hankyu-Department-Stor" +
+"e.jpg"}, "tsutenkaku": {"s": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/2b/Shinsekai_and_Tsutenkaku_Tower.jpg/960px-Shinsekai_and_Tsut" +
+"enkaku_Tower.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail", "l": "https://thumb.wikimedia.org/wikipedia/commo" +
+"ns/thumb/2/2b/Shinsekai_and_Tsutenkaku_Tower.jpg/1920px-Shinsekai_and_Tsutenkaku_Tower.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo" +
+"&utm_content=thumbnail", "cap": "新世界與通天閣", "by": "Sakai Yayoi", "lic": "CC0", "page": "https://commons.wikimedia.org/wiki/File:Shinsekai_an" +
+"d_Tsutenkaku_Tower.jpg"}, "harukas": {"s": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/cd/Abeno_Harukas_building_%40_Osaka_%28133825960" +
+"43%29.jpg/960px-Abeno_Harukas_building_%40_Osaka_%2813382596043%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbna" +
+"il", "l": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/cd/Abeno_Harukas_building_%40_Osaka_%2813382596043%29.jpg/1920px-Abeno_Harukas_bu" +
+"ilding_%40_Osaka_%2813382596043%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail", "cap": "阿倍野 HARUKAS", "by":
+"Guilhem Vellut from Annecy, France", "lic": "CC BY 2.0", "page": "https://commons.wikimedia.org/wiki/File:Abeno_Harukas_building_@_Osaka_(13382596" +
+"043).jpg"}, "k_tower": {"s": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/14/Kyoto_Tower_seen_from_the_Sky_garden_of_Kyoto_Station_Build" +
+"ing_at_night_20260921.jpg/960px-Kyoto_Tower_seen_from_the_Sky_garden_of_Kyoto_Station_Building_at_night_20260921.jpg?utm_source=commons.wikimedia." +
+"org&utm_campaign=imageinfo&utm_content=thumbnail", "l": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/14/Kyoto_Tower_seen_from_the_Sky_ga" +
+"rden_of_Kyoto_Station_Building_at_night_20260921.jpg/1920px-Kyoto_Tower_seen_from_the_Sky_garden_of_Kyoto_Station_Building_at_night_20260921.jpg?u" +
+"tm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail", "cap": "從京都車站空中庭園望京都塔", "by": "掬茶", "lic": "CC BY-SA" +
+" 4.0", "page": "https://commons.wikimedia.org/wiki/File:Kyoto_Tower_seen_from_the_Sky_garden_of_Kyoto_Station_Building_at_night_20260921.jpg"},
+"k_stairs": {"s": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/46/Grand_staircase_of_Kyoto_Station_at_night_20260921.jpg/960px-Grand_stai" +
+"rcase_of_Kyoto_Station_at_night_20260921.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail", "l": "https://thumb.w" +
+"ikimedia.org/wikipedia/commons/thumb/4/46/Grand_staircase_of_Kyoto_Station_at_night_20260921.jpg/1920px-Grand_staircase_of_Kyoto_Station_at_night_" +
+"20260921.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail", "cap": "京都車站大階梯夜間燈飾", "by": "掬茶", "lic":
+"CC BY-SA 4.0", "page": "https://commons.wikimedia.org/wiki/File:Grand_staircase_of_Kyoto_Station_at_night_20260921.jpg"}, "k_station": {"s": "http" +
+"s://thumb.wikimedia.org/wikipedia/commons/thumb/a/a4/Overview_of_the_grand_staircase_of_Kyoto_Station_at_night_20260921a.jpg/960px-Overview_of_the" +
+"_grand_staircase_of_Kyoto_Station_at_night_20260921a.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail", "l": "htt" +
+"ps://thumb.wikimedia.org/wikipedia/commons/thumb/a/a4/Overview_of_the_grand_staircase_of_Kyoto_Station_at_night_20260921a.jpg/1920px-Overview_of_t" +
+"he_grand_staircase_of_Kyoto_Station_at_night_20260921a.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail", "cap":
+"京都車站大樓夜景", "by": "掬茶", "lic": "CC BY-SA 4.0", "page": "https://commons.wikimedia.org/wiki/File:Overview_of_the_grand_staircase_of_Kyoto_" +
+"Station_at_night_20260921a.jpg"}, "k_shinkyogoku": {"s": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/ed/Shinkyogoku_shopping_arcade%2C_" +
+"Kyoto%2C_August_2019.jpg/960px-Shinkyogoku_shopping_arcade%2C_Kyoto%2C_August_2019.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm" +
+"_content=thumbnail", "l": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/ed/Shinkyogoku_shopping_arcade%2C_Kyoto%2C_August_2019.jpg/1920px" +
+"-Shinkyogoku_shopping_arcade%2C_Kyoto%2C_August_2019.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail", "cap":
+"新京極商店街", "by": "NevinThompson", "lic": "CC BY-SA 4.0", "page": "https://commons.wikimedia.org/wiki/File:Shinkyogoku_shopping_arcade,_Kyoto,_" +
+"August_2019.jpg"}, "k_kamogawa": {"s": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/24/Night_by_the_Kamogawa_River_%2853448413279%29.jpg" +
+"/960px-Night_by_the_Kamogawa_River_%2853448413279%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail", "l": "htt" +
+"ps://thumb.wikimedia.org/wikipedia/commons/thumb/2/24/Night_by_the_Kamogawa_River_%2853448413279%29.jpg/1920px-Night_by_the_Kamogawa_River_%285344" +
+"8413279%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail", "cap": "夜晚的鴨川", "by": "Michael Coghlan from Ad" +
+"elaide, Australia", "lic": "CC BY-SA 2.0", "page": "https://commons.wikimedia.org/wiki/File:Night_by_the_Kamogawa_River_(53448413279).jpg"},
+"k_gion_night": {"s": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/2a/Japan_A_Night_in_Gion_%2813934184196%29.jpg/960px-Japan_A_Night_in_" +
+"Gion_%2813934184196%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail", "l": "https://thumb.wikimedia.org/wikip" +
+"edia/commons/thumb/2/2a/Japan_A_Night_in_Gion_%2813934184196%29.jpg/1920px-Japan_A_Night_in_Gion_%2813934184196%29.jpg?utm_source=commons.wikimedi" +
+"a.org&utm_campaign=imageinfo&utm_content=thumbnail", "cap": "祇園白川・巽橋一帶夜景", "by": "Yiannis Theologos Michellis", "lic": "CC0", "page":
+"https://commons.wikimedia.org/wiki/File:Japan_A_Night_in_Gion_(13934184196).jpg"}, "k_fushimi_night": {"s": "https://thumb.wikimedia.org/wikipedia" +
+"/commons/thumb/f/fa/More_Gates_at_Night_-_Fushimi_Inari_Shrine_%2827311123557%29.jpg/960px-More_Gates_at_Night_-_Fushimi_Inari_Shrine_%28273111235" +
+"57%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail", "l": "https://thumb.wikimedia.org/wikipedia/commons/thum" +
+"b/f/fa/More_Gates_at_Night_-_Fushimi_Inari_Shrine_%2827311123557%29.jpg/1920px-More_Gates_at_Night_-_Fushimi_Inari_Shrine_%2827311123557%29.jpg?ut" +
+"m_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail", "cap": "夜晚的伏見稻荷千本鳥居", "by": "Ajay Suresh from New York, N" +
+"Y, USA", "lic": "CC BY 2.0", "page": "https://commons.wikimedia.org/wiki/File:More_Gates_at_Night_-_Fushimi_Inari_Shrine_(27311123557).jpg"},
+"o_umeda_night": {"s": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e1/Night_view_from_Umeda_Sky_Building_%28south_side%29_20250830.jpg/9" +
+"60px-Night_view_from_Umeda_Sky_Building_%28south_side%29_20250830.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+"l": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e1/Night_view_from_Umeda_Sky_Building_%28south_side%29_20250830.jpg/1920px-Night_view_f" +
+"rom_Umeda_Sky_Building_%28south_side%29_20250830.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail", "cap": "梅田" +
+"藍天大廈空中庭園南側夜景", "by": "掬茶", "lic": "CC BY-SA 4.0", "page": "https://commons.wikimedia.org/wiki/File:Night_view_from_Umeda_Sky_Buildin" +
+"g_(south_side)_20250830.jpg"}, "o_shinsekai_night": {"s": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/95/Shinsekai_and_Tsutenkaku_at_ni" +
+"ght_2019-04-12.jpg/960px-Shinsekai_and_Tsutenkaku_at_night_2019-04-12.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thum" +
+"bnail", "l": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/95/Shinsekai_and_Tsutenkaku_at_night_2019-04-12.jpg/1920px-Shinsekai_and_Tsute" +
+"nkaku_at_night_2019-04-12.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail", "cap": "夜晚的新世界與通天閣", "by":
+"Dick Thomas Johnson from Tokyo, Japan", "lic": "CC BY 2.0", "page": "https://commons.wikimedia.org/wiki/File:Shinsekai_and_Tsutenkaku_at_night_201" +
+"9-04-12.jpg"}, "o_amemura": {"s": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/21/Amerikamura_%28Busy%29.jpg/960px-Amerikamura_%28Busy%2" +
+"9.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail", "l": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/" +
+"21/Amerikamura_%28Busy%29.jpg/1920px-Amerikamura_%28Busy%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+"cap": "美國村", "by": "BradBeattie at English Wikipedia", "lic": "CC BY-SA 3.0", "page": "https://commons.wikimedia.org/wiki/File:Amerikamura_(Bus" +
+"y).jpg"}, "o_horie": {"s": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e5/Minamihorie-1.jpg/960px-Minamihorie-1.jpg?utm_source=commons." +
+"wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail", "l": "https://upload.wikimedia.org/wikipedia/commons/e/e5/Minamihorie-1.jpg?utm_sourc" +
+"e=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original", "cap": "南堀江的家具雜貨街", "by": "W236", "lic": "CC BY-SA 3.0", "page": "h" +
+"ttps://commons.wikimedia.org/wiki/File:Minamihorie-1.jpg"}, "o_shitennoji": {"s": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/6b/View_o" +
+"f_Abeno_Harukas_and_Shitenn%C5%8D-ji_five-storied_pagoda_at_dusk%2C_January_2024_%28clone_version%29_-_9978.jpg/960px-View_of_Abeno_Harukas_and_Sh" +
+"itenn%C5%8D-ji_five-storied_pagoda_at_dusk%2C_January_2024_%28clone_version%29_-_9978.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&" +
+"utm_content=thumbnail", "l": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/6b/View_of_Abeno_Harukas_and_Shitenn%C5%8D-ji_five-storied_pag" +
+"oda_at_dusk%2C_January_2024_%28clone_version%29_-_9978.jpg/1920px-View_of_Abeno_Harukas_and_Shitenn%C5%8D-ji_five-storied_pagoda_at_dusk%2C_Januar" +
+"y_2024_%28clone_version%29_-_9978.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail", "cap": "黃昏的四天王寺五重塔",
+"by": "Laitche", "lic": "CC BY-SA 4.0", "page": "https://commons.wikimedia.org/wiki/File:View_of_Abeno_Harukas_and_Shitenn%C5%8D-ji_five-storied_pa" +
+"goda_at_dusk,_January_2024_(clone_version)_-_9978.jpg"}, "o_kitagane": {"s": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/6b/Stone_Stage" +
+"_and_North_Bell_Tower_of_Shitennoji_Temple.JPG/960px-Stone_Stage_and_North_Bell_Tower_of_Shitennoji_Temple.JPG?utm_source=commons.wikimedia.org&ut" +
+"m_campaign=imageinfo&utm_content=thumbnail", "l": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/6b/Stone_Stage_and_North_Bell_Tower_of_Sh" +
+"itennoji_Temple.JPG/1920px-Stone_Stage_and_North_Bell_Tower_of_Shitennoji_Temple.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_c" +
+"ontent=thumbnail", "cap": "四天王寺北鐘堂", "by": "そらみみ", "lic": "CC BY-SA 3.0", "page": "https://commons.wikimedia.org/wiki/File:Stone_Stage_" +
+"and_North_Bell_Tower_of_Shitennoji_Temple.JPG"}, "o_kaiyukan": {"s": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/7d/Two_whale-sharks_ka" +
+"yukan.JPG/960px-Two_whale-sharks_kayukan.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail", "l": "https://thumb.w" +
+"ikimedia.org/wikipedia/commons/thumb/7/7d/Two_whale-sharks_kayukan.JPG/1920px-Two_whale-sharks_kayukan.JPG?utm_source=commons.wikimedia.org&utm_ca" +
+"mpaign=imageinfo&utm_content=thumbnail", "cap": "海遊館的兩隻鯨鯊", "by": "Glaoadare", "lic": "CC BY-SA 3.0", "page": "https://commons.wikimedia.o" +
+"rg/wiki/File:Two_whale-sharks_kayukan.JPG"}, "k_hosenin": {"s": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/77/Kyoto_%2816042896668%29." +
+"jpg/960px-Kyoto_%2816042896668%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail", "l": "https://thumb.wikimedi" +
+"a.org/wikipedia/commons/thumb/7/77/Kyoto_%2816042896668%29.jpg/1920px-Kyoto_%2816042896668%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=im" +
+"ageinfo&utm_content=thumbnail", "cap": "寶泉院客殿看出去的額緣庭園", "by": "Moyan Brenn from Italy", "lic": "CC BY 2.0", "page": "https://commons." +
+"wikimedia.org/wiki/File:Kyoto_(16042896668).jpg"}, "o_kofukuji": {"s": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/80/Kofuku-ji%2C_chuk" +
+"ondou-2.jpg/960px-Kofuku-ji%2C_chukondou-2.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail", "l": "https://thumb" +
+".wikimedia.org/wikipedia/commons/thumb/8/80/Kofuku-ji%2C_chukondou-2.jpg/1920px-Kofuku-ji%2C_chukondou-2.jpg?utm_source=commons.wikimedia.org&utm_" +
+"campaign=imageinfo&utm_content=thumbnail", "cap": "興福寺中金堂", "by": "Saigen Jiro", "lic": "CC0", "page": "https://commons.wikimedia.org/wiki/F" +
+"ile:Kofuku-ji,_chukondou-2.jpg"}, "o_nigatsudo": {"s": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a3/Todai-ji_Nigatsudo_%2852541498651" +
+"%29.jpg/960px-Todai-ji_Nigatsudo_%2852541498651%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail", "l": "https" +
+"://thumb.wikimedia.org/wikipedia/commons/thumb/a/a3/Todai-ji_Nigatsudo_%2852541498651%29.jpg/1920px-Todai-ji_Nigatsudo_%2852541498651%29.jpg?utm_s" +
+"ource=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail", "cap": "通往東大寺二月堂的石板坡道", "by": "Raita Futo from Tokyo, Japan",
+"lic": "CC BY 2.0", "page": "https://commons.wikimedia.org/wiki/File:Todai-ji_Nigatsudo_(52541498651).jpg"}, "o_grandfront": {"s": "https://thumb.w" +
+"ikimedia.org/wikipedia/commons/thumb/f/f8/Grand_Front_Osaka_in_201409.JPG/960px-Grand_Front_Osaka_in_201409.JPG?utm_source=commons.wikimedia.org&u" +
+"tm_campaign=imageinfo&utm_content=thumbnail", "l": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f8/Grand_Front_Osaka_in_201409.JPG/1920p" +
+"x-Grand_Front_Osaka_in_201409.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail", "cap": "Grand Front 大阪", "by":
+"Mc681", "lic": "CC BY-SA 4.0", "page": "https://commons.wikimedia.org/wiki/File:Grand_Front_Osaka_in_201409.JPG"}, "g_ajari": {"s": "https://thumb" +
+".wikimedia.org/wikipedia/commons/thumb/a/a4/Ajarimochi.jpg/960px-Ajarimochi.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_conten" +
+"t=thumbnail", "l": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a4/Ajarimochi.jpg/1920px-Ajarimochi.jpg?utm_source=commons.wikimedia.org" +
+"&utm_campaign=imageinfo&utm_content=thumbnail", "cap": "満月的阿闍梨餅", "by": "Kykk wiki", "lic": "CC0", "page": "https://commons.wikimedia.org/w" +
+"iki/File:Ajarimochi.jpg"}, "g_hijiri": {"s": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/9d/%E8%81%96%E8%AD%B7%E9%99%A2_%E7%94%9F%E5%85" +
+"%AB%E3%83%84%E6%A9%8B_%E5%95%86%E5%93%81%E8%A6%8B%E6%9C%AC_%283235077824%29.jpg/960px-%E8%81%96%E8%AD%B7%E9%99%A2_%E7%94%9F%E5%85%AB%E3%83%84%E6%A" +
+"9%8B_%E5%95%86%E5%93%81%E8%A6%8B%E6%9C%AC_%283235077824%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail", "l":
+"https://thumb.wikimedia.org/wikipedia/commons/thumb/9/9d/%E8%81%96%E8%AD%B7%E9%99%A2_%E7%94%9F%E5%85%AB%E3%83%84%E6%A9%8B_%E5%95%86%E5%93%81%E8%A6" +
+"%8B%E6%9C%AC_%283235077824%29.jpg/1920px-%E8%81%96%E8%AD%B7%E9%99%A2_%E7%94%9F%E5%85%AB%E3%83%84%E6%A9%8B_%E5%95%86%E5%93%81%E8%A6%8B%E6%9C%AC_%28" +
+"3235077824%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail", "cap": "聖護院生八橋「聖」的商品樣本", "by": "Mi" +
+"chael", "lic": "CC BY 2.0", "page": "https://commons.wikimedia.org/wiki/File:%E8%81%96%E8%AD%B7%E9%99%A2_%E7%94%9F%E5%85%AB%E3%83%84%E6%A9%8B_%E5%" +
+"95%86%E5%93%81%E8%A6%8B%E6%9C%AC_(3235077824).jpg"}, "g_yuko": {"s": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/ec/Nama_Yatsuhashi_for" +
+"_sale_in_Sakuranocho.jpg/960px-Nama_Yatsuhashi_for_sale_in_Sakuranocho.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thu" +
+"mbnail", "l": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/ec/Nama_Yatsuhashi_for_sale_in_Sakuranocho.jpg/1920px-Nama_Yatsuhashi_for_sal" +
+"e_in_Sakuranocho.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail", "cap": "井筒生八橋「夕子」的貨架", "by": "Yue" +
+"t Man Lee", "lic": "CC BY-SA 4.0", "page": "https://commons.wikimedia.org/wiki/File:Nama_Yatsuhashi_for_sale_in_Sakuranocho.jpg"}, "g_yaki": {"s":
+"https://thumb.wikimedia.org/wikipedia/commons/thumb/3/33/Yatsuhashi_%28347613370%29.jpg/960px-Yatsuhashi_%28347613370%29.jpg?utm_source=commons.wi" +
+"kimedia.org&utm_campaign=imageinfo&utm_content=thumbnail", "l": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/33/Yatsuhashi_%28347613370%" +
+"29.jpg/1920px-Yatsuhashi_%28347613370%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail", "cap": "烤八橋（示意" +
+"，圖為井筒的包裝）", "by": "Toshiyuki IMAI from Kyoto, Japan", "lic": "CC BY-SA 2.0", "page": "https://commons.wikimedia.org/wiki/File:Yatsuhashi_" +
+"(347613370).jpg"}, "g_kyobaum": {"s": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b4/Otabe_Arashiyama_Shop%2C_Kyoto_-_Oct_16%2C_2005.jp" +
+"g/960px-Otabe_Arashiyama_Shop%2C_Kyoto_-_Oct_16%2C_2005.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail", "l":
+"https://upload.wikimedia.org/wikipedia/commons/b/b4/Otabe_Arashiyama_Shop%2C_Kyoto_-_Oct_16%2C_2005.jpg?utm_source=commons.wikimedia.org&utm_campa" +
+"ign=imageinfo&utm_content=original", "cap": "美十「おたべ」嵐山店（京ばあむ同公司）", "by": "Ail Lee", "lic": "CC BY 2.0", "page": "https://common" +
+"s.wikimedia.org/wiki/File:Otabe_Arashiyama_Shop,_Kyoto_-_Oct_16,_2005.jpg"}, "g_hagoromo": {"s": "https://thumb.wikimedia.org/wikipedia/commons/th" +
+"umb/c/cd/Okinawa_beniimo_langue_de_chat.jpg/960px-Okinawa_beniimo_langue_de_chat.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_c" +
+"ontent=thumbnail", "l": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/cd/Okinawa_beniimo_langue_de_chat.jpg/1920px-Okinawa_beniimo_langue" +
+"_de_chat.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail", "cap": "夾心貓舌餅（示意）", "by": "Syced", "lic": "C" +
+"C0", "page": "https://commons.wikimedia.org/wiki/File:Okinawa_beniimo_langue_de_chat.jpg"}, "g_ogura": {"s": "https://thumb.wikimedia.org/wikipedi" +
+"a/commons/thumb/0/0c/Okaki_for_sale_in_Kawagoe.jpg/960px-Okaki_for_sale_in_Kawagoe.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm" +
+"_content=thumbnail", "l": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/0c/Okaki_for_sale_in_Kawagoe.jpg/1920px-Okaki_for_sale_in_Kawagoe" +
+".jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail", "cap": "日式米果（示意）", "by": "nakimusi", "lic": "CC BY 2.0",
+"page": "https://commons.wikimedia.org/wiki/File:Okaki_for_sale_in_Kawagoe.jpg"}, "g_mchoco": {"s": "https://thumb.wikimedia.org/wikipedia/commons/" +
+"thumb/0/01/Royce_chocolate.jpg/960px-Royce_chocolate.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail", "l": "htt" +
+"ps://thumb.wikimedia.org/wikipedia/commons/thumb/0/01/Royce_chocolate.jpg/1920px-Royce_chocolate.jpg?utm_source=commons.wikimedia.org&utm_campaign" +
+"=imageinfo&utm_content=thumbnail", "cap": "生巧克力（示意，圖為 ROYCE'）", "by": "Antonio733", "lic": "CC BY-SA 4.0", "page": "https://commons.wik" +
+"imedia.org/wiki/File:Royce_chocolate.jpg"}, "g_tsuki": {"s": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/0f/Tsuki_Gesho_Namba.jpg/960px" +
+"-Tsuki_Gesho_Namba.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail", "l": "https://thumb.wikimedia.org/wikipedia" +
+"/commons/thumb/0/0f/Tsuki_Gesho_Namba.jpg/1920px-Tsuki_Gesho_Namba.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbna" +
+"il", "cap": "月化粧難波直營店", "by": "Mr.ちゅらさん", "lic": "CC BY-SA 4.0", "page": "https://commons.wikimedia.org/wiki/File:Tsuki_Gesho_Namba.j" +
+"pg"}, "g_okoshi": {"s": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/64/Awaokoshi_01.jpg/960px-Awaokoshi_01.jpg?utm_source=commons.wikim" +
+"edia.org&utm_campaign=imageinfo&utm_content=thumbnail", "l": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/64/Awaokoshi_01.jpg/1920px-Awa" +
+"okoshi_01.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail", "cap": "粟おこし", "by": "Mugu-shisai", "lic": "CC B" +
+"Y-SA 3.0", "page": "https://commons.wikimedia.org/wiki/File:Awaokoshi_01.jpg"}, "g_petit": {"s": "https://thumb.wikimedia.org/wikipedia/commons/th" +
+"umb/4/41/%E5%A4%A7%E9%98%AA%E5%9C%9F%E7%94%A3_%E5%A0%82%E5%B3%B6%E3%83%AD%E3%83%BC%E3%83%AB_2014-06-08.jpg/960px-%E5%A4%A7%E9%98%AA%E5%9C%9F%E7%94" +
+"%A3_%E5%A0%82%E5%B3%B6%E3%83%AD%E3%83%BC%E3%83%AB_2014-06-08.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail", "l":
+"https://thumb.wikimedia.org/wikipedia/commons/thumb/4/41/%E5%A4%A7%E9%98%AA%E5%9C%9F%E7%94%A3_%E5%A0%82%E5%B3%B6%E3%83%AD%E3%83%BC%E3%83%AB_2014-0" +
+"6-08.jpg/1920px-%E5%A4%A7%E9%98%AA%E5%9C%9F%E7%94%A3_%E5%A0%82%E5%B3%B6%E3%83%AD%E3%83%BC%E3%83%AB_2014-06-08.jpg?utm_source=commons.wikimedia.org" +
+"&utm_campaign=imageinfo&utm_content=thumbnail", "cap": "Mon cher 堂島ロール（示意，プティロール為常溫小份版）", "by": "Nori Norisa from 熊谷市, Ja" +
+"pan", "lic": "CC BY 2.0", "page": "https://commons.wikimedia.org/wiki/File:%E5%A4%A7%E9%98%AA%E5%9C%9F%E7%94%A3_%E5%A0%82%E5%B3%B6%E3%83%AD%E3%83%" +
+"BC%E3%83%AB_2014-06-08.jpg"}, "g_tako": {"s": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/bb/Tako_senbei_-_for_sale_in_Tokyo_-_July_1_2" +
+"020.jpeg/960px-Tako_senbei_-_for_sale_in_Tokyo_-_July_1_2020.jpeg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+"l": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/bb/Tako_senbei_-_for_sale_in_Tokyo_-_July_1_2020.jpeg/1920px-Tako_senbei_-_for_sale_in_" +
+"Tokyo_-_July_1_2020.jpeg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail", "cap": "章魚仙貝（示意）", "by": "Nesnad",
+"lic": "CC BY 4.0", "page": "https://commons.wikimedia.org/wiki/File:Tako_senbei_-_for_sale_in_Tokyo_-_July_1_2020.jpeg"}, "g_pretz": {"s": "https:" +
+"//thumb.wikimedia.org/wikipedia/commons/thumb/9/9b/Pretz_Roast_and_Salad_Packages.jpg/960px-Pretz_Roast_and_Salad_Packages.jpg?utm_source=commons." +
+"wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail", "l": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/9b/Pretz_Roast_and_Salad_" +
+"Packages.jpg/1920px-Pretz_Roast_and_Salad_Packages.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail", "cap": "固" +
+"力果 Pretz（示意，圖為一般口味）", "by": "Davidng913", "lic": "CC BY-SA 4.0", "page": "https://commons.wikimedia.org/wiki/File:Pretz_Roast_and_Sal" +
+"ad_Packages.jpg"}, "k_jojakko": {"s": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a7/Jou_Jakkoji_2009-1-25.jpg/960px-Jou_Jakkoji_2009-1" +
+"-25.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail", "l": "https://thumb.wikimedia.org/wikipedia/commons/thumb/" +
+"a/a7/Jou_Jakkoji_2009-1-25.jpg/1920px-Jou_Jakkoji_2009-1-25.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+"cap": "一月的常寂光寺茅草屋頂仁王門", "by": "osakaosaka", "lic": "Public domain", "page": "https://commons.wikimedia.org/wiki/File:Jou_Jakkoji_200" +
+"9-1-25.jpg"}};
 const gmap = (o, d, w = [], mode = 'driving') => 'https://www.google.com/maps/dir/?api=1&travelmode=' + mode + '&origin=' + encodeURIComponent(o) +
 '&destination=' + encodeURIComponent(d) + (w.length ? '&waypoints=' + encodeURIComponent(w.join('|')) : '');
 const PLANS = {};
@@ -2268,14 +2277,14 @@ mode: 'rail',
 color: '#4D6B33',
 icon: 'train',
 badge: ['rec', '3 人 · 電車慢遊'],
-sub: '四晚連住地鐵五條站旁的 The Garden Hotel 京都五条 × 嵐山竹林與小火車 × 大原三千院與貴船 × 清水寺與東山 × 夜行程：新京極日潮、自由購物、' +
-'伏見稻荷夜訪 × 12/30 天橋立・伊根一日遊到大阪',
+sub: '四晚連住地鐵五條站旁的 The Garden Hotel 京都五条 × 嵐山竹林與小火車 × 大原三千院與貴船點燈 × 清水寺與東山 × 夜行程：新京極日潮、自由購' +
+'物、伏見稻荷夜訪 × 12/30 天橋立・伊根一日遊到大阪',
 hero: 'k_bamboo',
 summary: '三個人從關西機場搭 HARUKA 直達京都，四晚都住地鐵烏丸線五條站 6 號出口旁的 The Garden Hotel 京都五条（兩間相通的房間，4 張單人床），行李' +
-'打開就不用再收；往南 1 站到京都站、往北 1 站到四條，白天出遠門、晚上回市區都很近。白天每天一個區域：嵐山一天、大原加貴船一天、清水寺與東山半天；第' +
-'一晚入住後等同伴陸續抵達，在飯店附近吃晚餐；之後三晚：第二晚四條河原町逛日潮後到先斗町吃飯、第三晚在河原町吃和牛壽喜燒與蟹吃到飽，再自由購物逛街、' +
-'最後一晚輕鬆走一趟伏見稻荷千本鳥居，早點回飯店準備隔天一早退房。12/30 參加 Klook 天橋立・伊根舟屋一日遊，傍晚在大阪道頓堀下車，和劉有耘會合，接著' +
-'進入大阪篇。',
+'打開就不用再收；往南 1 站到京都站、往北 1 站到四條，白天出遠門、晚上回市區都很近。白天每天一個區域：嵐山一天、大原加貴船（傍晚看燈籠點燈）一天、清' +
+'水寺與東山半天；第一晚入住後等同伴陸續抵達，在飯店附近吃晚餐；之後三晚：第二晚先從亀岡搭小火車回嵐山，由北往南一路逛到傍晚，直接到河原町 17:20 吃' +
+'和牛壽喜燒與蟹吃到飽，飯後逛新京極；第三晚從貴船下山後到先斗町吃飯、沿鴨川散步、最後一晚輕鬆走一趟伏見稻荷千本鳥居，早點回飯店準備隔天一早退房。12' +
+'/30 參加 Klook 天橋立・伊根舟屋一日遊，傍晚在大阪道頓堀下車，和劉有耘會合，接著進入大阪篇。',
 who: '三個男生、一人一張床；白天看京都經典，晚上想逛街、吃飯、看夜景，不想每天換飯店',
 stats: [['3', '人同行'], ['4', '晚同一間飯店'], ['3', '個夜行程'], ['1', '站到京都站／四條']],
 snow: 0,
@@ -2305,10 +2314,10 @@ budget: [
 '立・伊根一日遊另計，以 Klook 含票方案價格為準。'],
 ['住宿', 'The Garden Hotel 京都五条連通房 4 晚（Airbnb 已訂），訂房頁價格 NT$32,662（含 Airbnb 所有費用，3 人分攤約 NT$10,900／人），金額以 Air' +
 'bnb 收據為準；宿泊稅 3 人 4 晚共 ¥4,800，入住時另付。'],
-['門票', '約 ¥2,000–3,500／人：天龍寺庭園 ¥500、三千院 ¥700、清水寺 ¥500；選配：大河內山莊含抹茶 ¥1,000、寶泉院 ¥1,000。伏見稻荷、貴船神社免費' +
-'。'],
-['餐飲', '嵐山湯豆腐約 ¥3,000–5,000、大原午餐約 ¥1,500–3,000、先斗町晚餐約 ¥5,000–10,000／人、12/28 和牛とカニ吃到飽約 ¥9,000–16,000／人（' +
-'含飲料喝到飽，依方案）；拉麵小路、錦市場邊走邊吃另計。']
+['門票', '約 ¥2,500–4,000／人：天龍寺庭園 ¥500、常寂光寺 ¥600、三千院 ¥700、清水寺 ¥500；選配：二尊院 ¥500、大河內山莊含抹茶 ¥1,000、寶泉院 ¥1' +
+',000。伏見稻荷、貴船神社免費。'],
+['餐飲', '嵐山湯豆腐約 ¥3,000–5,000、大原午餐約 ¥1,500–3,000、先斗町晚餐約 ¥5,000–10,000／人、12/27 和牛とカニ吃到飽約 ¥9,000–16,000／人（' +
+'含飲料喝到飽，依方案）；拉麵小路另計。']
 ],
 road: '全程不開車，靠電車、巴士和步行移動，每人一張 IC 卡（ICOCA 或 Apple 錢包裡的 Suica）就能搭大部分路線。飯店在地鐵烏丸線五條站 6 號出口旁：往' +
 '南 1 站到京都站、往北 1 站到四條（接阪急烏丸，再 1 站到京都河原町），步行到京都站約 12 分；三個人短程搭計程車，分攤後也很划算。嵐山從京都站搭 JR ' +
@@ -2317,8 +2326,8 @@ road: '全程不開車，靠電車、巴士和步行移動，每人一張 IC 卡
 route: [
 ['關西機場', '12/26', '', 34.4344, 135.2449],
 ['五條・Garden Hotel', '12/26', 'HARUKA 1h20', 34.9954, 135.7592],
-['嵐山・河原町', '12/27', '往返約 1h', 34.9954, 135.7592],
-['大原・貴船・購物', '12/28', '約 2h40', 34.9954, 135.7592],
+['嵐山・常寂光寺・河原町', '12/27', '約 1h40', 34.9954, 135.7592],
+['大原・貴船・先斗町', '12/28', '約 2h40', 34.9954, 135.7592],
 ['東山・伏見稻荷', '12/29', '約 40 分', 34.9954, 135.7592],
 ['大阪道頓堀', '12/30', '一日遊 9h45', 34.6687, 135.5013]
 ],
@@ -2364,94 +2373,129 @@ map: gmap('関西国際空港 第1ターミナル', '京都市下京区横諏訪
 },
 {
 d: '12/27', w: 'SUN', short: '嵐山・河原町',
-title: '嵐山竹林與小火車・新京極日潮與先斗町',
+title: '小火車・常寂光寺・竹林・天龍寺・和牛蟹吃到飽',
 from: '五條', to: '五條',
-drive: '電車往返約 1h · JR 嵯峨野線＋小火車',
-img: 'k_togetsu', gallery: ['k_bamboo2', 'k_tenryuji', 'k_yudofu', 'k_sagano', 'k_shinkyogoku', 'k_pontocho', 'k_kamogawa'],
-tags: ['竹林', '嵯峨野小火車', '新京極日潮', '先斗町'],
-must: ['小火車 11/27 開放預約就訂', '竹林排在早上（週日）', '先斗町先訂位'],
+drive: '電車約 1h40 · JR 嵯峨野線＋小火車＋阪急',
+img: 'k_togetsu', gallery: ['k_sagano', 'k_jojakko', 'k_bamboo2', 'k_yudofu', 'k_tenryuji', 'k_shinkyogoku'],
+tags: ['嵯峨野小火車', '常寂光寺', '竹林', '天龍寺', '和牛壽喜燒＋蟹吃到飽'],
+must: ['小火車 11/27 開賣就訂：トロッコ亀岡 9:30（嵯峨野2號）→ トロッコ嵐山', '8:20 出門，趕京都站 8:40 的 JR', '和牛とカニ訂 17:20（17:30 ' +
+'前入店有折扣）', '購物帶護照'],
 stayS: 'The Garden Hotel・第 2 晚',
-foodS: '午：嵐山湯豆腐 · 晚：先斗町',
+foodS: '午：嵐山湯豆腐 · 晚：和牛とカニ 17:20',
 tl: [
-{ t: '09:00', k: 'train', m: 1, n: '搭車到嵐山', s: '地鐵五條 → 京都站，轉 JR 嵯峨野線到嵯峨嵐山', c: ['約 30 分'] },
-{ t: '09:40', k: 'torii', n: '野宮神社・竹林小徑', s: '上午第一站，比午後人少', c: ['早上去'], p: 0 },
-{ t: '10:30', k: 'coffee', o: 1, n: '大河內山莊', s: '竹林盡頭，坐下喝抹茶' },
-{ t: '11:15', k: 'temple', n: '天龍寺曹源池庭園', s: '以嵐山為借景的名庭', c: ['約 45 分'], p: 1 },
-{ t: '12:15', k: 'food', n: '湯豆腐午餐', s: '嵯峨野或天龍寺篩月', c: ['!建議預約'],
-x: [['預約', '週日中午建議預約']] },
-{ t: '13:15', k: 'walk', n: '渡月橋散步', s: '往回走到トロッコ嵯峨站', p: 2 },
-{ t: '14:02', k: 'train', n: '嵯峨野觀光小火車', s: 'トロッコ嵯峨 → トロッコ亀岡', c: ['約 25 分', '¥880', '!要預約'], p: 3,
-x: [['班次', '以官網為準']] },
-{ t: '14:40', k: 'train', m: 1, n: '回飯店休息', s: '步行約 10 分到 JR 馬堀，嵯峨野線回京都站，再搭地鐵 1 站', c: ['約 40 分'] },
-{ t: '17:00', k: 'train', m: 1, n: '到四條河原町', s: '地鐵五條 → 四條，步行約 10 分' },
-{ t: '17:15', k: 'bag', n: '新京極逛日潮', s: '古著、球鞋與潮牌', c: ['約 20:00 打烊'], p: 4,
-x: [['範圍', '寺町京極、新京極商店街的古著、球鞋與潮牌，Kyoto BAL、四條通'], ['打烊', '多數店家約 20:00 打烊']] },
-{ t: '19:15', k: 'food', n: '先斗町晚餐', s: '週日晚上熱門店容易客滿', c: ['!先訂位'], p: 5 },
-{ t: '20:45', k: 'walk', n: '鴨川散步', s: '沿河岸走到三條大橋', p: 6,
-x: [['回飯店', '計程車約 10 分，或搭地鐵']] }
+{ t: '08:20', k: 'train', m: 1, n: '出門到京都站', s: '地鐵五條 → 京都 1 站，走到西側的 JR 嵯峨野線月台', c: ['約 15 分'],
+x: [['為什麼 8:20', '要趕 8:40 的 JR，才接得上 9:30 的小火車；下一班 JR 到馬堀會來不及']] },
+{ t: '08:40', k: 'train', m: 1, n: 'JR 嵯峨野線到馬堀', s: '普通車往亀岡方向，坐到馬堀，下車步行約 10 分到トロッコ亀岡站', c: ['約 35 分'],
+x: [['班次', '京都 8:40 亀岡行（約 15 分一班）；以當天時刻為準'], ['車資', '刷 IC 卡']] },
+{ t: '09:30', k: 'train', n: '嵯峨野觀光小火車', s: 'トロッコ亀岡 → トロッコ嵐山（嵯峨野2號），9:53 到', c: ['約 23 分', '¥880', '!要預約'],
+p: 0,
+x: [['班次', '嵯峨野2號：トロッコ亀岡 9:30 → 保津峡 9:42 → トロッコ嵐山 9:53（官網 2026 時刻表）'], ['座位', '往嵯峨方向坐左側，河景比' +
+'較多'], ['下車', '在トロッコ嵐山下車，不用坐到終點嵯峨；出站就是竹林小徑西端']] },
+{ t: '10:00', k: 'temple', n: '常寂光寺', s: '下車往北走約 8 分，爬石階到多寶塔旁看嵯峨野', c: ['約 45 分', '¥600'], p: 1,
+x: [['開放', '9:00–17:00（16:30 停止受理）'], ['鞋子', '石階和坡道多，穿好走的鞋']] },
+{ t: '10:50', k: 'temple', o: 1, n: '二尊院', s: '常寂光寺往北約 5 分，長長的「紅葉の馬場」參道', c: ['約 30 分', '¥500'],
+x: [['開放', '9:00–16:30'], ['再往北', '祇王寺的苔庭還要再走約 10 分，時間夠再去']] },
+{ t: '11:25', k: 'torii', n: '御髪神社・竹林小徑・野宮神社', s: '經小倉池往南回到竹林，從西往東穿過竹林到野宮神社', c: ['約 45 分'], p: 2,
+x: [['御髪神社', 'トロッコ嵐山站旁祭祀頭髮的小神社，免費，順路看一下'], ['大河內山莊', '竹林西端，想坐下喝抹茶多留約 40 分（選擇性，含抹' +
+'茶 ¥1,000）'], ['人潮', '週日中午竹林人多；想拍人少的畫面，9:53 下車後先在站前那段竹林拍幾張再往北走']] },
+{ t: '12:15', k: 'food', n: '湯豆腐午餐', s: '天龍寺門前或寺內的篩月，從野宮神社步行約 5 分', c: ['!建議預約'],
+x: [['預約', '週日中午建議預約，訂 12:15']] },
+{ t: '13:15', k: 'temple', n: '天龍寺曹源池庭園', s: '以嵐山為借景的名庭', c: ['約 45 分', '¥500'], p: 3 },
+{ t: '14:10', k: 'walk', n: '嵐電嵐山站・和服之森', s: '天龍寺門前往東，站內約 600 根京友禪布柱', c: ['約 20 分', '免費'] },
+{ t: '14:35', k: 'walk', n: '渡月橋・中之島・亀山公園展望台', s: '從渡月橋北岸沿桂川往上游，爬到展望台看保津川峽谷，再走過渡月橋', c: ['約 ' +
+'1 小時'], p: 4,
+x: [['展望台', '嵐山公園亀山地區最高處，免費；看下去就是早上小火車經過的保津川'], ['想看猴子', '可改去渡月橋南側的嵐山モンキーパーク：登' +
+'山約 20 分，16:00 最後入園，門票備現金']] },
+{ t: '15:40', k: 'bag', o: 1, n: '嵐山商店街小逛', s: '渡月橋到嵐電嵐山站一帶，抹茶甜點、伴手禮', c: ['約 40 分'] },
+{ t: '16:30', k: 'train', m: 1, n: '直接到河原町', s: '走過渡月橋到阪急嵐山站，搭阪急到桂轉京都線，坐到京都河原町', c: ['約 40 分'],
+x: [['不回飯店', '從嵐山直接進市區吃晚餐，不繞回五條'], ['另一條路', 'JR 嵯峨嵐山 → 二条，轉地鐵東西線到京都市役所前，再往南走約 8 分']] },
+{ t: '17:20', k: 'food', n: '和牛とカニ 晚餐', s: '和牛壽喜燒＋松葉蟹、帝王蟹吃到飽，含飲料喝到飽', c: ['¥9,000–16,000／人', '!訂 17:20'], p:
+5,
+x: [['方案', '食べログ上有 ¥9,000–16,000 等方案（含飲料喝到飽），依方案決定肉和蟹的種類；以訂位時的現行方案為準'], ['早到優惠', '食べロ' +
+'グ上 17:30 前到店折 ¥1,000，訂 17:20 剛好用得到；優惠內容訂位時確認'], ['營業', '食べログ寫 16:00 或 17:00 開到 24:00（L.O. 23:30）；12/27 是週日' +
+'，熱門時段先訂位'], ['怎麼去', '京都河原町站出來沿河原町通往北，過六角通，SKI 河原町六角ビル 3F，步行約 7 分']] },
+{ t: '19:20', k: 'bag', n: '飯後逛新京極', s: '從六角往西就是新京極、寺町京極：古著、球鞋與潮牌，多數店 20:00 打烊', c: ['約 40 分'], p: 6,
+x: [['範圍', '寺町京極、新京極商店街，Kyoto BAL、四條通；挑一兩家想看的日潮店'], ['回飯店', '計程車約 10 分，或阪急到烏丸轉地鐵 1 站到五' +
+'條']] }
 ],
 spots: [
+{ n: 'トロッコ亀岡站（嵯峨野觀光小火車）', lat: 35.0131, lng: 135.6068,
+t: '2026 年營運到 12/29，週三公休 · 單程 ¥880 · 乘車日 1 個月前 0:00 開放網路預約 · JR 馬堀站步行約 10 分',
+note: '從亀岡沿保津川峽谷坐回嵐山，在竹林旁的トロッコ嵐山下車；往嵯峨方向左側的河景比較多，12/30 起冬季停駛' },
+{ n: '常寂光寺', lat: 35.0197, lng: 135.6692,
+t: '9:00–17:00（16:30 停止受理）· ¥600',
+note: '小倉山山腰的日蓮宗寺院，茅草屋頂的仁王門與多寶塔；紅葉季以外人少很多' },
 { n: '竹林小徑・野宮神社', lat: 35.0170, lng: 135.6720,
-t: '自由通行 · 免費 · JR 嵯峨嵐山站步行約 10 分',
-note: '青竹兩側高聳約 400 m 的小路；野宮神社的黑木鳥居就在入口旁' },
+t: '自由通行 · 免費 · トロッコ嵐山站旁',
+note: '青竹兩側高聳約 400 m 的小路；從西往東走，終點是野宮神社的黑木鳥居' },
 { n: '天龍寺', lat: 35.0158, lng: 135.6737,
 t: '庭園約 8:30–17:00 · 約 ¥500（出發前確認）',
 note: '世界遺產，曹源池庭園以嵐山為借景，是夢窗疎石的代表作' },
-{ n: '渡月橋', lat: 35.0128, lng: 135.6775,
-t: '自由通行 · 嵐山的地標',
-note: '冬天山色比較素，晴天中午光線最好拍' },
-{ n: '嵯峨野觀光小火車', lat: 35.0181, lng: 135.6810,
-t: '2026 年營運到 12/29，週三公休 · 單程 ¥880 · 乘車日 1 個月前 0:00 開放網路預約',
-note: '沿保津川峽谷行駛的復古小火車，往亀岡方向右側的河景比較多；12/30 起冬季停駛' },
+{ n: '渡月橋・亀山公園展望台', lat: 35.0128, lng: 135.6775,
+t: '自由通行 · 免費 · 嵐山的地標',
+note: '展望台可以俯瞰保津川峽谷；冬天山色比較素，下午光線斜照也好拍' },
+{ n: '和牛とカニ 三条河原町店', lat: 35.0074, lng: 135.7700,
+t: '京阪三條站步行約 5 分 · 食べログ：16:00／17:00–24:00（L.O. 23:30）· 約 ¥9,000–16,000／人',
+note: '和牛壽喜燒加松葉蟹、帝王蟹吃到飽，還有和牛手捲壽司；2025 年 11 月開幕，週日晚上建議先訂位' },
 { n: '寺町京極・新京極商店街', lat: 35.0065, lng: 135.7678,
 t: '四條河原町 · 有頂棚 · 店家約 10:00–20:00（依店家）',
-note: '兩條平行的拱廊商店街，古著、球鞋、潮牌和藥妝都集中在這裡，下雨也能逛' },
-{ n: '先斗町', lat: 35.0058, lng: 135.7708,
-t: '阪急京都河原町站步行約 3 分 · 各店營業時間出發前確認',
-note: '一側是鴨川、一側是町家料理店的石板窄巷，夜晚燈籠亮起最有京都味' },
-{ n: '鴨川・三條大橋', lat: 35.0090, lng: 135.7720,
-t: '自由通行',
-note: '沿河岸散步消化晚餐，河邊等距坐著的情侶是京都名景' }
+note: '兩條平行的拱廊商店街，古著、球鞋、潮牌和藥妝都集中在這裡，下雨也能逛' }
 ],
 stay: 'The Garden Hotel 京都五条連住第 2 晚，不用收行李。',
-food: '午餐吃嵐山湯豆腐；晚餐在先斗町吃京料理、串炸或燒鳥；逛街時可以在新京極吃章魚燒、可樂餅墊胃。',
+food: '午餐在天龍寺一帶吃湯豆腐；下午在嵐山商店街可以買抹茶甜點墊胃；晚餐 17:20 在河原町的和牛とカニ吃和牛壽喜燒與蟹吃到飽，17:30 前入店有早' +
+'到優惠；飯後在新京極逛一下。',
 tips: [
-['warn', '12/27 是週日，嵐山中午後人潮很多，竹林小徑一定要排在早上。'],
-['warn', '小火車週末常常提早賣完，乘車日 1 個月前（11/27 0:00，日本時間）開放網路預約就先訂；沒買到就改成在渡月橋旁咖啡店坐坐，直接從 JR 嵯' +
-'峨嵐山站回京都。'],
-['info', '逛日潮的建議路線：四條河原町十字路口 → 寺町京極 → 新京極 → 往北到三條，再往東走到先斗町吃晚餐，最順。']
+['warn', '小火車週末常常提早賣完，乘車日 1 個月前（11/27 0:00，日本時間）開放網路預約就先訂：上車站選「トロッコ亀岡」、下車站選「トロッコ嵐' +
+'山」，嵯峨野2號 9:30。沒買到就直接搭 JR 到嵯峨嵐山，照同一條路線從常寂光寺開始走。'],
+['warn', '12/27 是週日，竹林中午人潮多；想拍人少的竹林，9:53 下車後先在トロッコ嵐山站前那段拍。'],
+['info', '一路順向、不走回頭路：JR 坐到馬堀 → 小火車回嵐山 → 由北往南走常寂光寺、竹林、天龍寺、渡月橋 → 從阪急嵐山站直接到河原町吃飯。']
 ],
-alt: '下雨時竹林撐傘也很有氣氛；雨大就以天龍寺與湯豆腐為主，省略小火車，下午提早回四條，在有頂棚的商店街和 Kyoto BAL 逛街。',
-map: gmap('京都市下京区横諏訪町318', '竹林の小径 嵐山', [], 'transit')
+alt: '下雨時省略小火車，直接搭 JR 到嵯峨嵐山；常寂光寺和二尊院的石階濕滑可以跳過，以竹林、天龍寺、湯豆腐和嵐山商店街為主，提早到河原町在有頂' +
+'棚的新京極和 Kyoto BAL 逛街，晚餐照常。',
+map: gmap('京都市下京区横諏訪町318', 'トロッコ亀岡駅', [], 'transit')
 },
 {
 d: '12/28', w: 'MON', short: '大原・貴船',
-title: '大原三千院・貴船神社・和牛蟹吃到飽・購物',
+title: '大原三千院・貴船傍晚點燈・先斗町晚餐',
 from: '五條', to: '五條',
 drive: '巴士＋電車約 2h40 · 地鐵＋京都巴士＋叡山電車＋京阪',
-img: 'k_sanzenin_snow', gallery: ['k_sanzenin_gate', 'k_kibune', 'k_kibune_steps', 'k_kibune_gate', 'k_kibune_town'],
-tags: ['三千院', '貴船', '和牛壽喜燒＋蟹吃到飽', '晚上自由購物'],
-must: ['穿防滑鞋（山區冷 2–3 度）', '換車多，耽擱就省略奧宮', '和牛とカニ先訂位', '購物帶護照'],
+img: 'k_sanzenin_snow', gallery: ['k_sanzenin_gate', 'k_kibune', 'k_kibune_steps', 'k_kibune_gate', 'k_kibune_town', 'k_pontocho', 'k_kamogaw' +
+'a'],
+tags: ['三千院', '貴船傍晚點燈', '先斗町晚餐', '鴨川夜散步'],
+must: ['穿防滑鞋、帶手電筒（山區冷 2–3 度）', '貴船 17:23 巴士下山（17:38 末班）', '先斗町訂 18:40'],
 stayS: 'The Garden Hotel・第 3 晚',
-foodS: '午：大原湯豆腐 · 晚：和牛とカニ',
+foodS: '午：大原湯豆腐 · 晚：先斗町 18:40',
 tl: [
 { t: '09:00', k: 'train', m: 1, n: '地鐵到國際會館', s: '烏丸線五條 → 國際會館（終點），不用轉車', c: ['約 20 分'] },
-{ t: '09:40', k: 'bus', m: 1, n: '京都巴士 19 往大原', s: '國際會館駅前上車，約 30 分一班', c: ['約 22 分', 'IC 卡可'] },
-{ t: '10:05', k: 'walk', m: 1, n: '走參道到三千院', s: '大原巴士站出發，上坡', c: ['約 10 分'] },
-{ t: '10:15', k: 'temple', n: '三千院', s: '御殿門、往生極樂院、苔庭與わらべ地蔵', c: ['約 1 小時'], p: [0, 1] },
-{ t: '11:20', k: 'food', n: '大原參道午餐', s: '湯豆腐、味噌鍋或柴漬定食' },
-{ t: '12:30', k: 'bus', m: 1, n: '轉往貴船', s: '巴士 → 叡山電車 → 巴士', c: ['約 1h15'], p: 2,
-x: [['12:30', '京都巴士往八瀬駅前（約 15 分），步行到叡山電車八瀬比叡山口站'], ['13:00', '叡山電車到宝ヶ池轉鞍馬線，坐到貴船口（約 25 分' +
-'）'], ['13:35', '貴船口轉京都巴士 33 系統到貴船（約 5 分）；班次少，錯過可沿河步行約 30 分']] },
-{ t: '13:45', k: 'torii', n: '貴船神社本宮', s: '朱紅燈籠石階、水占卜籤', p: 3 },
-{ t: '14:30', k: 'walk', o: 1, n: '結社・奧宮', s: '沿貴船川走約 15 分', c: ['冬天可能有雪'], p: 4 },
-{ t: '15:30', k: 'train', m: 1, n: '回三條', s: '貴船口搭叡山電車到出町柳，轉京阪到三條', c: ['約 45 分'] },
-{ t: '17:00', k: 'food', n: '和牛とカニ 晚餐', s: '和牛壽喜燒＋松葉蟹、帝王蟹吃到飽，含飲料喝到飽', c: ['¥9,000–16,000／人', '!先訂位'], p:
-5,
-x: [['方案', '食べログ上有 ¥9,000–16,000 等方案（含飲料喝到飽），依方案決定肉和蟹的種類；以訂位時的現行方案為準'], ['早到優惠', '食べロ' +
-'グ上的 90 分方案，17:30 前到店折 ¥1,000'], ['營業', '食べログ寫 16:00 或 17:00 開到 24:00（L.O. 23:30）；年末時間訂位時確認'], ['怎麼去', '京阪三' +
-'條站步行約 5 分，河原町通三条往南，SKI 河原町六角ビル 3F']] },
-{ t: '18:45', k: 'bag', n: '晚上自由購物逛街', s: '吃飽就在河原町一帶逛，地點之後再排' }
+{ t: '09:36', k: 'bus', m: 1, n: '京都巴士 19 往大原', s: '國際會館駅前上車，約 30 分一班', c: ['約 22 分', 'IC 卡可'],
+x: [['班次', '平日 9:05（特17）、<b>9:36（19）</b>、10:05（特17）、10:39（19）；往「大原」或「小出石」都會停大原'], ['時刻表', '<a href="' +
+'https://www.kyotobus.jp/route/timetable/schedule.html?stop_id=91_1" target="_blank" rel="noopener">京都巴士官網・國際會館駅前</a>（選「平日現行ダ' +
+'イヤ」）· <a href="#kbTT">附錄・12/28 轉乘時刻表</a>']] },
+{ t: '10:00', k: 'walk', m: 1, n: '走參道到三千院', s: '大原巴士站出發，上坡', c: ['約 10 分'] },
+{ t: '10:10', k: 'temple', n: '三千院', s: '御殿門、往生極樂院、苔庭與わらべ地蔵', c: ['約 1 小時'], p: 0 },
+{ t: '11:20', k: 'temple', o: 1, n: '寶泉院', s: '三千院旁步行約 3 分，坐在客殿看額緣庭園、喝抹茶', c: ['約 40 分', '¥1,000'], p: 1 },
+{ t: '12:10', k: 'food', n: '大原參道午餐', s: '湯豆腐、味噌鍋或柴漬定食，吃完沿參道慢慢逛回巴士站' },
+{ t: '14:07', k: 'bus', m: 1, n: '轉往貴船', s: '巴士 → 叡山電車 → 巴士', c: ['約 1 小時'], p: 2,
+x: [['14:07', '大原搭京都巴士 19 系統往國際會館，14:22 到八瀬駅前，步行約 5 分到叡山電車八瀬比叡山口站；備案 14:27（17）→ 14:42'], ['14:' +
+'30', '叡山電車往出町柳，14:34 在宝ヶ池下車，轉 14:39 往鞍馬的電車，14:58 到貴船口；錯過就搭 14:45 → 15:13'], ['15:07', '貴船口駅前搭京都巴士 33 ' +
+'系統，約 5 分到貴船；15 點還有 15:02、15:23、15:32，錯過可沿河步行約 30 分'], ['時刻表', '<a href="#kbTT">附錄・12/28 轉乘時刻表</a> · 官網：<a h' +
+'ref="https://www.kyotobus.jp/route/timetable/schedule.html?stop_id=6039_1" target="_blank" rel="noopener">大原巴士</a>、<a href="https://eizandens' +
+'ha.co.jp/guide/" target="_blank" rel="noopener">叡山電車</a>、<a href="https://www.kyotobus.jp/route/timetable/schedule.html?stop_id=6293_1" targe' +
+'t="_blank" rel="noopener">貴船口巴士</a>']] },
+{ t: '15:15', k: 'walk', o: 1, n: '結社・奧宮', s: '趁天亮先往上走，沿貴船川約 15 分；杉林比本宮安靜', c: ['冬天可能有雪'], p: 4 },
+{ t: '16:20', k: 'torii', n: '貴船神社本宮・看點燈', s: '17:00 授與所關門前先抽水占卜籤；16:53 日落後朱紅燈籠點亮，拍石階參道', c: ['燈籠亮' +
+'到 18:00 閉門'], p: 3 },
+{ t: '17:23', k: 'bus', m: 1, n: '下山回三條', s: '貴船搭京都巴士 33 系統到貴船口，叡山電車 17:46 到出町柳，轉京阪到三條', c: ['約 1 小時'],
+x: [['17:23', '貴船巴士站（本宮往下走約 3 分）上車；17:10 也有一班，17:38 是平日末班，錯過就要沿車道摸黑走約 30 分到貴船口'], ['17:46',
+'貴船口搭叡山電車往出町柳，18:16 到；搭 17:10 的巴士可趕 17:22 → 17:52 那班，下一班是 18:09'], ['約 18:20', '出町柳轉京阪往三條（約 4 分），出站步' +
+'行約 3 分到先斗町北口'], ['時刻表', '<a href="#kbTT">附錄・12/28 轉乘時刻表</a> · 官網：<a href="https://www.kyotobus.jp/route/timetable/schedule' +
+'.html?stop_id=6292_1" target="_blank" rel="noopener">貴船巴士</a>、<a href="https://eizandensha.co.jp/guide/" target="_blank" rel="noopener">叡山' +
+'電車</a>']] },
+{ t: '18:40', k: 'food', n: '先斗町晚餐', s: '鴨川邊的石板窄巷，京料理、串炸或燒鳥', c: ['!先訂位'], p: 5,
+x: [['訂位', '年末熱門店容易客滿，3 人座位先訂好；訂 18:40，搭 17:23 的巴士下山就來得及，晚到可以打電話說明'], ['營業日', '12/28 是週一又' +
+'接近年末，訂位時確認當天有營業']] },
+{ t: '20:10', k: 'walk', n: '鴨川散步・短暫逛街', s: '沿鴨川走到三條大橋，再到河原町挑一兩家逛；多數店 20:00–21:00 打烊', p: 6,
+x: [['回飯店', '計程車約 10 分，或搭地鐵']] }
 ],
 spots: [
 { n: '三千院', lat: 35.1199, lng: 135.8343,
@@ -2464,22 +2508,29 @@ note: '三千院旁步行約 3 分，從客殿看出去的「額緣庭園」與�
 t: '大原搭巴士約 15 分到八瀬駅前，步行數分',
 note: '轉乘點；冬季停駛的是比叡山纜車，叡山電車照常運行' },
 { n: '貴船神社本宮', lat: 35.1216, lng: 135.7632,
-t: '12–4 月約 6:00–18:00 · 免費 · 水占卜籤另付（出發前確認）',
-note: '朱紅燈籠沿石階排列，是京都最上鏡的參道之一；水占卜籤浮在神水上才會顯字' },
+t: '12–4 月 6:00–18:00 · 日落後點燈到閉門 · 授與所 9:00–17:00 · 免費 · 水占卜籤另付（出發前確認）',
+note: '朱紅燈籠沿石階排列，是京都最上鏡的參道之一；12/28 日落約 16:53，之後燈籠點亮最好拍；水占卜籤浮在神水上才會顯字' },
 { n: '（選）貴船神社奧宮', lat: 35.1268, lng: 135.7612, nr: 1,
 t: '本宮步行約 15 分 · 免費',
 note: '貴船神社最初的所在地，杉林圍繞，比本宮安靜許多' },
-{ n: '和牛とカニ 三条河原町店', lat: 35.0074, lng: 135.7700,
-t: '京阪三條站步行約 5 分 · 食べログ：16:00／17:00–24:00（L.O. 23:30）· 約 ¥9,000–16,000／人',
-note: '和牛壽喜燒加松葉蟹、帝王蟹吃到飽，還有和牛手捲壽司；2025 年 11 月開幕，年末建議先訂位' }
+{ n: '先斗町', lat: 35.0058, lng: 135.7708,
+t: '京阪三條站步行約 3 分 · 各店營業時間出發前確認',
+note: '一側是鴨川、一側是町家料理店的石板窄巷，夜晚燈籠亮起最有京都味' },
+{ n: '鴨川・三條大橋', lat: 35.0090, lng: 135.7720,
+t: '自由通行',
+note: '沿河岸散步消化晚餐，河邊等距坐著的情侶是京都名景' }
 ],
 stay: 'The Garden Hotel 京都五条連住第 3 晚。',
-food: '午餐在大原參道吃湯豆腐或味噌鍋，柴漬可以買回去當伴手禮；晚餐 17:00 在河原町的和牛とカニ吃和牛壽喜燒與蟹吃到飽，吃完再逛街。',
+food: '午餐在大原參道吃湯豆腐或味噌鍋，柴漬可以買回去當伴手禮；晚餐 18:40 在先斗町吃京料理、串炸或燒鳥，飯後沿鴨川散步、短暫逛街。',
 tips: [
-['warn', '這天換車比較多（巴士 → 叡山電車轉一次 → 巴士），大原或貴船任一處耽擱，就把貴船奧宮省略。'],
-['warn', '大原和貴船都比市區冷 2–3 度，下雪後石階與山路容易結冰，請穿防滑鞋。']
+['warn', '貴船下山的京都巴士 33 系統，12/28（週一）平日 17 點只有 17:10、17:23、17:38 三班，17:38 是末班；錯過要沿沒有路燈的車道走約 30 分' +
+'到貴船口，請帶手電筒。'],
+['warn', '這天換車比較多（巴士 → 叡山電車轉一次 → 巴士），到貴船若晚於 15:30，就省略奧宮，直接在本宮等點燈。'],
+['info', '雪中點燈只在 1 月中到 2 月的下雪週末舉辦；12/28 是一般的日落點燈，燈籠亮到 18:00 閉門。'],
+['warn', '大原和貴船都比市區冷 2–3 度，日落後更冷，下雪後石階與山路容易結冰，請穿防滑鞋。']
 ],
-alt: '大雪或大雨時二選一：只去三千院，從大原搭 19 系統回國際會館；或只去貴船神社本宮。晚上購物照常。',
+alt: '大雪或大雨時二選一：只去三千院，從大原搭 19 系統回國際會館；或只去貴船神社本宮（雨雪天石階滑，天黑前就下山）。晚餐照常。',
+link: ['#kbTT', '12/28 轉乘時刻表'],
 map: gmap('三千院', '貴船神社', [], 'transit')
 },
 {
@@ -2487,8 +2538,8 @@ d: '12/29', w: 'TUE', short: '東山・伏見夜',
 title: '清水寺・東山散步・伏見稻荷夜訪',
 from: '五條', to: '五條',
 drive: '計程車＋地鐵＋JR 約 40 分',
-img: 'kiyomizu', gallery: ['k_ninenzaka', 'k_yasakatower', 'k_nishiki', 'k_nishiki_ayu', 'fushimi', 'k_fushimi_night'],
-tags: ['清水寺', '二三年坂', '錦市場', '伏見稻荷夜訪'],
+img: 'kiyomizu', gallery: ['k_ninenzaka', 'k_yasakatower', 'fushimi', 'k_fushimi_night'],
+tags: ['清水寺', '二三年坂', '伏見稻荷夜訪'],
 must: ['今晚買好明天早餐', '行李收好（明早 7:30 退房）', '夜訪帶手電筒、別摸黑上山'],
 stayS: 'The Garden Hotel・最後一晚',
 foodS: '午：東山蕎麥麵 · 晚：京都站',
@@ -2499,13 +2550,12 @@ x: [['步行', '也可步行約 30 分']] },
 { t: '10:15', k: 'bag', n: '三年坂・二年坂', s: '散步、買伴手禮', p: 1 },
 { t: '11:15', k: 'walk', n: '八坂塔・寧寧之道', s: '八坂塔（法觀寺）→ 寧寧之道 → 石塀小路', p: 2 },
 { t: '12:15', k: 'food', n: '午餐', s: '蕎麥麵、湯葉或抹茶甜點' },
-{ t: '13:30', k: 'food', n: '錦市場年末採買', s: '漬物、玉子燒、豆乳甜甜圈', c: ['步行約 20 分'], p: 3 },
-{ t: '14:45', k: 'home', n: '回飯店整理行李', s: '地鐵四條搭 1 站回五條，休息', c: ['!明早 7:30 退房'] },
+{ t: '13:30', k: 'home', n: '回飯店整理行李', s: '計程車回五條，三人分攤；下午休息', c: ['約 10–15 分', '!明早 7:30 退房'] },
 { t: '17:15', k: 'train', m: 1, n: 'JR 到稻荷站', s: '地鐵五條 → 京都，轉 JR 奈良線', c: ['約 15 分'],
 x: [['出站', '出站就是大社鳥居']] },
-{ t: '17:30', k: 'torii', n: '伏見稻荷夜訪', s: '點燈的千本鳥居，走到奧社奉拜所就折返', c: ['往返約 40 分'], p: 4,
+{ t: '17:30', k: 'torii', n: '伏見稻荷夜訪', s: '點燈的千本鳥居，走到奧社奉拜所就折返', c: ['往返約 40 分'], p: 3,
 x: [['夜訪', '天黑後千本鳥居點起燈，人比白天少很多'], ['安全', '奧社之後山路暗，今晚不再往上走']] },
-{ t: '18:30', k: 'food', n: '京都站晚餐', s: '最後一晚，順便買明天早餐', p: 5,
+{ t: '18:30', k: 'food', n: '京都站晚餐', s: '最後一晚，順便買明天早餐', p: 4,
 x: [['怎麼去', 'JR 稻荷 → 京都'], ['早餐', '在超商或伊勢丹地下街買']] },
 { t: '19:45', k: 'bed', n: '回飯店打包', s: '地鐵 1 站，把行李收好、早點睡', c: ['!明早 7:30 退房'] }
 ],
@@ -2519,9 +2569,6 @@ note: '石板坡道兩側是町家老舖，適合邊走邊吃、買伴手禮' },
 { n: '八坂塔（法觀寺）', lat: 34.9986, lng: 135.7793,
 t: '外觀自由參觀',
 note: '五重塔從石板坡道盡頭冒出來，是東山最經典的明信片角度' },
-{ n: '錦市場', lat: 35.0050, lng: 135.7650,
-t: '多數店家約 9:00–18:00（依店家）· 年末人潮多',
-note: '有「京都廚房」之稱的商店街，年末採買年菜的在地人也很多，下午去比較好逛' },
 { n: '伏見稻荷大社', lat: 34.9671, lng: 135.7727,
 t: '24 小時開放 · 免費',
 note: '朱紅鳥居一路延伸上稻荷山；晚上燈籠亮起後的千本鳥居和白天是完全不同的氣氛' },
@@ -2530,13 +2577,13 @@ t: '伊勢丹、Porta 地下街與拉麵小路',
 note: '最後一晚的晚餐和隔天早餐都在這裡解決；大階梯燈飾開到 12/31 22:00，吃完可以順路看' }
 ],
 stay: 'The Garden Hotel 京都五条連住第 4 晚（最後一晚）。',
-food: '午餐在二年坂、三年坂一帶吃蕎麥麵或湯葉；錦市場邊走邊吃；晚餐在京都站伊勢丹餐廳街或 Porta 地下街。',
+food: '午餐在二年坂、三年坂一帶吃蕎麥麵或湯葉；晚餐在京都站伊勢丹餐廳街或 Porta 地下街。',
 tips: [
 ['warn', '伏見稻荷晚上照常開放，但山路很暗、部分路段沒有燈；只走到奧社奉拜所就折返，不要摸黑往上走，記得帶手機手電筒。'],
 ['info', '年末從 12/29 起東山一帶人潮變多，清水寺排在早上第一站最舒服。'],
 ['warn', '隔天 7:30 退房，今晚先把行李收好，並問櫃台一早退房的方式（櫃台還沒開時房卡放哪裡）。']
 ],
-alt: '下雨時清水寺與二年坂撐傘照常走，錦市場有頂棚；伏見稻荷的鳥居下大多能遮雨，雨大就只走到千本鳥居入口段。',
+alt: '下雨時清水寺與二年坂撐傘照常走；伏見稻荷的鳥居下大多能遮雨，雨大就只走到千本鳥居入口段。',
 map: gmap('京都市下京区横諏訪町318', '清水寺', [], 'transit')
 },
 {
@@ -2585,7 +2632,7 @@ note: '大阪會合點；年末晚上人潮多，先和劉有耘約好明確的�
 stay: '12/30 起住大阪新今宮，見大阪篇。',
 food: '早餐前一晚買好；午餐在天橋立文珠一帶自理（あさり丼、知恵の餅）；伊根可在 INE CAFE 喝咖啡；晚餐到道頓堀和劉有耘一起吃。',
 tips: [
-['warn', '這天 8:30 就要到京都站報到，是京都篇唯一早於 9:00 出門的一天；計程車前一晚先用 GO 或 Uber 預約。'],
+['warn', '這天 8:30 就要到京都站報到，是京都篇最早出門的一天；計程車前一晚先用 GO 或 Uber 預約。'],
 ['info', '行李規定（Klook 頁面）：每人可帶 1 件標準行李，上限 29 吋（54×31×79 cm），放巴士行李艙；出發前確認每個人的行李箱都在 29 吋內。'],
 ['warn', 'Klook 方案分含票和不含票，建議選含票（纜車＋伊根灣遊船）；下單時確認 12/30 有出團，備註「京都上車、大阪下車、3 件行李箱」。'],
 ['info', '日本海側冬天常有雨雪，伊根灣遊船停駛時改搭灣內小船；完全不能搭船時，平台退 ¥1,000。']
@@ -2605,14 +2652,14 @@ mode: 'rail',
 color: '#B8412C',
 icon: 'spark',
 badge: ['ny', '劉有耘加入 · 4 人'],
-sub: '四晚連住新今宮站旁的一棟貸切 Airbnb × 道頓堀會合 × 黑門市場與通天閣 × 住吉大社或四天王寺跨年 × 奈良初詣 × 大阪城天守閣 × 心齋橋・美國' +
-'村初賣與梅田夜景 × 臨空城 Outlet 買完搭接駁巴士去機場',
+sub: '四晚連住新今宮站旁的一棟貸切 Airbnb × 道頓堀會合 × 通天閣與新世界串炸 × 住吉大社或四天王寺跨年 × 奈良初詣 × 大阪城天守閣 × 心齋橋・美' +
+'國村初賣與梅田夜景 × 臨空城 Outlet 買完搭接駁巴士去機場',
 hero: 'dotonbori',
 summary: '12/30 傍晚在道頓堀和劉有耘會合，隊伍變成 4 個人。大阪四晚住新今宮站步行 3 分的一棟貸切 Airbnb（4 間臥室、6 張雙人床），南海、JR、地鐵御' +
 '堂筋線與堺筋線都在附近：到難波 1 站、到住吉大社約 10 分，南海空港急行也直接在新今宮上車。通天閣與新世界就在步行 10 分內，24 小時超市玉出和 MEGA 唐' +
-'吉訶德也在附近，晚上回來還能補貨。行程是：除夕白天逛黑門市場、通天閣，下午去海遊館看鯨鯊，晚上二選一：去住吉大社初詣跨年，或到四天王寺親手敲除夜之' +
-'鐘；元旦下午到奈良餵鹿、看大佛；1/2 早上先去大阪城天守閣，再逛心齋橋 PARCO、美國村古著與堀江，晚上梅田空中庭園看夜景；1/3 一早帶行李到機場對岸的臨' +
-'空城 Outlet 新年特賣，再搭 15 分鐘接駁巴士到關西機場。',
+'吉訶德也在附近，晚上回來還能補貨。行程是：除夕白天上通天閣、吃新世界串炸，下午去海遊館看鯨鯊，晚上二選一：去住吉大社初詣跨年，或到四天王寺親手敲除' +
+'夜之鐘；元旦下午到奈良餵鹿、看大佛；1/2 早上先去大阪城天守閣，再逛心齋橋 PARCO、美國村古著與堀江，晚上梅田空中庭園看夜景；1/3 一早帶行李到機場對岸' +
+'的臨空城 Outlet 新年特賣，再搭 15 分鐘接駁巴士到關西機場。',
 who: '四個人一起過日本新年，想跨年、初詣、買福袋，也想每晚都有地方去的旅伴',
 stats: [['4', '人同行'], ['4', '晚新今宮連住'], ['1', '站到難波'], ['0:48', '跨年末班車']],
 snow: 0,
@@ -2643,13 +2690,12 @@ budget: [
 ['住宿', '新今宮一棟貸切 Airbnb 4 晚（12/30–1/3，4 人），金額以 Airbnb 收據為準。'],
 ['門票', '約 ¥8,500–9,300／人：通天閣年末年始 ¥1,800、海遊館 ¥2,700–3,500（依日期浮動）、東大寺大佛殿 ¥800（只收現金）、大阪城天守閣 ¥1,200、' +
 '梅田空中庭園 ¥2,000。'],
-['餐飲', '黑門市場與新世界串炸約 ¥2,000–4,000、道頓堀晚餐約 ¥3,000–6,000／人；元旦小店多休息，連鎖店最保險。福袋、初賣與 Outlet 購物另計；1/3' +
-' Outlet 寄放行李 ¥1,000／件（只收現金）。']
+['餐飲', '新世界串炸約 ¥1,500–3,000、道頓堀晚餐約 ¥3,000–6,000／人；元旦小店多休息，連鎖店最保險。福袋、初賣與 Outlet 購物另計；1/3 Outlet 寄' +
+'放行李 ¥1,000／件（只收現金）。']
 ],
 road: '住宿在新今宮站旁，大阪篇幾乎都從這裡出發：南海本線 1 站到難波、約 10 分到住吉大社，空港急行直達りんくうタウン（臨空城）與關西機場；JR 大和' +
-'路快速直達奈良；地鐵御堂筋線（動物園前站）直達梅田；堺筋線（恵美須町站）到黑門市場所在的日本橋 2 站。四個人短程搭計程車分攤後也划算。年末年始注意' +
-'：南海與大阪 Metro 除夕沒有通宵電車（2025–26 住吉大社站往難波方向末班 0:48）；百貨 12/31 提早打烊、1/1 公休；元旦多數小店休息。大阪 12 月底白天約' +
-' 9–10°C、晚上 2–4°C，跨年排隊要穿暖。',
+'路快速直達奈良；地鐵御堂筋線（動物園前站）直達梅田。四個人短程搭計程車分攤後也划算。年末年始注意：南海與大阪 Metro 除夕沒有通宵電車（2025–26 住吉' +
+'大社站往難波方向末班 0:48）；百貨 12/31 提早打烊、1/1 公休；元旦多數小店休息。大阪 12 月底白天約 9–10°C、晚上 2–4°C，跨年排隊要穿暖。',
 route: [
 ['道頓堀（會合）', '12/30', '', 34.6687, 135.5013],
 ['新今宮 Airbnb', '12/30', '南海 1 站', 34.6515, 135.4998],
@@ -2707,24 +2753,22 @@ map: gmap('道頓堀 戎橋', '新今宮駅', [], 'transit')
 },
 {
 d: '12/31', w: 'THU', short: '除夕跨年',
-title: '黑門市場・通天閣・海遊館・跨年二選一',
+title: '通天閣・海遊館・跨年二選一',
 from: '新今宮', to: '新今宮',
 drive: '地鐵為主，海遊館單程約 30 分',
-img: 'sumiyoshi', gallery: ['o_shitennoji', 'o_kitagane', 'o_kuromon', 'tsutenkaku', 'o_kaiyukan'],
-tags: ['黑門市場', '通天閣', '海遊館', '年越蕎麥麵', '跨年 A 住吉大社／B 四天王寺'],
+img: 'sumiyoshi', gallery: ['o_shitennoji', 'o_kitagane', 'tsutenkaku', 'o_kaiyukan'],
+tags: ['通天閣', '海遊館', '年越蕎麥麵', '跨年 A 住吉大社／B 四天王寺'],
 must: ['通天閣、海遊館先買指定時段票', 'だるま只收現金', '跨年 A／B 先決定，先裝 GO App'],
 stayS: '新今宮 Airbnb・第 2 晚',
-foodS: '早：黑門 · 午：串炸 · 晚：蕎麥麵',
+foodS: '午：串炸 · 晚：蕎麥麵',
 tl: [
-{ t: '09:00', k: 'food', n: '黑門市場早餐', s: '海鮮丼、烤和牛串', c: ['早上去'], p: 0,
-x: [['怎麼去', '地鐵堺筋線 恵美須町 → 日本橋 2 站'], ['注意', '除夕下午陸續收攤，早上去']] },
-{ t: '10:30', k: 'spark', n: '通天閣展望台', s: '摸幸運之神 Billiken 的腳底', c: ['¥1,800', '!要預約'], p: 1,
-x: [['怎麼去', '回恵美須町'], ['門票', '入場時段預約制 · 年末年始 ¥1,800']] },
-{ t: '11:45', k: 'food', n: '新世界串炸午餐', s: 'だるま、横綱、じゃんじゃん四選一', c: ['!だるま只收現金'], p: 2,
+{ t: '10:30', k: 'spark', n: '通天閣展望台', s: '摸幸運之神 Billiken 的腳底', c: ['¥1,800', '!要預約'], p: 0,
+x: [['怎麼去', '從住宿步行約 10 分'], ['門票', '入場時段預約制 · 年末年始 ¥1,800']] },
+{ t: '11:45', k: 'food', n: '新世界串炸午餐', s: 'だるま、横綱、じゃんじゃん四選一', c: ['!だるま只收現金'], p: 1,
 x: [['四選一', 'だるま總本店、だるま分店（通天閣店、ジャンジャン店、動物園前店）、横綱 通天閣店、じゃんじゃん 新世界本店'], ['營業', '12/' +
 '31 都有開 · だるま只收現金']] },
 { t: '13:00', k: 'train', m: 1, n: '地鐵到大阪港', s: '動物園前搭御堂筋線到本町，轉中央線到大阪港，步行約 5 分', c: ['約 30 分'] },
-{ t: '13:30', k: 'waves', n: '海遊館', s: '從 8 樓沿螺旋坡道往下看，太平洋大水槽有鯨鯊', c: ['¥2,700–3,500', '!買指定時段票'], p: 3,
+{ t: '13:30', k: 'waves', n: '海遊館', s: '從 8 樓沿螺旋坡道往下看，太平洋大水槽有鯨鯊', c: ['¥2,700–3,500', '!買指定時段票'], p: 2,
 x: [['門票', '依日期浮動，大人約 ¥2,700–3,500，年末偏高；官網 e-ticket 指定日期與入館時段，不用在售票口排隊'], ['營業', '以 2025–26 為' +
 '例：12/29–12/31 8:30–20:00，最後入館 19:00'], ['逛多久', '約 2–2.5 小時；除夕下午人多，大水槽前多停一下']] },
 { t: '16:00', k: 'home', n: '回住宿午睡', s: '中央線轉御堂筋線回動物園前，晚上要熬夜', c: ['約 30 分'] },
@@ -2736,7 +2780,7 @@ opts: [
 map: gmap('新今宮駅', '住吉大社', [], 'transit'),
 tl: [
 { t: '21:15', k: 'train', m: 1, n: '南海到住吉大社', s: '新今宮搭南海本線普通車', c: ['約 10 分'] },
-{ t: '21:40', k: 'torii', n: '住吉大社門口排隊', s: '平常 17:00 關門，除夕 22:00 再開門，一路開到元旦晚上', p: 4 },
+{ t: '21:40', k: 'torii', n: '住吉大社門口排隊', s: '平常 17:00 關門，除夕 22:00 再開門，一路開到元旦晚上', p: 3 },
 { t: '22:00', k: 'torii', n: '開門進場・先買御守', s: '走過反橋（太鼓橋），趁人少先買新年御守', c: ['羊年御守'],
 x: [['御守', '2027 是羊年，干支御守晚一點會排很長，進場先買'], ['注意', '年末年始沒有攤販；石拾い、釣りみくじ暫停']] },
 { t: '23:15', k: 'torii', n: '到第一本宮前排隊', s: '0:00 前後最擠，排到本宮可能超過 1 小時' },
@@ -2753,7 +2797,7 @@ map: gmap('新今宮駅', '四天王寺', [], 'walking'),
 tl: [
 { t: '21:15', k: 'walk', m: 1, n: '前往四天王寺', s: '從住宿往東走到西門石鳥居；或 JR 新今宮 → 天王寺 1 站再走約 12 分', c: ['步行約 2' +
 '5 分'] },
-{ t: '21:45', k: 'temple', n: '到鐘堂排隊', s: '4 人一起排南鐘堂或鼓樓，北鐘堂最熱門', c: ['!各限 108 人'], p: 5,
+{ t: '21:45', k: 'temple', n: '到鐘堂排隊', s: '4 人一起排南鐘堂或鼓樓，北鐘堂最熱門', c: ['!各限 108 人'], p: 4,
 x: [['三座鐘堂', '北鐘堂（黃鐘樓）、鼓樓、南鐘堂（鯨鐘樓），三處各限先到 108 人，可以挑一處排'], ['排哪裡', '北鐘堂往年傍晚就有人排，' +
 '隊伍可能排出極楽門到石鳥居；南鐘堂離得遠、人比較少'], ['注意', '沒有官方排隊人數資料，21:45 到是保守安排；越早越穩']] },
 { t: '23:00', k: 'temple', n: '領整理券', s: '在排隊的鐘堂發券，每人 1 張、敲 1 下', c: ['免費'] },
@@ -2776,9 +2820,6 @@ tips: [
 ] }
 ],
 spots: [
-{ n: '黑門市場', lat: 34.6659, lng: 135.5063,
-t: '地鐵日本橋站步行約 2 分 · 店家約 9:00–17:00（年末提早收攤）',
-note: '「大阪的廚房」，海鮮丼、生蠔、和牛串現點現吃' },
 { n: '通天閣', lat: 34.6525, lng: 135.5063,
 t: '9:00–21:45（一般展望台最後入場 21:15）· 2026/12/30–2027/1/3 大人 ¥1,800 · 全時段預約入場',
 note: '新世界的地標，黃金展望台有幸運之神 Billiken；住宿步行約 10 分' },
@@ -2796,8 +2837,8 @@ t: '方案 B · 境內 24 小時可通行 · 除夕 23:00 發整理券、23:30 �
 note: '聖德太子建立、日本最早的官寺；三座鐘堂都讓一般人親手敲鐘，北鐘堂與鼓樓、南鐘堂的音色不同' }
 ],
 stay: '新今宮 Airbnb 連住第 2 晚。',
-food: '黑門市場早餐；新世界串炸午餐四選一：だるま總本店（1929 年元祖，12 席，排最久）、だるま分店（同樣味道，座位多）、横綱通天閣店（巨大横綱' +
-'串，可訂位）、じゃんじゃん本店（112 席大店）；每人約 ¥1,500–3,000。晚上吃年越蕎麥麵，跨年前要先吃飽。',
+food: '新世界串炸午餐四選一：だるま總本店（1929 年元祖，12 席，排最久）、だるま分店（同樣味道，座位多）、横綱通天閣店（巨大横綱串，可訂位）、' +
+'じゃんじゃん本店（112 席大店）；每人約 ¥1,500–3,000。晚上吃年越蕎麥麵，跨年前要先吃飽。',
 tips: [
 ['warn', '通天閣全時段都要預約入場時間，先在官網訂好 12/31 上午的時段。'],
 ['info', '12/31 中午是新世界全年最擠的時段：だるま總本店常排 40–60 分，排分店比較快；4 人不想排隊就前一天在食べログ訂横綱通天閣店（90 分制' +
@@ -3000,10 +3041,12 @@ const BOOK = [
 '–2027/1/3 大人 ¥1,800'],
 ['yokozuna', 'o', '（選）串炸 横綱 通天閣店訂位', 'rec', '12/31 11:45', '前一天前在食べログ訂', 'https://tabelog.com/osaka/A2701/A270206/27066939/',
 '24 小時營業、可訂位（90 分制）；不想排だるま再訂，其他三家不能訂只能排隊'],
-['torokko', 'a', '嵯峨野觀光小火車（嵯峨 → 亀岡）', 'rec', '12/27 14:02', '11/27 0:00（日本時間）開賣', 'https://www.sagano-kanko.co.jp/', '單程' +
-' ¥880，沒有往返票；週末常提早賣完，2026 年營運到 12/29'],
+['torokko', 'a', '嵯峨野觀光小火車（亀岡 → トロッコ嵐山）', 'rec', '12/27 9:30', '11/27 0:00（日本時間）開賣', 'https://www.sagano-kanko.co.jp/',
+'單程 ¥880，沒有往返票；上車選「トロッコ亀岡」、下車選「トロッコ嵐山」（嵯峨野2號）；週末常提早賣完，2026 年營運到 12/29'],
 ['yudofu', 'a', '嵐山湯豆腐午餐', 'rec', '12/27 12:15', '1–2 週前', '', '週日中午熱門；嵯峨野或天龍寺篩月，用 Google 地圖或店家網站預約'],
-['pontocho', 'a', '先斗町晚餐', 'rec', '12/27 19:15', '1–2 週前', '', '週日晚上熱門店容易客滿；3 人座位先訂好'],
+['wagyu-kani', 'a', '和牛とカニ 三条河原町店（吃到飽）', 'rec', '12/27 17:20', '1–2 週前', '', '週日晚上熱門；17:30 前入店每人折 ¥1,000（食べロ' +
+'グ優惠，訂位時確認）；方案約 ¥9,000–16,000／人'],
+['pontocho', 'a', '先斗町晚餐', 'rec', '12/28 18:40', '1–2 週前', '', '週一又接近年末，確認當天有營業；3 人座位先訂好，貴船 17:23 巴士下山來得及'],
 ['go-taxi', 'a', 'GO App 預約計程車（飯店 → 京都站八條口）', 'rec', '12/30 08:10', '12/29 晚上', '', '一早拖 3 件行李最省事；GO 或 Uber 都可以預' +
 '約'],
 ['kaiyukan', 'o', '海遊館 e-ticket（指定日期時段）', 'rec', '12/31 13:30', '官網開賣後盡早買', 'https://www.kaiyukan.com/info/ticket/kaiyukan/',
@@ -3023,45 +3066,46 @@ const BOOK = [
 // { n: name, ch: chapter, d: day, ty: temple / nature / shop / night, img: photo key, dur: how long,
 // tag: badge (optional), q: Google Maps search (Japanese name), intro: what it is, hl: 3 highlights }
 const SPOTS = [
-{ n: '竹林小徑・野宮神社', ch: 'a', d: '12/27', ty: 'nature', img: 'k_bamboo', dur: '約 40 分', q: '竹林の小径 嵐山',
+{ n: '嵯峨野觀光小火車', ch: 'a', d: '12/27', ty: 'nature', img: 'k_sagano', dur: '約 23 分', q: 'トロッコ亀岡駅',
+intro: '沿保津川峽谷行駛的復古小火車，從 JR 馬堀步行約 10 分到トロッコ亀岡上車，一路坐回竹林旁的トロッコ嵐山，下車就開始逛嵐山；2026 年營運到 1' +
+'2/29，這天是最後機會之一。',
+hl: ['亀岡 9:30 上車、9:53 到トロッコ嵐山', '往嵯峨方向坐左側，河景比較多', '乘車日 1 個月前開放網路預約'] },
+{ n: '常寂光寺', ch: 'a', d: '12/27', ty: 'temple', img: 'k_jojakko', dur: '約 45 分', q: '常寂光寺 嵐山',
+intro: '小倉山山腰的日蓮宗寺院，下小火車往北走約 8 分；沿石階往上走，多寶塔旁能俯瞰嵯峨野與京都市區，紅葉季以外人少很多。',
+hl: ['茅草屋頂的仁王門與苔庭石階', '多寶塔旁眺望嵯峨野', '9:00–17:00（16:30 停止受理）· ¥600'] },
+{ n: '竹林小徑・野宮神社', ch: 'a', d: '12/27', ty: 'nature', img: 'k_bamboo', dur: '約 45 分', q: '竹林の小径 嵐山',
 intro: '青竹在頭頂合攏、長約 400 m 的小路，風吹過時竹葉沙沙作響；入口旁的野宮神社在《源氏物語》裡出現過。',
-hl: ['上午 9 點多人還少，最好拍', '野宮神社的黑木鳥居，保留樹皮的原木', '野宮神社求良緣'] },
+hl: ['從トロッコ嵐山站旁由西往東走', '野宮神社的黑木鳥居，保留樹皮的原木', '野宮神社求良緣'] },
 { n: '大河內山莊庭園', ch: 'a', d: '12/27', ty: 'nature', img: 'k_okochi', dur: '約 40 分', tag: '選擇性', q: '大河内山荘庭園',
 intro: '時代劇明星大河內傳次郎花了約 30 年打造的回遊式庭園，就在竹林小徑盡頭，人比竹林少很多。',
 hl: ['門票附抹茶和茶點', '山頂可以遠眺京都市區與比叡山', '竹林人潮外的安靜角落'] },
 { n: '天龍寺', ch: 'a', d: '12/27', ty: 'temple', img: 'k_tenryuji', dur: '約 45 分', q: '天龍寺 京都',
 intro: '世界遺產，室町時代創建的禪寺，京都五山第一位；曹源池庭園以嵐山為借景，是夢窗疎石的代表作。',
 hl: ['曹源池庭園：把嵐山借進庭裡', '法堂雲龍圖週末公開（另購票）', '午餐可在寺內篩月吃精進料理'] },
-{ n: '渡月橋', ch: 'a', d: '12/27', ty: 'nature', img: 'k_togetsu', dur: '約 20 分', q: '渡月橋',
-intro: '橫跨桂川、背靠嵐山的木橋，是嵐山最經典的畫面；冬天山色素淨，晴天中午光線最好。',
-hl: ['嵐山的明信片角度', '沿桂川河岸散步', '走到トロッコ嵯峨站搭小火車'] },
-{ n: '嵯峨野觀光小火車', ch: 'a', d: '12/27', ty: 'nature', img: 'k_sagano', dur: '約 25 分', q: 'トロッコ嵯峨駅',
-intro: '沿保津川峽谷行駛的復古小火車，從トロッコ嵯峨坐到トロッコ亀岡；2026 年營運到 12/29，這天是最後機會之一。',
-hl: ['全程 7.3 km 的保津川峽谷', '往亀岡方向坐右側，河景比較多', '乘車日 1 個月前開放網路預約'] },
-{ n: '寺町京極・新京極', ch: 'a', d: '12/27', ty: 'shop', img: 'k_shinkyogoku', dur: '約 2 小時', q: '新京極商店街',
+{ n: '渡月橋', ch: 'a', d: '12/27', ty: 'nature', img: 'k_togetsu', dur: '約 1 小時', q: '渡月橋',
+intro: '橫跨桂川、背靠嵐山的木橋，是嵐山最經典的畫面；下午從和服之森走過來，先爬亀山公園展望台再過橋。',
+hl: ['嵐山的明信片角度', '亀山公園展望台俯瞰保津川', '過橋就是阪急嵐山站，直接到河原町'] },
+{ n: '寺町京極・新京極', ch: 'a', d: '12/27', ty: 'shop', img: 'k_shinkyogoku', dur: '飯後約 40 分', q: '新京極商店街',
 intro: '四條河原町兩條平行的拱廊商店街，古著、球鞋、潮牌和藥妝都集中在這裡，是京都買日潮的主場。',
 hl: ['古著、球鞋、潮牌集中', '有頂棚，下雨也能逛', '章魚燒、可樂餅邊走邊吃'] },
-{ n: '先斗町・鴨川', ch: 'a', d: '12/27', ty: 'night', img: 'k_pontocho', dur: '晚餐約 1.5 小時', q: '先斗町',
-intro: '一側是鴨川、一側是町家料理店的石板窄巷，燈籠亮起最有京都味；吃完沿鴨川散步到三條大橋。',
-hl: ['石板窄巷裡的町家料理店', '掛著千鳥紋的燈籠夜景', '飯後沿鴨川走到三條大橋'] },
 { n: '三千院', ch: 'a', d: '12/28', ty: 'temple', img: 'k_sanzenin_snow', dur: '約 1 小時', q: '三千院 大原',
 intro: '大原山里的天台宗古寺，往生極樂院四周是整片苔庭；冬天比市區冷 2–3 度，下雪時最有味道。',
 hl: ['往生極樂院與整片苔庭', '苔中探頭的わらべ地蔵', '參道吃湯豆腐、買柴漬'] },
 { n: '寶泉院', ch: 'a', d: '12/28', ty: 'temple', img: 'k_hosenin', dur: '約 30 分', tag: '選擇性', q: '宝泉院 大原',
 intro: '三千院旁步行約 3 分的小寺，坐在客殿裡，讓柱子把庭園框成一幅畫，就是有名的「額緣庭園」。',
 hl: ['柱間框出的額緣庭園', '樹齡約 700 年的五葉松', '門票附抹茶和和菓子'] },
-{ n: '貴船神社', ch: 'a', d: '12/28', ty: 'temple', img: 'k_kibune', dur: '約 45 分', q: '貴船神社',
-intro: '朱紅燈籠沿石階排列的參道是京都最上鏡的景色之一；本宮往上走約 15 分是更安靜的奧宮。',
-hl: ['朱紅燈籠石階參道', '水占卜籤浮在神水上才顯字', '奧宮杉林更安靜（選擇性）'] },
+{ n: '貴船神社', ch: 'a', d: '12/28', ty: 'temple', img: 'k_kibune', dur: '約 2 小時（含奧宮）', q: '貴船神社',
+intro: '朱紅燈籠沿石階排列的參道是京都最上鏡的景色之一；冬天日落後燈籠點亮到 18:00 閉門。下午先走更安靜的奧宮，傍晚回本宮看點燈。',
+hl: ['日落後點亮的朱紅燈籠石階', '水占卜籤浮在神水上才顯字（授與所 17:00 關）', '奧宮杉林更安靜（選擇性）'] },
+{ n: '先斗町・鴨川', ch: 'a', d: '12/28', ty: 'night', img: 'k_pontocho', dur: '晚餐約 1.5 小時', q: '先斗町',
+intro: '一側是鴨川、一側是町家料理店的石板窄巷，燈籠亮起最有京都味；從貴船下山後在京阪三條下車就到，吃完沿鴨川散步到三條大橋。',
+hl: ['石板窄巷裡的町家料理店', '掛著千鳥紋的燈籠夜景', '飯後沿鴨川走到三條大橋'] },
 { n: '清水寺', ch: 'a', d: '12/29', ty: 'temple', img: 'kiyomizu', dur: '約 1 小時', q: '清水寺 京都',
 intro: '懸空在山崖上的清水舞台俯瞰京都市區，冬天空氣清透；12 月底沒有夜間點燈，早上去人最少。',
 hl: ['懸空的清水舞台', '音羽之瀧三道泉水各有祈願', '早上 9 點前人最少'] },
 { n: '三年坂・二年坂・八坂塔', ch: 'a', d: '12/29', ty: 'shop', img: 'k_ninenzaka', dur: '約 2 小時', q: '産寧坂',
 intro: '清水寺下山的石板坡道，兩側是町家老舖；一路走到八坂塔從巷底冒出來的經典角度，再接寧寧之道。',
 hl: ['八坂塔從巷底冒出的明信片角度', '町家老舖買伴手禮、邊走邊吃', '接寧寧之道、石塀小路散步'] },
-{ n: '錦市場', ch: 'a', d: '12/29', ty: 'shop', img: 'k_nishiki', dur: '約 1 小時', q: '錦市場',
-intro: '有「京都廚房」之稱、約 400 m 長的商店街；年末來採買年菜的在地人也很多，下午去比較好逛。',
-hl: ['漬物、玉子燒、豆乳甜甜圈', '鹽烤香魚、章魚丸子邊走邊吃', '有頂棚，下雨也能逛'] },
 { n: '伏見稻荷大社（夜訪）', ch: 'a', d: '12/29', ty: 'night', img: 'k_fushimi_night', dur: '約 1 小時', q: '伏見稲荷大社',
 intro: '上萬座朱紅鳥居延伸上稻荷山；24 小時開放，天黑後燈籠亮起的千本鳥居人少又神秘。',
 hl: ['24 小時開放、免費', '點燈後的千本鳥居', '走到奧社奉拜所就折返'] },
@@ -3077,9 +3121,6 @@ hl: ['固力果跑跑人看板', '螃蟹道樂的巨大招牌', '大阪燒、章
 { n: '心齋橋筋商店街', ch: 'o', d: '12/30', ty: 'shop', img: 'shinsaibashi', dur: '約 1 小時', q: '心斎橋筋商店街',
 intro: '約 600 m 有頂棚的商店街，藥妝、服飾、球鞋一路逛；1/2 去美國村時也會再走一次。',
 hl: ['約 600 m 有頂棚', '藥妝、服飾、球鞋一路逛', '大丸心齋橋的沃里斯老外觀'] },
-{ n: '黑門市場', ch: 'o', d: '12/31', ty: 'shop', img: 'o_kuromon', dur: '約 1 小時', q: '黒門市場',
-intro: '「大阪的廚房」，海鮮丼、生蠔、烤和牛串現點現吃；除夕下午開始收攤，早上去最從容。',
-hl: ['海鮮丼、生蠔現點現吃', '烤和牛串', '除夕下午提早收攤，早上去'] },
 { n: '通天閣・新世界', ch: 'o', d: '12/31', ty: 'shop', img: 'tsutenkaku', dur: '約 2 小時', q: '通天閣',
 intro: '1956 年重建的新世界地標，黃金展望台有幸運之神 Billiken；樓下就是串炸發源地新世界。',
 hl: ['摸 Billiken 腳底求好運', '串炸發源地，醬汁禁止沾第二次', '年末年始全時段預約入場'] },
@@ -3140,7 +3181,7 @@ const GIFTS = [
 ['a', 'ok', '生八橋「聖」', '聖護院八ッ橋総本店', '10 個 ¥756', '12 天', 'Porta 1F 京小町、JR 伊勢丹 B1', '三角形 Q 皮包顆粒紅豆，另有肉桂、抹茶' +
 '綜合盒；回台後一週內吃完。', 'g_hijiri'],
 ['a', 'ok', '生八橋「夕子」', '井筒八ッ橋本舗', '10 個 ¥648', '約 13 天（出貨日起）', 'Porta 1F 京小町、京極一番街店（錦市場東側寺町通）', '肉桂' +
-'與抹茶雙色綜合盒，12/29 逛錦市場可以順路買；單顆包裝 12 個 ¥1,080 方便分送。', 'g_yuko'],
+'與抹茶雙色綜合盒；單顆包裝 12 個 ¥1,080 方便分送。', 'g_yuko'],
 ['a', 'ok', '烤八橋', '聖護院八ッ橋総本店', '24 片 ¥648', '90 天', 'Porta 1F 京小町、JR 伊勢丹 B1', '烤過的硬八橋，肉桂香很濃、喜好分明；期限最長' +
 '，分送同事最不怕過期。', 'g_yaki'],
 ['a', 'ok', '京ばあむ', '美十（おたべ）', '1 個 ¥1,663', '約 8 天（出貨日起）', 'Porta B1 atelier 京ばあむ、Porta 1F 京小町', '宇治抹茶加豆乳的年' +
@@ -3171,8 +3212,8 @@ const GIFTS = [
 const GIFT_VERDICT = { ok: ['可帶回台灣', 's-done'], check: ['含肉風險・先看成分', 's-rec'], eat: ['在日本吃', 's-must'] };
 // [icon, title, text]
 const GIFT_TIPS = [
-['cal', '京都：12/29 一次買齊', '下午逛錦市場可以買夕子、葉衣；晚上在京都站吃完晚餐，到 Porta 1F 京小町（到 20:00）或 B1 Kyokonomi（到 21:30）補' +
-'齊。阿闍梨餅、京ばあむ期限短，留到最後買。'],
+['cal', '京都：12/29 一次買齊', '葉衣在 Porta C5 出口旁的伊藤久右衛門京都站前店，只開到 18:30，傍晚往伏見稻荷、在京都站轉車時先買；晚上吃完晚餐，' +
+'到 Porta 1F 京小町（到 20:00）或 B1 Kyokonomi（到 21:30）買夕子等其他伴手禮。阿闍梨餅、京ばあむ期限短，留到最後買。'],
 ['bag', '大阪：1/2 梅田晚餐前後', '以 2025–26 為例，百貨 1/1–1/2 多半公休，改到 JR 大阪站 Entrée Marché 等車站伴手禮店買月化粧、おこし。KIX ' +
 '國際線出境後買不到月化粧。'],
 ['wallet', '退稅新制', '2026/11/1 起結帳先付含稅價，同店同日未稅滿 ¥5,000，出境時在 KIX 退稅。要在日本吃掉的點心不能算進退稅；海關要查驗商品的話' +
@@ -3196,8 +3237,25 @@ const RETURN = [
 '9:54'], ['9:42', '10:21']], '8:41'],
 ['Sky Shuttle（臨空城 Outlet → 關西機場 T1）', '接駁巴士 · ¥300 · 約 15 分 · 不用預約；現金或 IC 卡', [['11:00', '11:15'], ['12:15', '12:30'],
 ['13:10', '13:25'], ['14:10', '14:25']], '13:10'],
-['電車備案（りんくうタウン → 關西空港）', '南海或 JR 1 站 · ¥370 · 乘車約 6 分；抵達含站內步行', [['12:32', '12:45'], ['12:41', '12:53'], ['13' +
-':24', '13:36'], ['13:32', '13:45'], ['13:41', '13:53'], ['14:02', '14:15'], ['14:11', '14:23']], '13:24']
+];
+// 12/28 Ohara–Kibune transfers (weekday timetables, checked Nov 2026):
+// [label, title, sub, [col1, col2], rows [dep, arr], pick, [url, link text]]
+const KB_BUS = 'https://www.kyotobus.jp/route/timetable/schedule.html?stop_id=';
+const KIBUNE_TT = [
+['① 國際會館駅前 → 大原', '京都巴士 19／特17', '約 22 分 · IC 卡可 · 往「大原」或「小出石」都會停大原', ['發車', '系統'], [['9:05', '特17'],
+['9:36', '19'], ['10:05', '特17'], ['10:39', '19']], '9:36', [KB_BUS + '91_1', '京都巴士・國際會館駅前']],
+['② 大原 → 八瀬駅前', '京都巴士 19／17／特17', '約 15 分 · 搭往國際會館、京都駅方向，不要搭往小出石', ['大原發', '八瀬駅前到'], [['13:45', '14' +
+':00 · 特17'], ['14:07', '14:22 · 19'], ['14:27', '14:42 · 17'], ['14:45', '15:00 · 特17']], '14:07', [KB_BUS + '6039_1', '京都巴士・大原']],
+['③ 八瀬比叡山口 → 貴船口', '叡山電車（宝ヶ池轉車）', '先搭往出町柳到宝ヶ池，轉往鞍馬的電車 · 約 28 分 · 這段平日、假日時刻相同', ['八瀬發',
+'貴船口到'], [['14:30', '14:58<small>宝ヶ池 14:34 到、14:39 轉車</small>'], ['14:45', '15:13<small>宝ヶ池 14:49 到、14:54 轉車</small>'], ['15:00',
+'15:28<small>宝ヶ池 15:04 到、15:09 轉車</small>'], ['15:15', '15:43<small>宝ヶ池 15:19 到、15:24 轉車</small>']], '14:30', ['https://eizandensha.c' +
+'o.jp/guide/', '叡山電車・全線時刻表']],
+['④ 貴船口駅前 → 貴船', '京都巴士 33', '約 5 分 · 出站就是巴士站；錯過可沿河步行約 30 分', ['發車', '到貴船（約）'], [['15:02', '15:07'], ['15' +
+':07', '15:12'], ['15:23', '15:28'], ['15:32', '15:37']], '15:07', [KB_BUS + '6293_1', '京都巴士・貴船口駅前']],
+['⑤ 貴船 → 貴船口駅前', '京都巴士 33', '約 5 分 · 本宮往下走約 3 分到巴士站 · 17:38 是平日末班', ['發車', '接叡電'], [['16:57', '17:22'], ['1' +
+'7:10', '17:22'], ['17:23', '17:46'], ['17:38', '17:46<small>末班巴士</small>']], '17:23', [KB_BUS + '6292_1', '京都巴士・貴船']],
+['⑥ 貴船口 → 出町柳', '叡山電車', '約 30 分 · 出町柳轉京阪往三條約 4 分，班次很多', ['貴船口發', '出町柳到'], [['17:22', '17:52'], ['17:46',
+'18:16'], ['18:09', '18:39'], ['18:33', '19:03']], '17:46', ['https://eizandensha.co.jp/guide/', '叡山電車・全線時刻表']]
 ];
 // Per-chapter heads-ups shown under each chapter's summary.
 const CH_ALERTS = {
@@ -3208,8 +3266,8 @@ a: [
 '順路看。']
 ],
 o: [
-['百貨與市場', '以 2025–26 為例：百貨 12/31 只營業到約 18:00–19:00，1/1–1/2 多數公休，1/3 才開始初賣（阿倍野 HARUKAS 近鐵本店 1/2 就初賣）；' +
-'黑門市場 1/1–1/3 多數店家休息。出發前再確認當年公告。'],
+['百貨公司', '以 2025–26 為例：百貨 12/31 只營業到約 18:00–19:00，1/1–1/2 多數公休，1/3 才開始初賣（阿倍野 HARUKAS 近鐵本店 1/2 就初賣）。出' +
+'發前再確認當年公告。'],
 ['吃飯', '12/31–1/3 不少小店休息或提早打烊；一蘭、壽司郎、すき家等連鎖店多半照常營業，新世界的觀光區店家元旦多半有開，住處附近的玉出超市 24 小' +
 '時營業。'],
 ['交通與人潮', '以 2025–26 為例，南海和大阪 Metro 除夕都沒有通宵電車：跨年方案 A 住吉大社要趕 0:48 末班車回新今宮，或 4 人分攤計程車（約 15 分' +
@@ -3234,8 +3292,8 @@ const CHECKS = [
 'book'],
 ['haruka', '預約 HARUKA 單程優惠票', '關西機場 → 京都 ¥2,700／人（外國護照限定），乘車日 1 個月前在 JR 西日本網站開放預約；ICOCA & HARUKA 套票已' +
 '停售', '11/26', 'book'],
-['torokko', '搶嵯峨野小火車 12/27 車票', '乘車日 1 個月前，11/27 0:00（日本時間，台灣 11/26 23:00）開放網路預約；單程 ¥880，週末常提早賣完', '11/' +
-'27', 'book'],
+['torokko', '搶嵯峨野小火車 12/27 車票', '乘車日 1 個月前，11/27 0:00（日本時間，台灣 11/26 23:00）開放網路預約；上車トロッコ亀岡 9:30、下車トロ' +
+'ッコ嵐山（嵯峨野2號），單程 ¥880，週末常提早賣完', '11/27', 'book'],
 ['tsutenkaku', '預約通天閣 12/31 入場時段', '全時段預約制，年末年始大人 ¥1,800；建議訂 10:30 前後', '', 'book'],
 ['insurance', '旅遊平安險', '含海外突發疾病與行李延誤', '', 'book'],
 ['cash', '換日圓現金', '神社、市場小攤、部分拉麵店和巴士只收現金；可用上方的換算器估算要換多少', '', 'money'],
@@ -3500,11 +3558,11 @@ ${d.alt ? `<div class="tip alt">${ic('umbrella')}<span><b>備案</b>${d.alt}</sp
 </div></details>
 </div>
 <div class="dfoot">
-<div class="actions">${d.link ? `<a class="btn primary" href="${d.link[0]}" target="_blank" rel="noopener">${ic('ext')}${d.link[1]}</a>` : ''}<a
-class="btn ${d.link ? 'ghost' : 'primary'}" href="${d.map}" target="_blank" rel="noopener">${ic('ext')}Google Maps 開啟路線</a><button type="button"
-class="btn ghost" data-gprev="${p.key},${i}" aria-expanded="false" aria-controls="${p.key}-g${i}">${ic('rout' +
-'e')}<span>預覽 Google 路線</span></button><button type="button" class="btn ghost" data-mapday="${p.key},${i}">${ic('map')}在地圖上看 Day ${i +
-1}</button></div>
+<div class="actions">${d.link ? `<a class="btn primary" href="${d.link[0]}"${d.link[0][0] === '#' ? '' : ' target="_blank" rel="noopener' +
+'"'}>${ic(d.link[0][0] === '#' ? 'table' : 'ext')}${d.link[1]}</a>` : ''}<a class="btn ${d.link ? 'ghost' : 'primary'}" href="${d.map}"
+target="_blank" rel="noopener">${ic('ext')}Google Maps 開啟路線</a><button type="button" class="btn ghost" data-gprev="${p.key},${i}"
+aria-expanded="false" aria-controls="${p.key}-g${i}">${ic('route')}<span>預覽 Google 路線</span></button><button type="button" class="btn ghost"
+data-mapday="${p.key},${i}">${ic('map')}在地圖上看 Day ${i + 1}</button></div>
 <div class="gprev" id="${p.key}-g${i}" hidden></div>
 </div>
 </div>
@@ -3970,6 +4028,13 @@ const v = mins(d), c = d === HARUKA_PICK ? 'pick' : v < LAND ? 'no' : v >= OK ? 
 return `<li class="${c}"${d === HARUKA_PICK ? ' aria-current="true"' : ''}><b>${d}</b><span>${ic('right')}${a}</span>${d === HARUKA_PICK ?
 '<em>建議</em>' : ''}</li>`;
 }).join('');
+$('#kbGrid').innerHTML = KIBUNE_TT.map(([sm, t, s, [h1, h2], rows, pick, [u, l]]) => `<article class="tt rt">
+<header class="tt-h"><div><small>${sm}</small><h3>${t}</h3></div><p>${s}</p></header>
+<table><thead><tr><th scope="col">${h1}</th><th scope="col">${h2}</th></tr></thead>
+<tbody>${rows.map(([d, x]) => `<tr${d === pick ? ' class="pick" aria-current="true"' : ''}><td><b>${d}</b>${d === pick ? '<em>建議</em>' :
+''}</td><td>${x}</td></tr>`).join('')}</tbody></table>
+<a class="tt-lk" href="${u}" target="_blank" rel="noopener">${ic('ext')}官方時刻表：${l}</a>
+</article>`).join('');
 $('#returnGrid').innerHTML = RETURN.map(([t, s, rows, pick]) => `<article class="tt rt reveal">
 <header class="tt-h"><div><small>1/3（日）· 新今宮 → 臨空城 → 機場</small><h3>${t}</h3></div><p>${s}</p></header>
 <table><thead><tr><th scope="col">發車</th><th scope="col">${/^\d/.test(rows[0][1]) ? '抵達' : '車次'}</th></tr></thead>
