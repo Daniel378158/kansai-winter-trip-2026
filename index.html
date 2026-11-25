@@ -75,7 +75,7 @@ transform:scaleY(0);transform-origin:bottom}}
 /* OVERVIEW */
 .overview{padding-block:96px 32px}
 /* these sections are also .wrap: keep its side gutters, but let content stay 1180 wide on desktop */
-.overview,.drive,.spotsec,.booking,.flights,.money,.prep,.appendix{max-width:1228px}
+.overview,.drive,.spotsec,.booking,.closures,.eats,.flights,.weather,.money,.prep,.sos,.appendix{max-width:1228px}
 .phase{display:grid;grid-template-columns:repeat(2,1fr);gap:20px}
 .phase a{position:relative;display:block;text-decoration:none;border-radius:var(--r-lg);overflow:hidden;min-height:230px;color:#fff;
 box-shadow:var(--shadow);isolation:isolate}
@@ -759,6 +759,121 @@ border:0;padding:0;cursor:zoom-in}
 letter-spacing:.06em}
 .gf h4 small{display:block;font-family:var(--sans);font-size:12.5px;font-weight:400;letter-spacing:0;color:var(--ink-3)}
 .gf dl div{grid-template-columns:72px minmax(0,1fr)}
+/* YEAR-END HOURS */
+.closures,.eats,.weather,.sos{padding-block:80px 32px}
+.yc-lg i.yc-k{background:var(--b);border:1px solid var(--f)}
+.yc-lg i.yc-k.c-q{border-style:dashed}
+.yc-lg i.yv{background:var(--card);border:2px solid var(--ink-2)}
+.yc{margin-bottom:24px;background:var(--card);border:1px solid var(--line);border-radius:var(--r-lg);box-shadow:var(--shadow);overflow:hidden}
+.yc[hidden]{display:none}
+.yc>h3{display:flex;align-items:center;gap:10px;padding:14px 20px;border-bottom:1px solid var(--line);font-family:var(--serif);font-size:20px;
+letter-spacing:.06em}
+.yc>h3 i{width:12px;height:12px;border-radius:50%;background:var(--c)}
+.yc>h3 small{font-family:var(--latin);font-size:15px;font-weight:600;letter-spacing:0;color:var(--ink-3)}
+.yc-scroll{overflow-x:auto;overscroll-behavior-x:contain}
+.yc-scroll:focus-visible{outline:2px solid var(--accent);outline-offset:-2px}
+.yc-t{width:100%;min-width:760px;border-collapse:separate;border-spacing:0;font-variant-numeric:tabular-nums}
+.yc-t thead th{padding:10px 6px;background:var(--paper);border-bottom:1px solid var(--line);font-family:var(--latin);font-size:18px;font-weight:600;
+text-align:center;white-space:nowrap}
+.yc-t thead th small{display:block;font-family:var(--sans);font-size:11.5px;font-weight:400;color:var(--ink-3)}
+.yc-t thead th:first-child{font-family:var(--sans);font-size:12px;font-weight:500;letter-spacing:.14em;color:var(--ink-3);text-align:left;
+padding-left:16px}
+.yc-t th[scope=row],.yc-t thead th:first-child{position:sticky;left:0;z-index:1;width:250px;box-shadow:1px 0 0 var(--line)}
+.yc-t th[scope=row]{padding:10px 14px 10px 16px;background:var(--card);border-bottom:1px dashed var(--line);text-align:left;font-weight:400;
+vertical-align:middle}
+.yc-t th[scope=row] a{font-size:14.5px;font-weight:700;line-height:1.45;color:var(--ink);text-decoration:none}
+.yc-t th[scope=row] a:hover{color:var(--accent);text-decoration:underline;text-underline-offset:3px}
+.yc-t th[scope=row] a svg{width:12px;height:12px;margin-left:4px;color:var(--ink-3);vertical-align:-1px}
+.yc-n{display:block;margin-top:2px;font-size:12px;line-height:1.5;color:var(--ink-3)}
+.yc-b{display:inline-block;margin-top:4px;padding:0 8px;border-radius:999px;border:1px solid var(--line);font-size:11px;line-height:1.7;
+color:var(--ink-3)}
+.yc-b.b26{border-color:#9DBF92;color:#2F6B2B}
+.yc-g th{padding:7px 16px;background:var(--paper-2);border-bottom:1px solid var(--line);font-size:12px;font-weight:700;letter-spacing:.14em;
+color:var(--ink-2);text-align:left}
+.yc-g th span{position:sticky;left:16px}
+.yc-c{padding:6px 5px;border-bottom:1px dashed var(--line);text-align:center;vertical-align:middle}
+.yc-c>span{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:1px;min-height:46px;padding:5px 6px;border-radius:8px;
+background:var(--b);color:var(--f);font-size:12.5px;font-weight:600;line-height:1.35}
+.yc-c small{font-size:10.5px;font-weight:700;letter-spacing:.08em;opacity:.8}
+.yc-c em{margin-bottom:2px;padding:0 7px;border-radius:999px;background:var(--c);color:#fff;font-style:normal;font-size:10.5px;font-weight:700;
+line-height:1.6}
+.yc-c.v>span{box-shadow:0 0 0 2px var(--c)}
+.c-o{--b:#E4EFE0;--f:#2F6B2B}.c-s{--b:#FAF0D9;--f:#855508}.c-x{--b:#FBE7E1;--f:#A3321C}.c-n{--b:#E3EAF5;--f:#2E4A7D}
+.c-q{--b:transparent;--f:var(--ink-3)}.yc-c.c-q>span{border:1px dashed var(--ink-3);font-weight:500}
+.c-0{--b:transparent;--f:var(--line)}.yc-c.c-0>span{font-weight:400}
+.yc tr:last-child>*{border-bottom:0}
+/* BACKUP EATS */
+.ea-g{margin-bottom:28px}
+.ea-g[hidden]{display:none}
+.ea-g>h3{display:flex;flex-wrap:wrap;align-items:center;gap:6px 10px;margin-bottom:12px;font-family:var(--serif);font-size:19px;letter-spacing:.05em}
+.ea-g>h3 b{font-family:var(--latin);font-size:22px;font-weight:600;letter-spacing:0}
+.ea-g>h3 small{font-family:var(--sans);font-size:13px;font-weight:400;letter-spacing:0;color:var(--ink-3)}
+.ea.e-ok{--sb:#E4EFE0;--sf:#2F6B2B}.ea.e-q{--sb:#ECE6DA;--sf:#565149}.ea.e-x{--sb:#FBE7E1;--sf:#A3321C}
+.ea.e-x{background:color-mix(in srgb,var(--card) 70%,var(--paper-2))}
+.ea-ty{font-size:12.5px;font-weight:700;color:var(--ink-3)}
+.ea dl div{grid-template-columns:62px minmax(0,1fr)}
+.ea .bk-a svg{color:var(--sf)}
+/* WEATHER */
+.wx-grid{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:14px;margin-bottom:20px}
+.wx{--sf:var(--c);--sb:color-mix(in srgb,var(--c) 10%,transparent);display:flex;flex-direction:column;gap:8px;padding:18px;background:var(--card);
+border:1px solid var(--line);border-top:4px solid var(--c);border-radius:var(--r-md);box-shadow:var(--shadow)}
+.wx-k{display:flex;align-items:center;gap:6px;font-size:12.5px;font-weight:700;color:var(--c)}
+.wx-k i{width:8px;height:8px;border-radius:50%;background:var(--c)}
+.wx-k em{margin-left:auto;padding:1px 8px;border-radius:999px;background:var(--paper-2);color:var(--ink-2);font-style:normal;font-size:11px}
+.wx h3{font-family:var(--serif);font-size:19px;letter-spacing:.04em}
+.wx-t{display:flex;gap:18px;font-family:var(--latin);font-weight:600;font-variant-numeric:lining-nums tabular-nums}
+.wx-t b{display:flex;flex-direction:column;font-size:30px;line-height:1.05}
+.wx-t small{font-family:var(--sans);font-size:11.5px;font-weight:400;color:var(--ink-3)}
+.wx-t .hi{color:#A4482A}.wx-t .lo{color:var(--snow)}
+.wx-bar{position:relative;height:10px;margin:8px 0 18px;border-radius:999px;background:var(--paper-2)}
+.wx-bar span{position:absolute;top:0;bottom:0;border-radius:999px;background:linear-gradient(90deg,#4C79B5,#D98A4E)}
+.wx-bar i{position:absolute;top:-4px;bottom:-4px;width:1.5px;background:var(--ink-3)}
+.wx-bar i::after{content:'0°';position:absolute;top:100%;left:50%;margin-top:2px;transform:translateX(-50%);font-family:var(--latin);
+font-style:normal;font-size:11px;color:var(--ink-3)}
+.wx ul{flex:1;display:grid;align-content:start;gap:6px;list-style:none;font-size:13px;line-height:1.55;color:var(--ink-2)}
+.wx li{display:grid;grid-template-columns:14px minmax(0,1fr);gap:6px}
+.wx li svg{width:13px;height:13px;margin-top:3px;color:var(--c)}
+.wx-a{display:flex;flex-wrap:wrap;gap:6px}
+.gtips.wtips{grid-template-columns:repeat(3,minmax(0,1fr))}
+/* EMERGENCY */
+.sos-warn{margin-bottom:16px}
+.sos-calls{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px;margin-bottom:24px}
+.sos-c{--k:var(--ink-2);display:flex;flex-direction:column;gap:4px;padding:16px 18px;background:var(--card);border:1px solid var(--line);
+border-left:4px solid var(--k);border-radius:var(--r-md);box-shadow:var(--shadow);color:var(--ink);text-decoration:none;transition:transform .2s
+var(--ease),box-shadow .2s}
+.sos-c:hover{transform:translateY(-2px);box-shadow:var(--shadow-lg)}
+.sos-c:focus-visible{outline:2px solid var(--k);outline-offset:2px}
+.sos-c.red{--k:#A3321C}.sos-c.blue{--k:var(--snow)}
+.sos-c .n{font-family:var(--latin);font-size:34px;font-weight:600;line-height:1.1;color:var(--k);font-variant-numeric:lining-nums tabular-nums}
+.sos-c.sm .n{font-size:22px;line-height:1.5}
+.sos-c b{font-size:15px}
+.sos-c p{flex:1;font-size:13px;line-height:1.6;color:var(--ink-2)}
+.sos-c .go{display:inline-flex;align-items:center;gap:5px;min-height:28px;font-size:13px;font-weight:700;color:var(--k)}
+.sos-c .go svg{width:15px;height:15px}
+.sos-cols{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
+.sos-box{padding:20px 22px;background:var(--card);border:1px solid var(--line);border-radius:var(--r-lg);box-shadow:var(--shadow)}
+.sos-box>h3{display:flex;align-items:center;gap:8px;margin-bottom:12px;font-family:var(--serif);font-size:19px;letter-spacing:.05em}
+.sos-box>h3 svg{color:var(--shu)}
+.sos-h{padding:12px 0;border-top:1px dashed var(--line)}
+.sos-h:first-of-type{padding-top:0;border-top:0}
+.sos-h h4{display:flex;flex-wrap:wrap;align-items:center;gap:8px;font-size:15px}
+.sos-h p{margin:4px 0 6px;font-size:13.5px;line-height:1.6;color:var(--ink-2)}
+.sos-act{display:flex;flex-wrap:wrap;gap:6px 8px}
+.sos-a{display:inline-flex;align-items:center;gap:6px;min-height:44px;padding:0 14px;border:1px solid var(--line);border-radius:999px;font-size:14px;
+font-weight:700;color:var(--ink-2);text-decoration:none;font-variant-numeric:tabular-nums;white-space:nowrap;transition:border-color .2s,color .2s}
+.sos-a:hover{border-color:var(--accent);color:var(--accent)}
+.sos-a svg{width:15px;height:15px;color:var(--accent)}
+.sos-ol{display:grid;gap:10px;list-style:none;counter-reset:st}
+.sos-ol li{position:relative;padding-left:34px;font-size:14px;line-height:1.65}
+.sos-ol li::before{counter-increment:st;content:counter(st);position:absolute;left:0;top:1px;display:grid;place-items:center;width:24px;height:24px;
+border-radius:50%;background:var(--ink);color:#fff;font-family:var(--latin);font-size:13px;font-weight:600}
+.sos-ol li.warn{color:#8A2A17}
+.sos-ol li.warn::before{background:#A3321C}
+.sos-li{list-style:none}
+.sos-li li{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:6px 12px;padding:8px 0;border-top:1px dashed var(--line)}
+.sos-li li:first-child{border-top:0;padding-top:0}
+.sos-li li>div{flex:1 1 200px;font-size:14px;line-height:1.55}
+.sos-li small{display:block;font-size:13px;color:var(--ink-3)}
 /* APPENDIX TIMETABLES */
 .appendix{padding-block:72px 96px}
 .tt{background:var(--card);border:1px solid var(--line);border-radius:var(--r-lg);box-shadow:var(--shadow);padding:26px 28px}
@@ -932,7 +1047,8 @@ color:#fff;font:500 14px var(--sans);cursor:pointer}
 .stay-im{min-height:0;aspect-ratio:16/8}
 .stay-im.tall{aspect-ratio:4/3;max-height:72vh}
 .spotgrid,.bkgrid,.ret{grid-template-columns:repeat(2,minmax(0,1fr))}
-.gtips{grid-template-columns:repeat(2,minmax(0,1fr))}
+.gtips,.gtips.wtips,.sos-calls{grid-template-columns:repeat(2,minmax(0,1fr))}
+.wx-grid{grid-template-columns:repeat(3,minmax(0,1fr))}
 .tt-h{grid-template-columns:1fr}
 }
 @media (max-width:820px){
@@ -953,11 +1069,17 @@ html{scroll-padding-top:124px}
 .fgrp+.fgrp{padding-left:0;border-left:0}
 .fcount{margin-left:0;width:100%}
 .tt{padding:22px 18px}
-.spotsec,.booking,.gifts{padding-top:64px}
+.spotsec,.booking,.gifts,.closures,.eats,.weather,.sos{padding-top:64px}
+.wx-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+.sos-cols{grid-template-columns:1fr}
+.yc-t th[scope=row],.yc-t thead th:first-child{width:170px;min-width:170px}
 .bk{scroll-margin-top:140px}
 }
 @media (max-width:560px){
-.spotgrid,.gtips{grid-template-columns:1fr}
+.spotgrid,.gtips,.gtips.wtips,.wx-grid,.sos-calls{grid-template-columns:1fr}
+.yc-t{min-width:660px}
+.yc-t th[scope=row],.yc-t thead th:first-child{width:136px;min-width:136px;padding-left:12px}
+.yc-n{display:none}
 .ctab{padding:6px 13px 6px 11px;font-size:14.5px}
 .nbtn{padding:0 13px}
 .hgrid{grid-template-columns:repeat(auto-fill,minmax(96px,1fr))}
@@ -1030,6 +1152,12 @@ scroll-behavior:auto!important}
 .hero,.tabbar,.lb,.totop,.media .thumbs,.actions,.scroll-cue,.mapcard,.spots .loc,.sp-i .loc,.gprev,.fx-quick,.fx-row,.fx-hint,.cl-act,.snow,.hfx,
 .kfx,.filt,.sp-go,.sp-map,.bk-a,.more,.chend{display:none!important}
 .sp[hidden],.gf[hidden]{display:flex!important}
+.yc[hidden],.ea-g[hidden]{display:block!important}
+.yc tr[hidden]{display:table-row!important}
+.yc-scroll{overflow:visible}
+.yc-t{min-width:0}
+.yc-t th[scope=row]{position:static}
+.yc,.wx,.sos-box,.sos-c{break-inside:avoid}
 .ovs,.ovl{display:none!important}
 .ovp[hidden]{display:block!important}
 .ovh{display:block;font-size:14px;margin:10px 0 4px}
@@ -1153,10 +1281,14 @@ href="#i-snow"/></svg></button>
 <hr>
 <a href="#spots"><svg class="i" aria-hidden="true"><use href="#i-camera"/></svg><span>景點介紹</span></a>
 <a href="#booking"><svg class="i" aria-hidden="true"><use href="#i-ticket"/></svg><span>預訂總表</span></a>
+<a href="#closures"><svg class="i" aria-hidden="true"><use href="#i-cal"/></svg><span>年末年始營業</span></a>
+<a href="#eats"><svg class="i" aria-hidden="true"><use href="#i-food"/></svg><span>備選餐廳</span></a>
 <a href="#gifts"><svg class="i" aria-hidden="true"><use href="#i-bag"/></svg><span>伴手禮清單</span></a>
 <a href="#flights"><svg class="i" aria-hidden="true"><use href="#i-plane"/></svg><span>航班資訊</span></a>
+<a href="#weather"><svg class="i" aria-hidden="true"><use href="#i-umbrella"/></svg><span>天氣與穿搭</span></a>
 <a href="#money"><svg class="i" aria-hidden="true"><use href="#i-swap"/></svg><span>日幣換算</span></a>
 <a href="#prep"><svg class="i" aria-hidden="true"><use href="#i-check"/></svg><span>出發前清單</span></a>
+<a href="#sos"><svg class="i" aria-hidden="true"><use href="#i-phone"/></svg><span>緊急資訊</span></a>
 <a href="#appendix"><svg class="i" aria-hidden="true"><use href="#i-table"/></svg><span>附錄・電車時刻</span></a>
 </div>
 </div>
@@ -1192,6 +1324,33 @@ href="#i-snow"/></svg></button>
 </div>
 <div class="bkstat reveal" id="bkStat"></div>
 <div id="bookBoard"></div>
+</section>
+<section class="closures wrap" id="closures" aria-labelledby="yc-h">
+<div class="sec-head reveal">
+<div><div class="eyebrow">Year-end Hours</div><h2 class="sec" id="yc-h">年末年始營業總表</h2></div>
+<p>12/27–1/3 每天要去的景點、百貨和交通照不照常，有框的格子是行程會去的那天。資料查到 2026/11/24；標「2025–26 實績」的今年還沒公告，出發前<!--
+-->再核對。</p>
+</div>
+<div class="gtips" id="ycTips"></div>
+<div class="filt reveal" id="ycFilt" role="group" aria-label="篩選營業總表">
+<div class="fgrp" id="ycCh"></div>
+<div class="fgrp" id="ycVs"></div>
+<p class="fcount" id="ycCount" aria-live="polite"></p>
+</div>
+<div class="tt-legend yc-lg" id="ycLegend"></div>
+<div id="ycBoard"></div>
+</section>
+<section class="eats wrap" id="eats" aria-labelledby="ea-h">
+<div class="sec-head reveal">
+<div><div class="eyebrow">Backup Eats</div><h2 class="sec" id="ea-h">各區備選餐廳</h2></div>
+<p>原本想吃的店客滿或沒開時，就近換這幾家。依天數和餐別排列；價格多來自 Tabelog 與網友評價，年末時間多半未公告，到店前先看 Google Maps。</p>
+</div>
+<div class="gtips" id="eatTips"></div>
+<div class="filt reveal" id="eaFilt" role="group" aria-label="依日期篩選餐廳">
+<div class="fgrp" id="eaDay"></div>
+<p class="fcount" id="eaCount" aria-live="polite"></p>
+</div>
+<div id="eatBoard"></div>
 </section>
 <section class="gifts wrap" id="gifts" aria-labelledby="gf-h">
 <div class="sec-head reveal">
@@ -1246,6 +1405,21 @@ href="#i-snow"/></svg></button>
 </dl></div>
 </article>
 </div>
+</section>
+<section class="weather wrap" id="weather" aria-labelledby="wx-h">
+<div class="sec-head reveal">
+<div><div class="eyebrow">Weather &amp; Layers</div><h2 class="sec" id="wx-h">天氣與穿搭</h2></div>
+<p>卡片上的溫度是氣象廳 1991–2020 年 12 月平年值，不是預報；出發前兩週點「10 天預報」看實際天氣。</p>
+</div>
+<div class="wx-grid" id="wxGrid"></div>
+<div class="gtips wtips" id="wearTips"></div>
+<p class="tt-note reveal"><svg class="i" aria-hidden="true"><use href="#i-info"/></svg><span>tenki.jp 約 12/12 起看得到 2 週預報，氣象廳週間預<!--
+-->報約 12/19 起涵蓋行程：<a href="https://www.jma.go.jp/bosai/forecast/#area_type=offices&amp;area_code=260000" target="_blank" rel="noopener">京<!--
+-->都</a>・<a href="https://www.jma.go.jp/bosai/forecast/#area_type=offices&amp;area_code=270000" target="_blank" rel="noopener">大阪</a>・<a
+href="https://www.jma.go.jp/bosai/forecast/#area_type=offices&amp;area_code=290000" target="_blank" rel="noopener">奈良</a>。今年寒候期預報：近畿<!--
+-->日本海側氣溫偏高的機率 60%、降雪偏少 50%。資料來源：<a href="https://www.data.jma.go.jp/stats/etrn/view/nml_sfc_ym.php?prec_no=61&amp;
+block_no=47759&amp;view=p1" target="_blank" rel="noopener">氣象廳平年值</a>、<a href="https://eco.mtk.nao.ac.jp/koyomi/dni/2026/s2712.html"
+target="_blank" rel="noopener">國立天文台日出日落</a>。</span></p>
 </section>
 <section class="money wrap" id="money" aria-labelledby="mo-h">
 <div class="sec-head reveal">
@@ -1332,6 +1506,13 @@ aria-describedby="fxHint fxErr"><span>台幣</span>
 </aside>
 <div class="cl" id="checklist"></div>
 </div>
+</section>
+<section class="sos wrap" id="sos" aria-labelledby="so-h">
+<div class="sec-head reveal">
+<div><div class="eyebrow">Emergency</div><h2 class="sec" id="so-h">緊急資訊</h2></div>
+<p>號碼都能直接點撥，出發前先存進手機。另附 24 小時急診醫院、護照遺失流程（含辦事處年末休息日）和失物招領。</p>
+</div>
+<div id="sosWrap"></div>
 </section>
 <section class="appendix wrap" id="appendix" aria-labelledby="ap-h">
 <div class="sec-head reveal">
@@ -2264,7 +2445,16 @@ const IMG = {"nachi": {"s": "https://thumb.wikimedia.org/wikipedia/commons/thumb
 "-25.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail", "l": "https://thumb.wikimedia.org/wikipedia/commons/thumb/" +
 "a/a7/Jou_Jakkoji_2009-1-25.jpg/1920px-Jou_Jakkoji_2009-1-25.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
 "cap": "一月的常寂光寺茅草屋頂仁王門", "by": "osakaosaka", "lic": "Public domain", "page": "https://commons.wikimedia.org/wiki/File:Jou_Jakkoji_200" +
-"9-1-25.jpg"}};
+"9-1-25.jpg"}, "k_yasaka": {"s": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/86/Nishiromon_Gate%2C_Yasaka_Shrine%2C_Kyoto%2C_West_view_2" +
+"0190416_1.jpg/960px-Nishiromon_Gate%2C_Yasaka_Shrine%2C_Kyoto%2C_West_view_20190416_1.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&" +
+"utm_content=thumbnail", "l": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/86/Nishiromon_Gate%2C_Yasaka_Shrine%2C_Kyoto%2C_West_view_2019" +
+"0416_1.jpg/1920px-Nishiromon_Gate%2C_Yasaka_Shrine%2C_Kyoto%2C_West_view_20190416_1.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&ut" +
+"m_content=thumbnail", "cap": "八坂神社西樓門", "by": "DXR", "lic": "CC BY-SA 4.0", "page": "https://commons.wikimedia.org/wiki/File:Nishiromon_Gat" +
+"e,_Yasaka_Shrine,_Kyoto,_West_view_20190416_1.jpg"}, "o_tenmangu": {"s": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/ff/Osaka_Tenmangu_" +
+"Shrine_ao_01.jpg/960px-Osaka_Tenmangu_Shrine_ao_01.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail", "l": "https" +
+"://thumb.wikimedia.org/wikipedia/commons/thumb/f/ff/Osaka_Tenmangu_Shrine_ao_01.jpg/1920px-Osaka_Tenmangu_Shrine_ao_01.jpg?utm_source=commons.wiki" +
+"media.org&utm_campaign=imageinfo&utm_content=thumbnail", "cap": "大阪天滿宮本殿", "by": "Sakai Yayoi", "lic": "CC0", "page": "https://commons.wiki" +
+"media.org/wiki/File:Osaka_Tenmangu_Shrine_ao_01.jpg"}};
 const gmap = (o, d, w = [], mode = 'driving') => 'https://www.google.com/maps/dir/?api=1&travelmode=' + mode + '&origin=' + encodeURIComponent(o) +
 '&destination=' + encodeURIComponent(d) + (w.length ? '&waypoints=' + encodeURIComponent(w.join('|')) : '');
 const PLANS = {};
@@ -2277,14 +2467,14 @@ mode: 'rail',
 color: '#4D6B33',
 icon: 'train',
 badge: ['rec', '3 人 · 電車慢遊'],
-sub: '四晚連住地鐵五條站旁的 The Garden Hotel 京都五条 × 嵐山竹林與小火車 × 大原三千院與貴船點燈 × 清水寺與東山 × 夜行程：新京極日潮、自由購' +
-'物、伏見稻荷夜訪 × 12/30 天橋立・伊根一日遊到大阪',
+sub: '四晚連住地鐵五條站旁的 The Garden Hotel 京都五条 × 嵐山竹林與小火車 × 大原三千院與貴船點燈 × 清水寺、東山與伏見稻荷千本鳥居 × 吉伊卡哇' +
+'伏見店 × 夜行程：新京極日潮、自由購物、京都站燈飾 × 12/30 天橋立・伊根一日遊到大阪',
 hero: 'k_bamboo',
 summary: '三個人從關西機場搭 HARUKA 直達京都，四晚都住地鐵烏丸線五條站 6 號出口旁的 The Garden Hotel 京都五条（兩間相通的房間，4 張單人床），行李' +
 '打開就不用再收；往南 1 站到京都站、往北 1 站到四條，白天出遠門、晚上回市區都很近。白天每天一個區域：嵐山一天、大原加貴船（傍晚看燈籠點燈）一天、清' +
-'水寺與東山半天；第一晚入住後等同伴陸續抵達，在飯店附近吃晚餐；之後三晚：第二晚先從亀岡搭小火車回嵐山，由北往南一路逛到傍晚，直接到河原町 17:20 吃' +
-'和牛壽喜燒與蟹吃到飽，飯後逛新京極；第三晚從貴船下山後到先斗町吃飯、沿鴨川散步、最後一晚輕鬆走一趟伏見稻荷千本鳥居，早點回飯店準備隔天一早退房。12' +
-'/30 參加 Klook 天橋立・伊根舟屋一日遊，傍晚在大阪道頓堀下車，和劉有耘會合，接著進入大阪篇。',
+'水寺、東山與伏見稻荷一天；第一晚入住後等同伴陸續抵達，在飯店附近吃晚餐；之後三晚：第二晚先從亀岡搭小火車回嵐山，由北往南一路逛到傍晚，直接到河原町' +
+'自由找晚餐，飯後逛新京極；第三晚從貴船下山後到先斗町吃飯，飯後夜遊祇園白川，再到京都站看大階段冬季燈光；最後一晚是下午爬伏見稻荷千本鳥居、逛吉伊卡' +
+'哇店，在京都站吃晚餐，早點回飯店準備隔天一早退房。12/30 參加 Klook 天橋立・伊根舟屋一日遊，傍晚在大阪道頓堀下車，和劉有耘會合，接著進入大阪篇。',
 who: '三個男生、一人一張床；白天看京都經典，晚上想逛街、吃飯、看夜景，不想每天換飯店',
 stats: [['3', '人同行'], ['4', '晚同一間飯店'], ['3', '個夜行程'], ['1', '站到京都站／四條']],
 snow: 0,
@@ -2316,19 +2506,20 @@ budget: [
 'bnb 收據為準；宿泊稅 3 人 4 晚共 ¥4,800，入住時另付。'],
 ['門票', '約 ¥2,500–4,000／人：天龍寺庭園 ¥500、常寂光寺 ¥600、三千院 ¥700、清水寺 ¥500；選配：二尊院 ¥500、大河內山莊含抹茶 ¥1,000、寶泉院 ¥1' +
 ',000。伏見稻荷、貴船神社免費。'],
-['餐飲', '嵐山湯豆腐約 ¥3,000–5,000、大原午餐約 ¥1,500–3,000、先斗町晚餐約 ¥5,000–10,000／人、12/27 和牛とカニ吃到飽約 ¥9,000–16,000／人（' +
-'含飲料喝到飽，依方案）；拉麵小路另計。']
+['餐飲', '嵐山湯豆腐約 ¥3,000–5,000、大原午餐約 ¥1,500–3,000、先斗町晚餐約 ¥5,000–10,000／人；12/27 晚餐むさし迴轉壽司約 ¥1,500–2,500／人、' +
+'12/29 京都站晚餐自由選，拉麵小路另計。']
 ],
 road: '全程不開車，靠電車、巴士和步行移動，每人一張 IC 卡（ICOCA 或 Apple 錢包裡的 Suica）就能搭大部分路線。飯店在地鐵烏丸線五條站 6 號出口旁：往' +
 '南 1 站到京都站、往北 1 站到四條（接阪急烏丸，再 1 站到京都河原町），步行到京都站約 12 分；三個人短程搭計程車，分攤後也很划算。嵐山從京都站搭 JR ' +
-'嵯峨野線約 15 分；大原搭烏丸線到終點國際會館約 20 分，再轉京都巴士 19 系統約 22 分（約 30 分一班）；貴船靠叡山電車接巴士；伏見稻荷從京都站搭 JR 奈' +
-'良線 2 站約 5 分。京都市區 12 月底白天約 8–10°C、晚上接近 0°C，夜行程請多穿一層；大原、貴船比市區冷 2–3 度，石階可能結冰，請穿防滑鞋。',
+'嵯峨野線約 15 分；大原搭烏丸線到終點國際會館約 20 分，再轉京都巴士 19 系統約 22 分（約 30 分一班）；貴船靠叡山電車接巴士；伏見稻荷從祇園四条搭京阪' +
+'約 10 分，回京都站搭 JR 奈良線 2 站約 5 分。京都市區 12 月底白天約 8–10°C、晚上接近 0°C，夜行程請多穿一層；大原、貴船比市區冷 2–3 度，石階可能' +
+'結冰，請穿防滑鞋。',
 route: [
 ['關西機場', '12/26', '', 34.4344, 135.2449],
 ['五條・Garden Hotel', '12/26', 'HARUKA 1h20', 34.9954, 135.7592],
 ['嵐山・常寂光寺・河原町', '12/27', '約 1h40', 34.9954, 135.7592],
 ['大原・貴船・先斗町', '12/28', '約 2h40', 34.9954, 135.7592],
-['東山・伏見稻荷', '12/29', '約 1 小時', 34.9954, 135.7592],
+['東山・伏見稻荷', '12/29', '約 40 分', 34.9954, 135.7592],
 ['大阪道頓堀', '12/30', '一日遊 9h45', 34.6687, 135.5013]
 ],
 days: [
@@ -2373,15 +2564,14 @@ map: gmap('関西国際空港 第1ターミナル', '京都市下京区横諏訪
 },
 {
 d: '12/27', w: 'SUN', short: '嵐山・河原町',
-title: '小火車・常寂光寺・竹林・天龍寺・和牛蟹吃到飽',
+title: '小火車・常寂光寺・竹林・天龍寺・新京極',
 from: '五條', to: '五條',
 drive: '電車約 1h40 · JR 嵯峨野線＋小火車＋阪急',
 img: 'k_togetsu', gallery: ['k_sagano', 'k_jojakko', 'k_bamboo2', 'k_yudofu', 'k_tenryuji', 'k_shinkyogoku'],
-tags: ['嵯峨野小火車', '常寂光寺', '竹林', '天龍寺', '和牛壽喜燒＋蟹吃到飽'],
-must: ['小火車 11/27 開賣就訂：トロッコ亀岡 9:30（嵯峨野2號）→ トロッコ嵐山', '8:20 出門，趕京都站 8:40 的 JR', '和牛とカニ訂 17:20（17:30 ' +
-'前入店有折扣）', '購物帶護照'],
+tags: ['嵯峨野小火車', '常寂光寺', '竹林', '天龍寺', 'むさし迴轉壽司・新京極'],
+must: ['小火車 11/27 開賣就訂：トロッコ亀岡 9:30（嵯峨野2號）→ トロッコ嵐山', '8:20 出門，趕京都站 8:40 的 JR', '購物帶護照'],
 stayS: 'The Garden Hotel・第 2 晚',
-foodS: '午：嵐山湯豆腐 · 晚：和牛とカニ 17:20',
+foodS: '午：嵐山湯豆腐 · 晚：むさし迴轉壽司',
 tl: [
 { t: '08:20', k: 'train', m: 1, n: '出門到京都站', s: '地鐵五條 → 京都 1 站，走到西側的 JR 嵯峨野線月台', c: ['約 15 分'],
 x: [['為什麼 8:20', '要趕 8:40 的 JR，才接得上 9:30 的小火車；下一班 JR 到馬堀會來不及']] },
@@ -2408,13 +2598,15 @@ x: [['展望台', '嵐山公園亀山地區最高處，免費；看下去就是�
 '山約 20 分，16:00 最後入園，門票備現金']] },
 { t: '15:40', k: 'bag', o: 1, n: '嵐山商店街小逛', s: '渡月橋到嵐電嵐山站一帶，抹茶甜點、伴手禮', c: ['約 40 分'] },
 { t: '16:30', k: 'train', m: 1, n: '直接到河原町', s: '走過渡月橋到阪急嵐山站，搭阪急到桂轉京都線，坐到京都河原町', c: ['約 40 分'],
-x: [['不回飯店', '從嵐山直接進市區吃晚餐，不繞回五條'], ['另一條路', 'JR 嵯峨嵐山 → 二条，轉地鐵東西線到京都市役所前，再往南走約 8 分']] },
-{ t: '17:20', k: 'food', n: '和牛とカニ 晚餐', s: '和牛壽喜燒＋松葉蟹、帝王蟹吃到飽，含飲料喝到飽', c: ['¥9,000–16,000／人', '!訂 17:20'], p:
-5,
-x: [['方案', '食べログ上有 ¥9,000–16,000 等方案（含飲料喝到飽），依方案決定肉和蟹的種類；以訂位時的現行方案為準'], ['早到優惠', '食べロ' +
-'グ上 17:30 前到店折 ¥1,000，訂 17:20 剛好用得到；優惠內容訂位時確認'], ['營業', '食べログ寫 16:00 或 17:00 開到 24:00（L.O. 23:30）；12/27 是週日' +
-'，熱門時段先訂位'], ['怎麼去', '京都河原町站出來沿河原町通往北，過六角通，SKI 河原町六角ビル 3F，步行約 7 分']] },
-{ t: '19:20', k: 'bag', n: '飯後逛新京極', s: '從六角往西就是新京極、寺町京極：古著、球鞋與潮牌，多數店 20:00 打烊', c: ['約 40 分'], p: 6,
+x: [['不回飯店', '從嵐山直接進市區吃晚餐，不繞回五條'], ['另一條路', 'JR 嵯峨嵐山 → 二条，轉地鐵東西線到京都市役所前，步行約 3 分就到む' +
+'さし']] },
+{ t: '17:20', k: 'food', n: '寿しのむさし 三条本店（迴轉壽司）', s: '河原町通三條往北一點，從阪急京都河原町站沿河原町通往北走約 8 分', c:
+['約 1 小時', '1 盤 ¥146 起（未稅）', '!不能訂位'],
+x: [['營業', '每天 11:00–21:45（LO 21:30，最後入店 21:20），只休元旦；舊資料寫週三休，週日不受影響'], ['座位', '64 席：1F 吧檯 36 席，2F' +
+' 有 5 個 box 和 8 席吧檯；三人可以跟店員說要 box'], ['排隊', '不能訂位，現場排；17:20 比 18:00 後好排。等太久就換「各區備選餐廳」的河原町名單'],
+['付款', '可刷卡、電子錢包、QR 付款'], ['地址', '京都市中京區河原町通三条上る恵比須町 440；地鐵京都市役所前站步行 3 分、京阪三條站步行 5 分']] },
+{ t: '18:30', k: 'bag', n: '飯後逛新京極', s: 'むさし出來往南走、再往西一條街就是新京極、寺町京極：古著、球鞋與潮牌，多數店 20:00 打烊', c:
+['約 1 小時'], p: 5,
 x: [['範圍', '寺町京極、新京極商店街，Kyoto BAL、四條通；挑一兩家想看的日潮店'], ['回飯店', '計程車約 10 分，或阪急到烏丸轉地鐵 1 站到五' +
 '條']] }
 ],
@@ -2434,21 +2626,19 @@ note: '世界遺產，曹源池庭園以嵐山為借景，是夢窗疎石的代�
 { n: '渡月橋・亀山公園展望台', lat: 35.0128, lng: 135.6775,
 t: '自由通行 · 免費 · 嵐山的地標',
 note: '展望台可以俯瞰保津川峽谷；冬天山色比較素，下午光線斜照也好拍' },
-{ n: '和牛とカニ 三条河原町店', lat: 35.0074, lng: 135.7700,
-t: '京阪三條站步行約 5 分 · 食べログ：16:00／17:00–24:00（L.O. 23:30）· 約 ¥9,000–16,000／人',
-note: '和牛壽喜燒加松葉蟹、帝王蟹吃到飽，還有和牛手捲壽司；2025 年 11 月開幕，週日晚上建議先訂位' },
 { n: '寺町京極・新京極商店街', lat: 35.0065, lng: 135.7678,
 t: '四條河原町 · 有頂棚 · 店家約 10:00–20:00（依店家）',
 note: '兩條平行的拱廊商店街，古著、球鞋、潮牌和藥妝都集中在這裡，下雨也能逛' }
 ],
 stay: 'The Garden Hotel 京都五条連住第 2 晚，不用收行李。',
-food: '午餐在天龍寺一帶吃湯豆腐；下午在嵐山商店街可以買抹茶甜點墊胃；晚餐 17:20 在河原町的和牛とカニ吃和牛壽喜燒與蟹吃到飽，17:30 前入店有早' +
-'到優惠；飯後在新京極逛一下。',
+food: '午餐在天龍寺一帶吃湯豆腐；下午在嵐山商店街可以買抹茶甜點墊胃；晚餐吃河原町三條的寿しのむさし迴轉壽司（不能訂位，17:20 前到比較好排）；' +
+'飯後沿河原町往南到新京極逛一下（多數店 20:00 打烊）。',
 tips: [
 ['warn', '小火車週末常常提早賣完，乘車日 1 個月前（11/27 0:00，日本時間）開放網路預約就先訂：上車站選「トロッコ亀岡」、下車站選「トロッコ嵐' +
 '山」，嵯峨野2號 9:30。沒買到就直接搭 JR 到嵯峨嵐山，照同一條路線從常寂光寺開始走。'],
 ['warn', '12/27 是週日，竹林中午人潮多；想拍人少的竹林，9:53 下車後先在トロッコ嵐山站前那段拍。'],
-['info', '一路順向、不走回頭路：JR 坐到馬堀 → 小火車回嵐山 → 由北往南走常寂光寺、竹林、天龍寺、渡月橋 → 從阪急嵐山站直接到河原町吃飯。']
+['info', '一路順向、不走回頭路：JR 坐到馬堀 → 小火車回嵐山 → 由北往南走常寂光寺、竹林、天龍寺、渡月橋 → 從阪急嵐山站直接到河原町，吃むさ' +
+'し迴轉壽司，再往南逛新京極。']
 ],
 alt: '下雨時省略小火車，直接搭 JR 到嵯峨嵐山；常寂光寺和二尊院的石階濕滑可以跳過，以竹林、天龍寺、湯豆腐和嵐山商店街為主，提早到河原町在有頂' +
 '棚的新京極和 Kyoto BAL 逛街，晚餐照常。',
@@ -2456,13 +2646,13 @@ map: gmap('京都市下京区横諏訪町318', 'トロッコ亀岡駅', [], 'tra
 },
 {
 d: '12/28', w: 'MON', short: '大原・貴船',
-title: '大原三千院・貴船傍晚點燈・先斗町晚餐',
+title: '大原三千院・貴船傍晚點燈・先斗町晚餐・祇園白川夜景',
 from: '五條', to: '五條',
-drive: '巴士＋電車約 2h40 · 地鐵＋京都巴士＋叡山電車＋京阪',
-img: 'k_sanzenin_snow', gallery: ['k_sanzenin_gate', 'k_kibune', 'k_kibune_steps', 'k_kibune_gate', 'k_kibune_town', 'k_pontocho', 'k_kamogaw' +
-'a'],
-tags: ['三千院', '貴船傍晚點燈', '先斗町晚餐', '鴨川夜散步'],
-must: ['穿防滑鞋、帶手電筒（山區冷 2–3 度）', '貴船 17:23 巴士下山（17:38 末班）', '先斗町訂 18:40'],
+drive: '巴士＋電車約 2h40 · 地鐵＋京都巴士＋叡山電車＋京阪＋計程車',
+img: 'k_sanzenin_snow', gallery: ['k_sanzenin_gate', 'k_kibune', 'k_kibune_steps', 'k_kibune_gate', 'k_kibune_town', 'k_pontocho', 'k_gion_ni' +
+'ght'],
+tags: ['三千院', '貴船傍晚點燈', '先斗町晚餐', '祇園白川夜景', '京都站大階段燈光'],
+must: ['穿防滑鞋、帶手電筒（山區冷 2–3 度）', '貴船 17:23 巴士下山（17:38 末班）', '先斗町訂 18:40', '京都站大階段燈光 22:00 結束'],
 stayS: 'The Garden Hotel・第 3 晚',
 foodS: '午：大原湯豆腐 · 晚：先斗町 18:40',
 tl: [
@@ -2494,8 +2684,14 @@ x: [['17:23', '貴船巴士站（本宮往下走約 3 分）上車；17:10 也�
 { t: '18:40', k: 'food', n: '先斗町晚餐', s: '鴨川邊的石板窄巷，京料理、串炸或燒鳥', c: ['!先訂位'], p: 5,
 x: [['訂位', '年末熱門店容易客滿，3 人座位先訂好；訂 18:40，搭 17:23 的巴士下山就來得及，晚到可以打電話說明'], ['營業日', '12/28 是週一又' +
 '接近年末，訂位時確認當天有營業']] },
-{ t: '20:10', k: 'walk', n: '鴨川散步・短暫逛街', s: '沿鴨川走到三條大橋，再到河原町挑一兩家逛；多數店 20:00–21:00 打烊', p: 6,
-x: [['回飯店', '計程車約 10 分，或搭地鐵']] }
+{ t: '20:10', k: 'walk', n: '祇園白川・巽橋夜散步', s: '先斗町南口出來過四條大橋往東，從縄手通轉進白川南通，沿柳樹、燈籠與町家走到巽橋，再' +
+'順路穿過花見小路', c: ['免費', '約 30 分'], p: 6,
+x: [['路線', '先斗町 → 四條大橋 → 縄手通 → 白川南通・巽橋・辰巳大明神 → 新橋通 → 花見小路，步行約 10 分就到第一個點'], ['禮儀', '花' +
+'見小路和白川一帶多數是私有巷弄，不要攔拍藝妓、不要進私人巷道']] },
+{ t: '20:50', k: 'car', m: 1, n: '計程車到京都站', s: '在四條通（祇園一側）攔車，3 人共乘最省事', c: ['約 15 分', '約 ¥1,500–2,000／車'] },
+{ t: '21:10', k: 'moon', n: '京都站大階段冬季燈光', s: '站內大樓西側的 171 階大階段，LED 播放雪與雪花動畫', c: ['12/26–31 限定', '15:00–2' +
+'2:00', '免費'], p: 7,
+x: [['回飯店', '地鐵烏丸線京都 → 五條 1 站約 2 分，6 號出口就是飯店；或計程車約 5 分']] }
 ],
 spots: [
 { n: '三千院', lat: 35.1199, lng: 135.8343,
@@ -2516,12 +2712,16 @@ note: '貴船神社最初的所在地，杉林圍繞，比本宮安靜許多' },
 { n: '先斗町', lat: 35.0058, lng: 135.7708,
 t: '京阪三條站步行約 3 分 · 各店營業時間出發前確認',
 note: '一側是鴨川、一側是町家料理店的石板窄巷，夜晚燈籠亮起最有京都味' },
-{ n: '鴨川・三條大橋', lat: 35.0090, lng: 135.7720,
-t: '自由通行',
-note: '沿河岸散步消化晚餐，河邊等距坐著的情侶是京都名景' }
+{ n: '祇園白川・巽橋', lat: 35.0047, lng: 135.7752,
+t: '自由通行 · 免費',
+note: '白川沿岸的柳樹、石板路與町家茶屋，入夜燈籠亮起，是京都最有味道的夜景之一；先斗町走過去約 10 分' },
+{ n: '京都站大階段', lat: 34.9852, lng: 135.7577,
+t: '冬季燈光 12/26–31 · 15:00–22:00 · 免費',
+note: '京都車站大樓的 171 階大階段，年末限定播放雪與雪花的燈光動畫；離飯店只有 1 站' }
 ],
 stay: 'The Garden Hotel 京都五条連住第 3 晚。',
-food: '午餐在大原參道吃湯豆腐或味噌鍋，柴漬可以買回去當伴手禮；晚餐 18:40 在先斗町吃京料理、串炸或燒鳥，飯後沿鴨川散步、短暫逛街。',
+food: '午餐在大原參道吃湯豆腐或味噌鍋，柴漬可以買回去當伴手禮；晚餐 18:40 在先斗町吃京料理、串炸或燒鳥，飯後走到祇園白川看夜景，再搭計程車到' +
+'京都站看大階段燈光。',
 tips: [
 ['warn', '貴船下山的京都巴士 33 系統，12/28（週一）平日 17 點只有 17:10、17:23、17:38 三班，17:38 是末班；錯過要沿沒有路燈的車道走約 30 分' +
 '到貴船口，請帶手電筒。'],
@@ -2534,36 +2734,38 @@ link: ['#kbTT', '12/28 轉乘時刻表'],
 map: gmap('三千院', '貴船神社', [], 'transit')
 },
 {
-d: '12/29', w: 'TUE', short: '東山・伏見夜',
-title: '清水寺・東山散步・伏見稻荷夜訪',
+d: '12/29', w: 'TUE', short: '東山・伏見稻荷',
+title: '清水寺・東山散步・伏見稻荷・吉伊卡哇',
 from: '五條', to: '五條',
-drive: '地鐵＋市巴士＋JR 約 1 小時',
-img: 'kiyomizu', gallery: ['k_ninenzaka', 'k_yasakatower', 'fushimi', 'k_fushimi_night'],
-tags: ['清水寺', '二三年坂', '伏見稻荷夜訪'],
-must: ['今晚買好明天早餐', '行李收好（明早 7:30 退房）', '夜訪帶手電筒、別摸黑上山'],
+drive: '計程車＋京阪＋JR 約 40 分',
+img: 'kiyomizu', gallery: ['k_ninenzaka', 'k_yasakatower', 'k_yasaka', 'fushimi'],
+tags: ['清水寺', '二三年坂', '八坂神社', '伏見稻荷', '吉伊卡哇'],
+must: ['8:40 計程車到五条坂', '吉伊卡哇店 17:30 關門', '今晚買好明天早餐', '行李收好（明早 7:30 退房）'],
 stayS: 'The Garden Hotel・最後一晚',
 foodS: '午：東山蕎麥麵 · 晚：京都站',
 tl: [
-{ t: '08:15', k: 'train', m: 1, n: '地鐵到京都站', s: '烏丸線五條 → 京都（1 站），走到站前巴士總站', c: ['約 10 分'] },
-{ t: '08:25', k: 'bus', m: 1, n: '市巴士到五条坂', s: '京都站前巴士總站搭 206 或 100 系統，「五条坂」下車', c: ['約 15 分', 'IC 卡可'],
-x: [['乘車處', 'D 乘車區；206、100 在哪個月台以站內看板為準'], ['人潮', '206 白天常客滿，8 點多比較空，盡量搭這個時段'],
-['步行', '也可從飯店沿五條通走過五條大橋再爬五条坂，約 40 分（後段上坡）']] },
-{ t: '08:45', k: 'walk', n: '茶わん坂上坡到清水寺', s: '五条坂巴士站下車往上走', c: ['約 10 分'] },
+{ t: '08:40', k: 'car', m: 1, n: '計程車到五条坂', s: '飯店門口叫車，在五条坂或茶わん坂口下車，往上走約 10 分到清水寺', c: ['約 10 分', '約' +
+' ¥400–500／人'],
+x: [['車資', '三人分攤約 ¥400–500／人；用 GO App 叫車或請櫃台幫忙'], ['不搭車', '步行約 30 分，或市巴士 206、86、106 系統到五条坂']] },
 { t: '09:00', k: 'temple', n: '清水寺', s: '清水舞台、音羽之瀧，早上人少', c: ['約 1 小時'], p: 0 },
 { t: '10:15', k: 'bag', n: '三年坂・二年坂', s: '散步、買伴手禮', p: 1 },
 { t: '11:15', k: 'walk', n: '八坂塔・寧寧之道', s: '八坂塔（法觀寺）→ 寧寧之道 → 石塀小路', p: 2 },
 { t: '12:15', k: 'food', n: '午餐', s: '蕎麥麵、湯葉或抹茶甜點' },
-{ t: '13:15', k: 'torii', n: '八坂神社', s: '石塀小路走出來就到，朱紅西樓門正對四條通', c: ['約 20 分'], p: 3 },
-{ t: '13:40', k: 'walk', n: '沿四條通走到地鐵四條站', s: '經祇園、過鴨川四條大橋、穿過河原町', c: ['步行約 20 分'],
-x: [['順路', '（選）錦市場和四條通平行，可以繞進去逛 30 分；12/29 年末採買人多，部分攤位傍晚就收']] },
-{ t: '14:15', k: 'home', n: '回飯店整理行李', s: '地鐵四條 → 五條 1 站；下午休息', c: ['約 5 分', '!明早 7:30 退房'] },
-{ t: '17:15', k: 'train', m: 1, n: 'JR 到稻荷站', s: '地鐵五條 → 京都，轉 JR 奈良線', c: ['約 15 分'],
-x: [['出站', '出站就是大社鳥居']] },
-{ t: '17:30', k: 'torii', n: '伏見稻荷夜訪', s: '點燈的千本鳥居，走到奧社奉拜所就折返', c: ['往返約 40 分'], p: 4,
-x: [['夜訪', '天黑後千本鳥居點起燈，人比白天少很多'], ['安全', '奧社之後山路暗，今晚不再往上走']] },
-{ t: '18:30', k: 'food', n: '京都站晚餐', s: '最後一晚，順便買明天早餐', p: 5,
-x: [['怎麼去', 'JR 稻荷 → 京都'], ['早餐', '在超商或伊勢丹地下街買']] },
-{ t: '19:45', k: 'bed', n: '回飯店打包', s: '地鐵 1 站，把行李收好、早點睡', c: ['!明早 7:30 退房'] }
+{ t: '13:15', k: 'torii', n: '八坂神社', s: '石塀小路走出來就到，朱紅西樓門正對四條通', c: ['約 20 分'], p: 3,
+x: [['參拜', '24 小時開放、免費'], ['年末', '12/31 晚上的「をけら詣」人潮最多，12/29 還算好走']] },
+{ t: '13:40', k: 'train', m: 1, n: '京阪到伏見稲荷', s: '八坂神社往西走約 5 分到祇園四条站，搭往淀屋橋方向的普通或準急', c: ['約 10 分', 'I' +
+'C 卡可'],
+x: [['停靠', '特急不停伏見稲荷，搭普通或準急'], ['出站', '京阪伏見稲荷站往東走約 5 分到大社鳥居']] },
+{ t: '14:00', k: 'torii', n: '伏見稻荷大社', s: '千本鳥居 → 奧社奉拜所，體力夠再往上到四ツ辻看京都市景', c: ['約 1.5 小時', '免費'], p: 4,
+x: [['路線', '千本鳥居到奧社約 15 分；奧社往上到四ツ辻約 30 分，從四ツ辻原路下山'], ['天色', '12 月底約 16:50 日落，16:30 前回到山下']] },
+{ t: '15:50', k: 'bag', n: 'ちいかわもぐもぐ本舗 京都伏見店', s: '伏見稻荷參道上的吉伊卡哇店，造型點心與限定周邊', c: ['約 40 分', '!17:30 ' +
+'關門'], p: 5,
+x: [['營業', '9:30–17:30，全年無休；12/29 是平日，原則上自由入店，人多時可能發整理券'], ['位置', 'JR 稻荷站步行約 5 分，逛完直接走回 JR ' +
+'站']] },
+{ t: '16:40', k: 'train', m: 1, n: 'JR 稻荷 → 京都', s: 'JR 奈良線 2 站', c: ['約 5 分'] },
+{ t: '16:50', k: 'food', n: '京都站逛街・晚餐', s: '伊勢丹、Porta 地下街與拉麵小路；最後一晚，順便買明天早餐', p: 6,
+x: [['早餐', '在超商或伊勢丹地下街買'], ['燈飾', '京都站大階梯燈飾開到 22:00，吃完順路看']] },
+{ t: '19:30', k: 'bed', n: '回飯店打包', s: '地鐵 1 站，把行李收好、早點睡', c: ['!明早 7:30 退房'] }
 ],
 spots: [
 { n: '清水寺', lat: 34.9949, lng: 135.7850,
@@ -2575,12 +2777,15 @@ note: '石板坡道兩側是町家老舖，適合邊走邊吃、買伴手禮' },
 { n: '八坂塔（法觀寺）', lat: 34.9986, lng: 135.7793,
 t: '外觀自由參觀',
 note: '五重塔從石板坡道盡頭冒出來，是東山最經典的明信片角度' },
-{ n: '八坂神社', lat: 35.0037, lng: 135.7785,
+{ n: '八坂神社', lat: 35.0036, lng: 135.7785,
 t: '24 小時開放 · 免費',
-note: '祇園的總鎮守，朱紅西樓門正對四條通；年末已開始為初詣搭棚、掛新注連繩' },
+note: '祇園的守護神社，朱紅西樓門正對四條通；從這裡沿四條通往西走就是祇園、鴨川與河原町' },
 { n: '伏見稻荷大社', lat: 34.9671, lng: 135.7727,
 t: '24 小時開放 · 免費',
-note: '朱紅鳥居一路延伸上稻荷山；晚上燈籠亮起後的千本鳥居和白天是完全不同的氣氛' },
+note: '朱紅鳥居一路延伸上稻荷山；下午光線斜照進千本鳥居最好拍，四ツ辻可以俯瞰京都市區' },
+{ n: 'ちいかわもぐもぐ本舗 京都伏見店', lat: 34.9676, lng: 135.7712,
+t: '9:30–17:30 · 全年無休 · JR 稻荷站步行約 5 分',
+note: '伏見稻荷參道上的吉伊卡哇店，賣造型點心和店舖限定周邊；平日原則自由入店（人多時可能發整理券）；週末假日要先在 LINE 取得數位整理券' },
 { n: '京都站', lat: 34.9858, lng: 135.7588,
 t: '伊勢丹、Porta 地下街與拉麵小路',
 note: '最後一晚的晚餐和隔天早餐都在這裡解決；大階梯燈飾開到 12/31 22:00，吃完可以順路看' }
@@ -2588,11 +2793,12 @@ note: '最後一晚的晚餐和隔天早餐都在這裡解決；大階梯燈飾�
 stay: 'The Garden Hotel 京都五条連住第 4 晚（最後一晚）。',
 food: '午餐在二年坂、三年坂一帶吃蕎麥麵或湯葉；晚餐在京都站伊勢丹餐廳街或 Porta 地下街。',
 tips: [
-['warn', '伏見稻荷晚上照常開放，但山路很暗、部分路段沒有燈；只走到奧社奉拜所就折返，不要摸黑往上走，記得帶手機手電筒。'],
-['info', '年末從 12/29 起東山一帶人潮變多，清水寺排在早上第一站最舒服。'],
+['warn', '吉伊卡哇店 17:30 關門；伏見稻荷爬得比較久時，15:50 前先下山去吉伊卡哇，不要等到傍晚。'],
+['info', '年末從 12/29 起東山一帶人潮變多，清水寺排在早上第一站最舒服；以 2025 年為例，京都市巴士 12/28–1/4 走假日班表。'],
 ['warn', '隔天 7:30 退房，今晚先把行李收好，並問櫃台一早退房的方式（櫃台還沒開時房卡放哪裡）。']
 ],
-alt: '下雨時清水寺與二年坂撐傘照常走；伏見稻荷的鳥居下大多能遮雨，雨大就只走到千本鳥居入口段。',
+alt: '下雨時清水寺與二年坂撐傘照常走；伏見稻荷的鳥居下大多能遮雨，雨大就只走千本鳥居到奧社，提早去吉伊卡哇店。累了：八坂神社後計程車直接到伏' +
+'見稻荷，約 15 分。',
 map: gmap('京都市下京区横諏訪町318', '清水寺', [], 'transit')
 },
 {
@@ -2661,14 +2867,14 @@ mode: 'rail',
 color: '#B8412C',
 icon: 'spark',
 badge: ['ny', '劉有耘加入 · 4 人'],
-sub: '四晚連住新今宮站旁的一棟貸切 Airbnb × 道頓堀會合 × 通天閣與新世界串炸 × 住吉大社或四天王寺跨年 × 奈良初詣 × 大阪城天守閣 × 心齋橋・美' +
-'國村初賣與梅田夜景 × 臨空城 Outlet 買完搭接駁巴士去機場',
+sub: '四晚連住新今宮站旁的一棟貸切 Airbnb × 道頓堀會合 × 通天閣與新世界串炸 × 住吉大社跨年 × 奈良初詣 × 大阪天滿宮與天神橋筋 × 梅田購物與空' +
+'中庭園夕陽 × 心齋橋和牛蟹吃到飽 × 臨空城 Outlet 買完搭接駁巴士去機場',
 hero: 'dotonbori',
 summary: '12/30 傍晚在道頓堀和劉有耘會合，隊伍變成 4 個人。大阪四晚住新今宮站步行 3 分的一棟貸切 Airbnb（4 間臥室、6 張雙人床），南海、JR、地鐵御' +
 '堂筋線與堺筋線都在附近：到難波 1 站、到住吉大社約 10 分，南海空港急行也直接在新今宮上車。通天閣與新世界就在步行 10 分內，24 小時超市玉出和 MEGA 唐' +
-'吉訶德也在附近，晚上回來還能補貨。行程是：除夕白天上通天閣、吃新世界串炸，下午去海遊館看鯨鯊，晚上二選一：去住吉大社初詣跨年，或到四天王寺親手敲除' +
-'夜之鐘；元旦下午到奈良餵鹿、看大佛；1/2 早上先去大阪城天守閣，再逛心齋橋 PARCO、美國村古著與堀江，晚上梅田空中庭園看夜景；1/3 一早帶行李到機場對岸' +
-'的臨空城 Outlet 新年特賣，再搭 15 分鐘接駁巴士到關西機場。',
+'吉訶德也在附近，晚上回來還能補貨。行程是：除夕白天上通天閣、吃新世界串炸，下午去海遊館看鯨鯊，晚上到住吉大社初詣跨年，搭 0:48 末班車回住處；元旦下' +
+'午到奈良餵鹿、看大佛；1/2 早上到大阪天滿宮初詣、逛天神橋筋商店街，下午在梅田逛街、傍晚上空中庭園看夕陽，晚上到心齋橋逛 PARCO、吃和牛蟹吃到飽；1/3 ' +
+'一早帶行李到機場對岸的臨空城 Outlet 新年特賣，再搭 15 分鐘接駁巴士到關西機場。',
 who: '四個人一起過日本新年，想跨年、初詣、買福袋，也想每晚都有地方去的旅伴',
 stats: [['4', '人同行'], ['4', '晚新今宮連住'], ['1', '站到難波'], ['0:48', '跨年末班車']],
 snow: 0,
@@ -2697,10 +2903,10 @@ budget: [
 ['交通', '約 ¥4,000–6,000／人：市內地鐵、南海、JR 刷 IC 卡；奈良 JR 來回 ¥1,160；1/3 南海新今宮 → りんくうタウン ¥780＋臨空城接駁巴士到機場 ¥' +
 '300。'],
 ['住宿', '新今宮一棟貸切 Airbnb 4 晚（12/30–1/3，4 人），金額以 Airbnb 收據為準。'],
-['門票', '約 ¥8,500–9,300／人：通天閣年末年始 ¥1,800、海遊館 ¥2,700–3,500（依日期浮動）、東大寺大佛殿 ¥800（只收現金）、大阪城天守閣 ¥1,200、' +
-'梅田空中庭園 ¥2,000。'],
-['餐飲', '新世界串炸約 ¥1,500–3,000、道頓堀晚餐約 ¥3,000–6,000／人；元旦小店多休息，連鎖店最保險。福袋、初賣與 Outlet 購物另計；1/3 Outlet 寄' +
-'放行李 ¥1,000／件（只收現金）。']
+['門票', '約 ¥7,300–8,100／人：通天閣年末年始 ¥1,800、海遊館 ¥2,700–3,500（依日期浮動）、東大寺大佛殿 ¥800（只收現金）、梅田空中庭園 ¥2,000；' +
+'住吉大社、天滿宮免費。'],
+['餐飲', '新世界串炸約 ¥1,500–3,000、道頓堀晚餐約 ¥3,000–6,000／人、1/2 心齋橋和牛蟹吃到飽約 ¥10,000–18,000／人（120 分含喝到飽，依方案）；' +
+'元旦小店多休息，連鎖店最保險。福袋、初賣與 Outlet 購物另計；1/3 Outlet 寄放行李 ¥1,000／件（只收現金）。']
 ],
 road: '住宿在新今宮站旁，大阪篇幾乎都從這裡出發：南海本線 1 站到難波、約 10 分到住吉大社，空港急行直達りんくうタウン（臨空城）與關西機場；JR 大和' +
 '路快速直達奈良；地鐵御堂筋線（動物園前站）直達梅田。四個人短程搭計程車分攤後也划算。年末年始注意：南海與大阪 Metro 除夕沒有通宵電車（2025–26 住吉' +
@@ -2710,7 +2916,7 @@ route: [
 ['新今宮 Airbnb', '12/30', '南海 1 站', 34.6515, 135.4998],
 ['新今宮 Airbnb', '12/31', '跨年往返', 34.6515, 135.4998],
 ['新今宮 Airbnb', '1/1', '奈良往返 1h30', 34.6515, 135.4998],
-['新今宮 Airbnb', '1/2', '大阪城・心齋橋・梅田', 34.6515, 135.4998],
+['新今宮 Airbnb', '1/2', '天滿宮・梅田・心齋橋', 34.6515, 135.4998],
 ['關西機場', '1/3', '臨空城 Outlet → 巴士 15 分', 34.4344, 135.2449]
 ],
 days: [
@@ -2762,12 +2968,12 @@ map: gmap('道頓堀 戎橋', '新今宮駅', [], 'transit')
 },
 {
 d: '12/31', w: 'THU', short: '除夕跨年',
-title: '通天閣・海遊館・跨年二選一',
+title: '通天閣・海遊館・住吉大社跨年',
 from: '新今宮', to: '新今宮',
 drive: '地鐵為主，海遊館單程約 30 分',
-img: 'sumiyoshi', gallery: ['o_shitennoji', 'o_kitagane', 'tsutenkaku', 'o_kaiyukan'],
-tags: ['通天閣', '海遊館', '年越蕎麥麵', '跨年 A 住吉大社／B 四天王寺'],
-must: ['通天閣、海遊館先買指定時段票', 'だるま只收現金', '跨年 A／B 先決定，先裝 GO App'],
+img: 'sumiyoshi', gallery: ['tsutenkaku', 'o_kaiyukan', 'o_shinsekai_night'],
+tags: ['通天閣', '海遊館', '年越蕎麥麵', '住吉大社跨年'],
+must: ['通天閣、海遊館先買指定時段票', 'だるま只收現金', '末班車 0:48，先裝 GO App'],
 stayS: '新今宮 Airbnb・第 2 晚',
 foodS: '午：串炸 · 晚：蕎麥麵',
 tl: [
@@ -2781,13 +2987,7 @@ x: [['四選一', 'だるま總本店、だるま分店（通天閣店、ジャ�
 x: [['門票', '依日期浮動，大人約 ¥2,700–3,500，年末偏高；官網 e-ticket 指定日期與入館時段，不用在售票口排隊'], ['營業', '以 2025–26 為' +
 '例：12/29–12/31 8:30–20:00，最後入館 19:00'], ['逛多久', '約 2–2.5 小時；除夕下午人多，大水槽前多停一下']] },
 { t: '16:00', k: 'home', n: '回住宿午睡', s: '中央線轉御堂筋線回動物園前，晚上要熬夜', c: ['約 30 分'] },
-{ t: '18:30', k: 'food', n: '晚餐・年越蕎麥麵', s: '新世界或難波，跨年前先吃飽' }
-],
-optH: '跨年二選一',
-opts: [
-{ id: 'A', n: '住吉大社', s: '國寶本殿初詣 · 要排隊 · 搭 0:48 末班車',
-map: gmap('新今宮駅', '住吉大社', [], 'transit'),
-tl: [
+{ t: '18:30', k: 'food', n: '晚餐・年越蕎麥麵', s: '新世界或難波，跨年前先吃飽' },
 { t: '21:15', k: 'train', m: 1, n: '南海到住吉大社', s: '新今宮搭南海本線普通車', c: ['約 10 分'] },
 { t: '21:40', k: 'torii', n: '住吉大社門口排隊', s: '平常 17:00 關門，除夕 22:00 再開門，一路開到元旦晚上', p: 3 },
 { t: '22:00', k: 'torii', n: '開門進場・先買御守', s: '走過反橋（太鼓橋），趁人少先買新年御守', c: ['羊年御守'],
@@ -2796,37 +2996,6 @@ x: [['御守', '2027 是羊年，干支御守晚一點會排很長，進場先�
 { t: '00:00', k: 'spark', n: '迎接 2027 年', s: '在本宮前初詣參拜' },
 { t: '00:20', k: 'train', m: 1, n: '直接離場・末班車回新今宮', s: '步行約 3 分到住吉大社站，搭 0:48 之前的普通車', c: ['!末班 0:48'],
 x: [['沒趕上', '走 5–10 分離開管制區再用 GO 叫計程車，回新今宮約 15 分'], ['再不行', '步行約 5 km，約 65 分']] }
-],
-tips: [
-['warn', '以 2025–26 為例，南海、大阪 Metro、阪堺電車除夕都沒有通宵或延長運轉，住吉大社站往難波方向末班 0:48（普通，會停新今宮）。'],
-['info', '0:00–3:00 最擠，排隊 1–2 小時很常見；帶暖暖包和手套。元旦 1/1–1/4 Rapi:t 不停住吉大社站。']
-] },
-{ id: 'B', n: '四天王寺除夜之鐘', s: '自己敲除夜之鐘 · 不用趕末班車 · 走路回家',
-map: gmap('新今宮駅', '四天王寺', [], 'walking'),
-tl: [
-{ t: '21:15', k: 'walk', m: 1, n: '前往四天王寺', s: '從住宿往東走到西門石鳥居；或 JR 新今宮 → 天王寺 1 站再走約 12 分', c: ['步行約 2' +
-'5 分'] },
-{ t: '21:45', k: 'temple', n: '到鐘堂排隊', s: '4 人一起排南鐘堂或鼓樓，北鐘堂最熱門', c: ['!各限 108 人'], p: 4,
-x: [['三座鐘堂', '北鐘堂（黃鐘樓）、鼓樓、南鐘堂（鯨鐘樓），三處各限先到 108 人，可以挑一處排'], ['排哪裡', '北鐘堂往年傍晚就有人排，' +
-'隊伍可能排出極楽門到石鳥居；南鐘堂離得遠、人比較少'], ['注意', '沒有官方排隊人數資料，21:45 到是保守安排；越早越穩']] },
-{ t: '23:00', k: 'temple', n: '領整理券', s: '在排隊的鐘堂發券，每人 1 張、敲 1 下', c: ['免費'] },
-{ t: '23:30', k: 'spark', n: '除夜之鐘開始', s: '依整理券順序，每人親手敲一下，送走一年的煩惱',
-x: [['聽音色', '北鐘堂與鼓樓是明亮的「黃鐘調」，南鐘堂是低沉的「盤涉調」'], ['北鐘堂', '鐘在天花板裡，拉繩子敲，看不到鐘本體']] },
-{ t: '00:00', k: 'spark', n: '迎接 2027 年', s: '在鐘聲裡跨年，寺裡沒有倒數', c: ['!勿大聲喧嘩'],
-x: [['規矩', '四天王寺請大家不要在境內倒數喧嘩、大聲歡呼'], ['沒有', '官方公告沒有甜酒和年越蕎麥麵，晚餐先吃飽']] },
-{ t: '00:15', k: 'temple', n: '開運之鐘・招福之鐘', s: '沒拿到整理券的人，到北鐘堂或鼓樓排隊再敲', c: ['到約 3:00'],
-x: [['時間', '108 下結束後，北鐘堂「開運之鐘」、鼓樓「招福之鐘」0:00 左右起自由敲到凌晨約 3:00；南鐘堂敲完 108 下就關'], ['排隊', '部' +
-'落格經驗：1–2 點去，隊伍在動，多半不用等 1 小時']] },
-{ t: '00:45', k: 'torii', n: '初詣・求新年御守', s: '除夕夜御守集中在龜池前的「西樂所」授與所', c: ['部落格資料'],
-x: [['授與所', '部落格說除夕 22:00 左右重新開到隔天早上約 7:00；官方沒寫，到現場確認'], ['本堂', '金堂、中心伽藍晚上不開，元旦 8:30 ' +
-'才開']] },
-{ t: '01:15', k: 'home', n: '走回新今宮', s: '步行約 25 分，不用趕末班車', c: ['約 25 分'],
-x: [['累了', '用 GO 叫計程車，約 5–10 分']] }
-],
-tips: [
-['warn', '除夜之鐘三座鐘堂各限先到 108 人，23:00 才發整理券；北鐘堂最熱門，4 人要一起敲就早點去排南鐘堂或鼓樓。'],
-['info', '沒排到也不用失望：0:00 後北鐘堂與鼓樓一路開放到凌晨約 3:00，每個人都能敲到。寺裡要保持安靜，跨年氣氛比住吉大社安靜很多。']
-] }
 ],
 spots: [
 { n: '通天閣', lat: 34.6525, lng: 135.5063,
@@ -2838,12 +3007,9 @@ note: '醬汁共用，「禁止沾第二次」。八重勝、越源、近江屋�
 { n: '海遊館', lat: 34.6545, lng: 135.4289,
 t: '地鐵中央線大阪港站步行約 5 分 · 12/29–12/31 8:30–20:00，最後入館 19:00（2025–26 資料）· 大人約 ¥2,700–3,500，依日期浮動',
 note: '世界最大級的水族館，從 8 樓沿螺旋坡道一路往下，中央的太平洋大水槽有鯨鯊和鬼蝠魟' },
-{ n: '住吉大社', v: 'A', lat: 34.6124, lng: 135.4930,
-t: '方案 A · 平常 17:00 關門；除夕 22:00 開門，通宵開到 1/1 20:00（2025–26 資料）',
+{ n: '住吉大社', lat: 34.6124, lng: 135.4930,
+t: '平常 17:00 關門；除夕 22:00 開門，通宵開到 1/1 20:00（2025–26 資料）',
 note: '大阪人初詣的首選，四棟本殿都是國寶；反橋坡度很陡，晚上人多要慢慢走' },
-{ n: '四天王寺', v: 'B', lat: 34.6537, lng: 135.5164,
-t: '方案 B · 境內 24 小時可通行 · 除夕 23:00 發整理券、23:30 除夜之鐘；0:00–約 3:00 開運之鐘・招福之鐘（官網資料，2027 公告出發前確認）',
-note: '聖德太子建立、日本最早的官寺；三座鐘堂都讓一般人親手敲鐘，北鐘堂與鼓樓、南鐘堂的音色不同' }
 ],
 stay: '新今宮 Airbnb 連住第 2 晚。',
 food: '新世界串炸午餐四選一：だるま總本店（1929 年元祖，12 席，排最久）、だるま分店（同樣味道，座位多）、横綱通天閣店（巨大横綱串，可訂位）、' +
@@ -2852,8 +3018,8 @@ tips: [
 ['warn', '通天閣全時段都要預約入場時間，先在官網訂好 12/31 上午的時段。'],
 ['info', '12/31 中午是新世界全年最擠的時段：だるま總本店常排 40–60 分，排分店比較快；4 人不想排隊就前一天在食べログ訂横綱通天閣店（90 分制' +
 '）。'],
-['info', '跨年分兩個方案：A 住吉大社是正統初詣、要排隊、要趕 0:48 末班車；B 四天王寺是親手敲除夜之鐘、寺裡安靜跨年，走路 25 分回住宿。兩個' +
-'方案的時間表在上方切換。']
+['warn', '以 2025–26 為例，南海、大阪 Metro、阪堺電車除夕都沒有通宵或延長運轉，住吉大社站往難波方向末班 0:48（普通，會停新今宮）。'],
+['info', '住吉大社 0:00–3:00 最擠，排隊 1–2 小時很常見；帶暖暖包和手套。元旦 1/1–1/4 Rapi:t 不停住吉大社站。']
 ],
 alt: '不想熬夜：除夕在住宿看紅白歌合戰倒數，元旦 6:00–8:00 再去住吉大社（通宵開門，清晨人比較少），10:30 回新今宮接奈良行程。',
 map: gmap('新今宮駅', '住吉大社', [], 'transit')
@@ -2865,7 +3031,7 @@ from: '新今宮', to: '新今宮',
 drive: 'JR 大和路快速約 40 分',
 img: 'deer', gallery: ['todaiji', 'kasuga', 'o_shinsekai_night'],
 tags: ['餵鹿', '東大寺大佛', '春日大社', '新世界夜景'],
-must: ['大佛殿 ¥800 只收現金', '春日大社特別參拜 16:00 前', '大佛殿 17:00 關門'],
+must: ['大佛殿 ¥800 只收現金', '春日大社本殿特別參拜 12/20–1/7 暫停', '大佛殿 17:00 關門'],
 stayS: '新今宮 Airbnb・第 3 晚',
 foodS: '元旦找連鎖店（一蘭、壽司郎）',
 tl: [
@@ -2875,7 +3041,7 @@ tl: [
 x: [['怎麼去', 'JR 奈良站步行約 15–20 分']] },
 { t: '13:00', k: 'camera', n: '奈良公園餵鹿', s: '邊餵邊往東南走向春日大社', p: 1 },
 { t: '13:45', k: 'torii', n: '春日大社初詣', s: '走石燈籠參道', p: 2,
-x: [['（選）', '本殿特別參拜 ¥700，16:00 停止受理']] },
+x: [['注意', '本殿特別參拜（¥700）12/20–1/7 暫停，元旦只能在一般參拜所參拜']] },
 { t: '15:00', k: 'temple', n: '東大寺大佛殿', s: '步行約 15 分', c: ['¥800', '!只收現金', '17:00 關門'], p: 3 },
 { t: '16:20', k: 'camera', n: '二月堂看夕陽', s: '大佛殿後方爬坡約 10 分，舞台看奈良市景', c: ['免費'], p: 4,
 x: [['日落', '元旦日落約 16:55']] },
@@ -2894,7 +3060,7 @@ note: '中金堂 2018 年重建落成；五重塔整修中，外面圍起來拍�
 t: '自由通行 · 鹿仙貝約 ¥200',
 note: '對鹿鞠躬牠會回禮；小心衣服和紙袋被咬' },
 { n: '春日大社', lat: 34.6813, lng: 135.8484,
-t: '冬季 7:00–17:00 · 一般參拜免費 · 本殿特別參拜 9:00–16:00 ¥700',
+t: '元旦延長開門（以 2025–26 為例到 20:00）· 一般參拜免費 · 本殿特別參拜 12/20–1/7 暫停',
 note: '參道兩旁是成排的石燈籠，元旦人潮很多' },
 { n: '東大寺大佛殿', lat: 34.6890, lng: 135.8398,
 t: '11–3 月 8:00–17:00 · ¥800 · 只收現金',
@@ -2910,76 +3076,86 @@ stay: '新今宮 Airbnb 連住第 3 晚。',
 food: '元旦小店多半休息，早午餐和晚餐找連鎖店（一蘭、壽司郎、すき家）最保險；新世界的觀光區店家元旦多半有開。',
 tips: [
 ['info', '大佛殿 ¥800 只收現金；元旦 0:00–8:00 免費參拜並打開觀相窗，可以從殿外看到大佛的臉，下午去就是一般參觀。'],
-['info', '路線是西 → 南 → 北：興福寺 → 春日大社 → 東大寺 → 二月堂，不走回頭路。春日大社三天新年假期白天最擠，本殿特別參拜要在 16:00 前' +
-'進去。'],
+['info', '路線是西 → 南 → 北：興福寺 → 春日大社 → 東大寺 → 二月堂，不走回頭路。春日大社新年三天白天最擠；本殿特別參拜 12/20–1/7 暫停' +
+'，只能在一般參拜所參拜。'],
 ['info', 'JR 奈良站到東大寺步行約 30 分；正月奈良交通有臨時巴士，JR 奈良 \u2194 東大寺大佛殿・春日大社前 ¥250。']
 ],
 alt: '太累：走興福寺 → 奈良公園 → 東大寺就好，跳過春日大社，在二月堂看完夕陽就回大阪。',
 map: gmap('新今宮駅', '東大寺', [], 'transit')
 },
 {
-d: '1/2', w: 'SAT', short: '大阪城・心齋橋',
-title: '大阪城天守閣・心齋橋初賣・美國村古著・梅田夜景',
+d: '1/2', w: 'SAT', short: '天滿宮・梅田',
+title: '大阪天滿宮初詣・梅田購物・空中庭園夕陽・心齋橋和牛蟹',
 from: '新今宮', to: '新今宮',
-drive: 'JR、地鐵為主 · 每段約 6–15 分',
-img: 'o_amemura', gallery: ['osakajo', 'shinsaibashi', 'o_horie', 'umeda', 'o_umeda_night'],
-tags: ['大阪城天守閣', 'PARCO 初賣', '美國村古著', '空中庭園夜景'],
-must: ['天守閣先買 WEB 票', '多數百貨 1/2 休業', '今晚打包、留千元鈔'],
+drive: '地鐵為主 · 每段約 10–15 分',
+img: 'o_tenmangu', gallery: ['o_grandfront', 'umeda', 'o_umeda_night', 'shinsaibashi'],
+tags: ['大阪天滿宮', '天神橋筋', '梅田購物', '空中庭園夕陽', '心齋橋和牛蟹'],
+must: ['天滿宮 9:00 前到人較少', '和牛蟹 12/2 左右開放線上訂位，19:30', '多數百貨 1/2 休業', '今晚打包、留千元鈔'],
 stayS: '新今宮 Airbnb・最後一晚',
-foodS: '午：美國村 · 晚：梅田',
+foodS: '午：天神橋筋 · 晚：心齋橋和牛蟹',
 tl: [
-{ t: '08:30', k: 'food', n: '早餐', s: '玉出超市買回 Airbnb 吃，睡飽再起床' },
-{ t: '09:00', k: 'train', m: 1, n: 'JR 環狀線到大阪城公園', s: '往鶴橋、京橋方向，不用轉車', c: ['約 15 分', '¥200'] },
-{ t: '09:15', k: 'walk', m: 1, n: '走到天守閣', s: '穿過大阪城公園、走過極樂橋', c: ['約 15–20 分'] },
-{ t: '09:35', k: 'spark', n: '大阪城天守閣', s: '先搭電梯到 8 樓展望台，再一層層往下看', c: ['¥1,200', '!先買 WEB 票'], p: 0,
-x: [['時間', '9:00–18:00'], ['人潮', '1/2 是新年第一天開館，售票和電梯會排隊']] },
-{ t: '11:15', k: 'train', m: 1, n: '地鐵到心齋橋', s: '往南走約 15 分到森ノ宮，長堀鶴見緑地線 5 站', c: ['約 10 分'] },
-{ t: '11:45', k: 'bag', n: '心齋橋 PARCO 初賣', s: '隔壁大丸心齋橋 1/2 還在休業', c: ['10:00–20:00'], p: 1 },
-{ t: '12:45', k: 'walk', n: '心齋橋筋商店街', s: '往南逛藥妝、球鞋，轉進美國村' },
-{ t: '13:30', k: 'shirt', n: '美國村古著・午餐', s: '古著初賣、三角公園，午餐章魚燒或小店', c: ['多 12:00 開'], p: 2,
-x: [['注意', '古著店多半 12:00 才開門，初賣時間出發前確認']] },
-{ t: '15:15', k: 'bag', n: '堀江・立花通り', s: '選物店、家具雜貨和球鞋店', p: 3,
-x: [['怎麼去', '往西走約 5 分']] },
-{ t: '16:45', k: 'train', m: 1, n: '地鐵到西梅田', s: '四つ橋線 四ツ橋 → 西梅田 3 站', c: ['約 7 分'] },
-{ t: '17:15', k: 'bag', n: '梅田逛街', s: 'LUCUA／LUCUA 1100、Grand Front 大阪、Yodobashi', p: 4,
-x: [['營業', '這幾間 1/2 照常營業；阪急、阪神、大丸梅田 1/2 休業']] },
-{ t: '18:45', k: 'food', n: '梅田晚餐', s: 'LUCUA、Grand Front 大阪的餐廳樓層' },
-{ t: '20:00', k: 'moon', n: '空中庭園夜景', s: '步行約 10 分到梅田藍天大廈', c: ['¥2,000', '最後入場 22:00'], p: 5 },
-{ t: '21:30', k: 'home', n: '回住處打包', s: '御堂筋線 梅田 → 動物園前', c: ['!明早 8:20 出門'],
+{ t: '08:15', k: 'food', n: '早餐', s: '玉出超市買回 Airbnb 吃' },
+{ t: '08:40', k: 'train', m: 1, n: '堺筋線到南森町', s: '動物園前搭地鐵堺筋線往天神橋筋六丁目方向，不用轉車', c: ['約 12 分'],
+x: [['出站', '南森町站出站往東南走約 5 分到天滿宮']] },
+{ t: '09:00', k: 'torii', n: '大阪天滿宮初詣', s: '學問之神菅原道真；參拜、求新年御守', c: ['約 1 小時', '免費'], p: 0,
+x: [['人潮', '以 2026 年為例，1/2 6:00–19:00 開放；9:00–15:00 最擠，排 30–60 分，9 點前到最好'], ['御守', '學業、合格御守最有名']] },
+{ t: '10:15', k: 'bag', n: '天神橋筋商店街・午餐', s: '天滿宮旁往北走，日本最長的商店街（約 2.6 km），邊逛邊吃', c: ['約 2 小時'], p: 1,
+x: [['怎麼逛', '從天神橋 2 丁目往北走到 4 丁目（JR 天満站），沿路小吃、壽司和咖啡店'], ['營業', '新年期間部分店家休息，以當天為準']] },
+{ t: '12:30', k: 'train', m: 1, n: 'JR 天満 → 大阪', s: '環狀線 1 站；或從扇町往西走約 15 分到梅田', c: ['約 5 分'] },
+{ t: '12:45', k: 'bag', n: '梅田逛街', s: 'LUCUA／LUCUA 1100、Grand Front 大阪、Yodobashi 梅田', c: ['約 3.5 小時'], p: 2,
+x: [['營業', '這幾間 1/2 照常營業；阪急、大丸梅田 1/2 休業（阪神以 2025–26 為例也休）'], ['福袋', 'LUCUA 和 Grand Front 的店家新年特' +
+'賣']] },
+{ t: '16:30', k: 'moon', n: '空中庭園看夕陽到入夜', s: 'Grand Front 往北走約 10 分到梅田藍天大廈，日落約 17:00', c: ['¥2,000', '約 1 小時'],
+p: 3,
+x: [['時間', '16:30 上去先看夕陽，17:20 前後天黑亮燈再下來'], ['營業', '9:30–22:30（最後入場 22:00）']] },
+{ t: '17:45', k: 'train', m: 1, n: '御堂筋線 梅田 → 心齋橋', s: '走回梅田站約 10 分，御堂筋線 3 站', c: ['約 25 分'] },
+{ t: '18:15', k: 'bag', n: '心齋橋 PARCO', s: '新年特賣，日系潮牌、選物和動漫周邊', c: ['到 20:00'], p: 4,
+x: [['隔壁', '大丸心齋橋 1/2 還在休業'], ['時間', '19:20 前往北走約 5 分到餐廳']] },
+{ t: '19:30', k: 'food', n: '和牛とカニ 吃到飽', s: '心齋橋站前店：和牛壽喜燒、涮涮鍋＋蟹吃到飽，含飲料喝到飽', c: ['¥10,000–22,000／人',
+'120 分', '!要訂位'], p: 5,
+x: [['方案', '含蟹方案 ¥10,000／11,500／14,000／18,000（最熱門）／22,000，都是 120 分鐘含喝到飽；以訂位時的現行方案為準'], ['營業', '官網' +
+'：定休日「無休」，晚餐 16:00–24:30，最後入店 22:30；1/2 線上月曆約 12/2 開放（約提前 1 個月），能選就代表有營業'], ['訂位', '官網 wagyutobuta-kan' +
+'i-shinsaibashi.foodre.jp（即予約／リクエスト予約），電話 050-5462-9674'], ['店名', '全名「しゃぶしゃぶ すき焼き かに食べ放題 和牛と豚...そしてカニ' +
+' 心斎橋駅前店」，和京都的「和牛とカニ」不一定同一家']] },
+{ t: '21:30', k: 'walk', n: '道頓堀・戎橋散步', s: '沿心齋橋筋往南走約 10 分，最後一晚看固力果看板', c: ['約 30 分'] },
+{ t: '22:00', k: 'home', n: '回住處打包', s: '御堂筋線 なんば → 動物園前 2 站', c: ['!明早 8:20 出門'],
 x: [['今晚', '把行李全部打包好']] }
 ],
 spots: [
-{ n: '大阪城天守閣', lat: 34.6873, lng: 135.5259,
-t: '9:00–18:00（最後入館 17:30）· 12/28–1/1 休館 · 大人 ¥1,200 · 可刷卡',
-note: '1931 年由市民捐款重建的天守閣，8 樓展望台可以俯瞰大阪城公園與市區；1/2 是新年第一天開館，人多，先在官網買 WEB 票' },
-{ n: '心齋橋 PARCO', lat: 34.6743, lng: 135.5011,
-t: '1/1 休館 · 1/2 起 10:00–20:00（以 2026 年為例）',
-note: '日系潮牌、選物店與動漫周邊集中的商場；百貨還在休業時，它 1/2 就開始新年特賣' },
-{ n: '美國村・三角公園', lat: 34.6720, lng: 135.4984,
-t: '古著店多半 12:00 起 · 依店家',
-note: '大阪年輕人的潮流聖地，古著、街頭品牌和二手球鞋店密集；三角公園是大家的集合點' },
-{ n: '堀江・立花通り（Orange Street）', lat: 34.6728, lng: 135.4920,
-t: '店家約 11:00–20:00 · 依店家',
-note: '美國村西側比較安靜的選物街，家具雜貨、咖啡店和球鞋店，適合慢慢逛' },
+{ n: '大阪天滿宮', lat: 34.6961, lng: 135.5128,
+t: '1/2 6:00–19:00（以 2026 年為例）· 免費 · 地鐵南森町站步行約 5 分',
+note: '祭祀學問之神菅原道真的「天神さん」；1/2 9:00–15:00 最擠、排 30–60 分，早上 9 點前或 17:00 後人比較少' },
+{ n: '天神橋筋商店街', lat: 34.6995, lng: 135.5115,
+t: '約 2.6 km · 日本最長的商店街 · 店家依各店',
+note: '從天滿宮旁一路往北到天神橋 6 丁目，小吃、壽司、咖啡和老舖，有頂棚下雨也能逛' },
 { n: '梅田 LUCUA・Grand Front 大阪', lat: 34.7036, lng: 135.4960,
 t: '1/2 照常營業 · LUCUA 10:30–20:30、Grand Front 11:00–21:00',
 note: 'JR 大阪站兩側的兩大商場；年初阪急、阪神、大丸梅田休業時，這裡是主要戰場' },
 { n: '梅田藍天大廈・空中庭園展望台', lat: 34.7053, lng: 135.4906,
 t: '9:30–22:30（最後入場 22:00）· 年中無休 · 大人 ¥2,000',
-note: '兩棟大樓頂端連在一起的 173 m 露天展望台，360 度看大阪夜景' }
+note: '兩棟大樓頂端連在一起的 173 m 露天展望台；1/2 日落約 17:00，夕陽和夜景一次看' },
+{ n: '心齋橋 PARCO', lat: 34.6743, lng: 135.5011,
+t: '1/1 休館 · 1/2 起 10:00–20:00（以 2026 年為例）',
+note: '日系潮牌、選物店與動漫周邊集中的商場；百貨還在休業時，它 1/2 就開始新年特賣' },
+{ n: '和牛と豚...そしてカニ 心斎橋駅前店', lat: 34.6770, lng: 135.5010,
+t: '心斎橋筋 1-3-13 茶茶心斎橋ビル 6F · 晚餐 16:00／17:00 起，最後入店 22:30 · 不定休 · 含蟹方案 ¥10,000–22,000／人',
+note: '和牛壽喜燒、涮涮鍋加蟹吃到飽，120 分鐘含飲料喝到飽；地鐵心齋橋站北側，官網寫無休，1/2 約 12/2 開放線上訂位' }
 ],
 stay: '新今宮 Airbnb 連住第 4 晚（最後一晚）。',
-food: '午餐在美國村吃章魚燒或附近小店；晚餐在梅田 LUCUA、Grand Front 大阪的餐廳樓層。新年期間各店營業時間出發前確認。',
+food: '午餐在天神橋筋商店街邊逛邊吃；晚餐 19:30 在心齋橋站前吃和牛壽喜燒、涮涮鍋加蟹吃到飽（120 分鐘含喝到飽），要先訂位。新年期間各店營業時' +
+'間出發前確認。',
 tips: [
-['warn', '以 2025–26 為例，大丸心齋橋、大丸梅田、阪急、阪神、高島屋 1/1–1/2 都休業，1/3 才初賣；今天以 PARCO、LUCUA、Grand Front 和路面店' +
+['warn', '以 2025–26 為例，大丸心齋橋、大丸梅田、阪急、阪神、高島屋 1/1–1/2 都休業，1/3 才初賣；今天以 LUCUA、Grand Front、PARCO 和路面店' +
 '為主。'],
-['info', '大阪城天守閣不用預約，但 1/2 售票口和電梯都會排隊：可以先在官網買 WEB 票省掉買票的隊，現場也收信用卡、交通 IC 卡和 PayPay。'],
+['info', '大阪天滿宮 1/2 從 6:00 開到 19:00（以 2026 年為例），9:00–15:00 排隊最長；8:40 出門、9 點前到就能少排很多。'],
+['warn', '晚餐店官網寫「無休」，但線上月曆約提前 1 個月才開放，1/2 約 12/2 能訂，開放後馬上訂 19:30（4 人）；新年方案和價格以訂位時為準；店' +
+'名和京都的「和牛とカニ」不同，訂位時認明「心斎橋駅前店」。'],
 ['info', '2026/11/1 起免稅改為「先付含稅價、出境時退稅」：結帳出示護照，收據和商品都要留到 1/3 在機場辦退稅。'],
 ['info', '明天 8:20 就要帶行李出門，今晚回來先打包好；Outlet 寄放行李只收現金（¥1,000／件），留好千元鈔。']
 ],
-alt: '想再睡晚一點：跳過大阪城，10:30 地鐵御堂筋線 動物園前 → 心齋橋（3 站約 6 分）直接逛 PARCO。走累了：堀江逛完直接回難波，晚上在道頓堀吃' +
-'最後一頓，跳過梅田；想看夜景就改去阿倍野 HARUKAS 300，離住處只有 1 站。',
-map: gmap('大阪城天守閣', '心斎橋PARCO', [], 'transit')
+alt: '想睡晚一點：跳過天滿宮，11:00 直接到梅田逛街。走累了：空中庭園看完先回住處休息，19:00 再從動物園前搭御堂筋線 3 站到心齋橋吃飯。下雨：天' +
+'神橋筋和梅田商場都有頂棚或室內，空中庭園改看夜景就好。',
+map: gmap('大阪天満宮', '心斎橋駅', [], 'transit')
 },
 {
 d: '1/3', w: 'SUN', short: '臨空城・回程',
@@ -3053,19 +3229,18 @@ const BOOK = [
 ['torokko', 'a', '嵯峨野觀光小火車（亀岡 → トロッコ嵐山）', 'rec', '12/27 9:30', '11/27 0:00（日本時間）開賣', 'https://www.sagano-kanko.co.jp/',
 '單程 ¥880，沒有往返票；上車選「トロッコ亀岡」、下車選「トロッコ嵐山」（嵯峨野2號）；週末常提早賣完，2026 年營運到 12/29'],
 ['yudofu', 'a', '嵐山湯豆腐午餐', 'rec', '12/27 12:15', '1–2 週前', '', '週日中午熱門；嵯峨野或天龍寺篩月，用 Google 地圖或店家網站預約'],
-['wagyu-kani', 'a', '和牛とカニ 三条河原町店（吃到飽）', 'rec', '12/27 17:20', '1–2 週前', '', '週日晚上熱門；17:30 前入店每人折 ¥1,000（食べロ' +
-'グ優惠，訂位時確認）；方案約 ¥9,000–16,000／人'],
 ['pontocho', 'a', '先斗町晚餐', 'rec', '12/28 18:40', '1–2 週前', '', '週一又接近年末，確認當天有營業；3 人座位先訂好，貴船 17:23 巴士下山來得及'],
 ['go-taxi', 'a', 'GO App 預約計程車（飯店 → 京都站八條口）', 'rec', '12/30 08:10', '12/29 晚上', '', '一早拖 3 件行李最省事；GO 或 Uber 都可以預' +
 '約'],
+['wagyu-kani', 'o', '和牛と豚...そしてカニ 心斎橋駅前店（吃到飽）', 'rec', '1/2 19:30', '12/2 左右', 'https://wagyutobuta-kani-shinsaibashi.foodr' +
+'e.jp/', '4 人；官網寫無休，線上月曆約提前 1 個月開放，1/2 約 12/2 可訂；TEL 050-5462-9674；含蟹方案 ¥10,000–22,000／人（最熱門 ¥18,000），120 分' +
+'含喝到飽。和京都「和牛とカニ」不同店，認明心斎橋駅前店'],
 ['kaiyukan', 'o', '海遊館 e-ticket（指定日期時段）', 'rec', '12/31 13:30', '官網開賣後盡早買', 'https://www.kaiyukan.com/info/ticket/kaiyukan/',
 '票價依日期浮動，大人約 ¥2,700–3,500（年末偏高）；以 2025–26 為例 12/29–31 營業 8:30–20:00、最後入館 19:00'],
 ['ohara-bus', 'a', '京都巴士 19 系統・叡山電車', 'onsite', '12/28', '刷 IC 卡', '', '國際會館 → 大原約 30 分一班；叡山電車、京阪也都能刷 IC 卡'],
 ['todaiji', 'o', '東大寺大佛殿', 'onsite', '1/1 15:00', '現場買', '', '¥800，只收現金'],
-['osakajo', 'o', '大阪城天守閣', 'onsite', '1/2 09:35', '現場買；1/2 人多，建議先買 WEB 票', 'https://ars-osakacastle.triplabo.jp/home?lang=ja',
-'¥1,200，可刷卡；12/28–1/1 休館，1/2 是新年第一天開館'],
-['skygarden', 'o', '梅田空中庭園展望台', 'onsite', '1/2 20:00', '現場買', 'https://www.skybldg.co.jp/observatory/information/', '¥2,000；最後入場' +
-' 22:00'],
+['skygarden', 'o', '梅田空中庭園展望台', 'onsite', '1/2 16:30', '現場買', 'https://www.skybldg.co.jp/observatory/information/', '¥2,000；日落約 1' +
+'7:00，16:30 上去看夕陽到入夜'],
 ['rinku-luggage', 'o', '臨空城 Outlet 寄放行李', 'onsite', '1/3 09:30', '不用預約', 'https://www.premiumoutlets.co.jp/rinku/', 'Main Side 1F 資訊' +
 '中心或 Sea Side 1F Welcome Center，¥1,000／件，只收現金'],
 ['sky-shuttle', 'o', 'Sky Shuttle 接駁巴士（Outlet → 關西機場 T1）', 'onsite', '1/3 13:10', '不用預約', '', '¥300、約 15 分；現金或 IC 卡，車上' +
@@ -3106,18 +3281,22 @@ hl: ['柱間框出的額緣庭園', '樹齡約 700 年的五葉松', '門票附�
 { n: '貴船神社', ch: 'a', d: '12/28', ty: 'temple', img: 'k_kibune', dur: '約 2 小時（含奧宮）', q: '貴船神社',
 intro: '朱紅燈籠沿石階排列的參道是京都最上鏡的景色之一；冬天日落後燈籠點亮到 18:00 閉門。下午先走更安靜的奧宮，傍晚回本宮看點燈。',
 hl: ['日落後點亮的朱紅燈籠石階', '水占卜籤浮在神水上才顯字（授與所 17:00 關）', '奧宮杉林更安靜（選擇性）'] },
-{ n: '先斗町・鴨川', ch: 'a', d: '12/28', ty: 'night', img: 'k_pontocho', dur: '晚餐約 1.5 小時', q: '先斗町',
-intro: '一側是鴨川、一側是町家料理店的石板窄巷，燈籠亮起最有京都味；從貴船下山後在京阪三條下車就到，吃完沿鴨川散步到三條大橋。',
-hl: ['石板窄巷裡的町家料理店', '掛著千鳥紋的燈籠夜景', '飯後沿鴨川走到三條大橋'] },
+{ n: '先斗町・祇園白川', ch: 'a', d: '12/28', ty: 'night', img: 'k_pontocho', dur: '晚餐約 1.5 小時', q: '先斗町',
+intro: '一側是鴨川、一側是町家料理店的石板窄巷，燈籠亮起最有京都味；從貴船下山後在京阪三條下車就到；吃完過四條大橋走約 10 分到祇園白川，看巽橋' +
+'一帶的燈籠夜景。',
+hl: ['石板窄巷裡的町家料理店', '掛著千鳥紋的燈籠夜景', '飯後到祇園白川・巽橋看夜景'] },
 { n: '清水寺', ch: 'a', d: '12/29', ty: 'temple', img: 'kiyomizu', dur: '約 1 小時', q: '清水寺 京都',
 intro: '懸空在山崖上的清水舞台俯瞰京都市區，冬天空氣清透；12 月底沒有夜間點燈，早上去人最少。',
 hl: ['懸空的清水舞台', '音羽之瀧三道泉水各有祈願', '早上 9 點前人最少'] },
 { n: '三年坂・二年坂・八坂塔', ch: 'a', d: '12/29', ty: 'shop', img: 'k_ninenzaka', dur: '約 2 小時', q: '産寧坂',
 intro: '清水寺下山的石板坡道，兩側是町家老舖；一路走到八坂塔從巷底冒出來的經典角度，再接寧寧之道。',
 hl: ['八坂塔從巷底冒出的明信片角度', '町家老舖買伴手禮、邊走邊吃', '接寧寧之道、石塀小路散步'] },
-{ n: '伏見稻荷大社（夜訪）', ch: 'a', d: '12/29', ty: 'night', img: 'k_fushimi_night', dur: '約 1 小時', q: '伏見稲荷大社',
-intro: '上萬座朱紅鳥居延伸上稻荷山；24 小時開放，天黑後燈籠亮起的千本鳥居人少又神秘。',
-hl: ['24 小時開放、免費', '點燈後的千本鳥居', '走到奧社奉拜所就折返'] },
+{ n: '八坂神社', ch: 'a', d: '12/29', ty: 'temple', img: 'k_yasaka', dur: '約 20 分', q: '八坂神社',
+intro: '祇園的守護神社，石塀小路走出來就到；朱紅西樓門正對四條通，參拜完沿四條通往西走，經祇園、鴨川到河原町。',
+hl: ['正對四條通的朱紅西樓門', '24 小時開放、免費', '接四條通散步到河原町'] },
+{ n: '伏見稻荷大社', ch: 'a', d: '12/29', ty: 'temple', img: 'fushimi', dur: '約 1.5 小時', q: '伏見稲荷大社',
+intro: '上萬座朱紅鳥居延伸上稻荷山；下午從千本鳥居走到奧社，體力夠再上四ツ辻看京都市景，下山就是吉伊卡哇店。',
+hl: ['千本鳥居到奧社約 15 分', '四ツ辻俯瞰京都市區', '參道上的吉伊卡哇店 17:30 關門'] },
 { n: '天橋立', ch: 'a', d: '12/30', ty: 'nature', img: 'b_hashidate_snow', dur: '約 2.5 小時', q: '天橋立',
 intro: '日本三景之一，約 3.6 km 的松林沙洲橫越海灣；從展望台彎腰倒看，像一條升天的龍。',
 hl: ['日本三景之一', '展望台彎腰「股のぞき」', '走過回旋橋到松林沙洲'] },
@@ -3128,7 +3307,7 @@ hl: ['約 230 棟舟屋沿灣排開', '搭遊船從海上看', '舟屋小鎮散�
 intro: '固力果跑跑人看板、巨大螃蟹招牌和運河夜景，大阪「吃到倒」的中心；和劉有耘會合的地方。',
 hl: ['固力果跑跑人看板', '螃蟹道樂的巨大招牌', '大阪燒、章魚燒一路吃'] },
 { n: '心齋橋筋商店街', ch: 'o', d: '12/30', ty: 'shop', img: 'shinsaibashi', dur: '約 1 小時', q: '心斎橋筋商店街',
-intro: '約 600 m 有頂棚的商店街，藥妝、服飾、球鞋一路逛；1/2 去美國村時也會再走一次。',
+intro: '約 600 m 有頂棚的商店街，藥妝、服飾、球鞋一路逛；1/2 晚上去 PARCO 時也會再走一次。',
 hl: ['約 600 m 有頂棚', '藥妝、服飾、球鞋一路逛', '大丸心齋橋的沃里斯老外觀'] },
 { n: '通天閣・新世界', ch: 'o', d: '12/31', ty: 'shop', img: 'tsutenkaku', dur: '約 2 小時', q: '通天閣',
 intro: '1956 年重建的新世界地標，黃金展望台有幸運之神 Billiken；樓下就是串炸發源地新世界。',
@@ -3136,12 +3315,9 @@ hl: ['摸 Billiken 腳底求好運', '串炸發源地，醬汁禁止沾第二次
 { n: '海遊館', ch: 'o', d: '12/31', ty: 'nature', img: 'o_kaiyukan', dur: '約 2–2.5 小時', q: '海遊館',
 intro: '世界最大級的水族館，從 8 樓沿螺旋坡道往下走，中央太平洋大水槽裡的鯨鯊和鬼蝠魟從身邊游過。',
 hl: ['太平洋大水槽的鯨鯊', '從 8 樓沿螺旋坡道往下看', '先買指定時段的 e-ticket'] },
-{ n: '住吉大社', ch: 'o', d: '12/31', ty: 'temple', img: 'sumiyoshi', dur: '約 2.5 小時', tag: '跨年 A', q: '住吉大社',
+{ n: '住吉大社', ch: 'o', d: '12/31', ty: 'temple', img: 'sumiyoshi', dur: '約 2.5 小時', tag: '跨年', q: '住吉大社',
 intro: '全國約 2,300 座住吉神社的總本社，四棟本殿都是國寶；大阪人跨年初詣的首選。',
 hl: ['四棟國寶本殿', '走過陡峭的反橋迎新年', '回程搭 0:48 末班車'] },
-{ n: '四天王寺・除夜之鐘', ch: 'o', d: '12/31', ty: 'temple', img: 'o_shitennoji', dur: '約 3–4 小時', tag: '跨年 B', q: '四天王寺',
-intro: '聖德太子建立、日本最早的官寺；除夕夜三座鐘堂都開放一般人親手敲鐘，敲完走路就能回住處。',
-hl: ['親手敲除夜之鐘', '0:00 後還能敲開運之鐘', '不用趕末班車'] },
 { n: '興福寺', ch: 'o', d: '1/1', ty: 'temple', img: 'o_kofukuji', dur: '約 40 分', q: '興福寺',
 intro: '藤原氏的氏寺，世界遺產「古都奈良的文化財」之一；2018 年重建落成的中金堂朱紅氣派。',
 hl: ['2018 年重建的朱紅中金堂', '國寶館裡的阿修羅像', '五重塔整修中，圍著施工圍籬'] },
@@ -3160,15 +3336,12 @@ hl: ['免費、全天開放', '迴廊俯瞰大佛殿與奈良市', '元旦日落
 { n: '新世界霓虹・MEGA 唐吉訶德', ch: 'o', d: '1/1', ty: 'night', img: 'o_shinsekai_night', dur: '約 1.5 小時', q: 'MEGAドン・キホーテ 新世界店',
 intro: '晚上的新世界霓虹招牌最有昭和味；住宿步行 10 分就有 MEGA 唐吉訶德，藥妝零食一次買齊。',
 hl: ['昭和味的霓虹招牌', '點燈的通天閣', '藥妝零食一次買齊，店內辦免稅'] },
-{ n: '大阪城天守閣', ch: 'o', d: '1/2', ty: 'temple', img: 'osakajo', dur: '約 1.5 小時', q: '大阪城天守閣',
-intro: '豐臣秀吉築城的名城，現在的天守閣是 1931 年市民捐款重建；館內是歷史博物館。',
-hl: ['8 樓展望台俯瞰大阪', '館內是歷史博物館', '1/2 新年首日開館，先買 WEB 票'] },
-{ n: '心齋橋 PARCO・美國村', ch: 'o', d: '1/2', ty: 'shop', img: 'o_amemura', dur: '約 3 小時', q: '心斎橋PARCO',
-intro: '百貨還在休業的 1/2，PARCO 就開始新年特賣；往西走進美國村，古著、街頭品牌和二手球鞋店密集。',
-hl: ['PARCO 1/2 就開始新年特賣', '美國村古著與二手球鞋', '三角公園是集合點'] },
-{ n: '堀江・立花通り', ch: 'o', d: '1/2', ty: 'shop', img: 'o_horie', dur: '約 1.5 小時', q: '堀江 オレンジストリート',
-intro: '美國村西側比較安靜的選物街（Orange Street），家具雜貨、咖啡店和球鞋店，適合慢慢挖寶。',
-hl: ['家具雜貨選物店', '咖啡店和球鞋店', '比美國村安靜好逛'] },
+{ n: '大阪天滿宮', ch: 'o', d: '1/2', ty: 'temple', img: 'o_tenmangu', dur: '約 1 小時', q: '大阪天満宮',
+intro: '祭祀學問之神菅原道真的「天神さん」，大阪人的新年參拜名所；旁邊就是日本最長的天神橋筋商店街。',
+hl: ['1/2 6:00–19:00 開放', '9 點前到少排很多', '旁邊接天神橋筋商店街'] },
+{ n: '心齋橋 PARCO', ch: 'o', d: '1/2', ty: 'shop', img: 'o_amemura', dur: '約 1 小時', q: '心斎橋PARCO',
+intro: '百貨還在休業的 1/2，PARCO 就開始新年特賣；日系潮牌、選物和動漫周邊，逛完往北走 5 分就到晚餐的和牛蟹吃到飽。',
+hl: ['PARCO 1/2 就開始新年特賣', '營業到 20:00', '往北 5 分到晚餐店'] },
 { n: '梅田 LUCUA・Grand Front 大阪', ch: 'o', d: '1/2', ty: 'shop', img: 'o_grandfront', dur: '約 1.5 小時', q: 'グランフロント大阪',
 intro: 'JR 大阪站兩側的兩大商場；年初阪急、阪神、大丸梅田休業時，這裡照常營業，是梅田的主要戰場。',
 hl: ['1/2 照常營業', 'JR 大阪站兩側直通', 'Yodobashi 梅田買 3C'] },
@@ -3271,16 +3444,16 @@ const CH_ALERTS = {
 a: [
 ['小火車與年末', '嵯峨野小火車 2026 年營運到 12/29，12/30 起冬季停駛，週三公休；12/29 起東山一帶開始有年末人潮，清水寺排在早上第一站。'],
 ['寒冷與山區', '京都 12 月底晚上接近 0°C；大原、貴船比市區冷 2–3 度，石階可能結冰，夜行程和山區都要穿防滑鞋、多帶一層。'],
-['夜間開放', '伏見稻荷 24 小時開放，但稻荷山路晚上很暗，只走到奧社奉拜所就折返；京都站大階梯燈飾 12/26–12/31 開到 22:00，最後一晚吃完晚餐可以' +
-'順路看。']
+['伏見稻荷與燈飾', '伏見稻荷改成下午去，12 月底約 16:50 日落，16:30 前下山；參道上的吉伊卡哇店 17:30 關門。京都站大階梯燈飾 12/26–12/31 開到 2' +
+'2:00，最後一晚吃完晚餐可以順路看。']
 ],
 o: [
 ['百貨公司', '以 2025–26 為例：百貨 12/31 只營業到約 18:00–19:00，1/1–1/2 多數公休，1/3 才開始初賣（阿倍野 HARUKAS 近鐵本店 1/2 就初賣）。出' +
 '發前再確認當年公告。'],
 ['吃飯', '12/31–1/3 不少小店休息或提早打烊；一蘭、壽司郎、すき家等連鎖店多半照常營業，新世界的觀光區店家元旦多半有開，住處附近的玉出超市 24 小' +
 '時營業。'],
-['交通與人潮', '以 2025–26 為例，南海和大阪 Metro 除夕都沒有通宵電車：跨年方案 A 住吉大社要趕 0:48 末班車回新今宮，或 4 人分攤計程車（約 15 分' +
-'）；方案 B 四天王寺除夜之鐘，結束後步行約 25 分回住宿；元旦春日大社人潮多；1/3 一早帶行李搭空港急行去臨空城，逛完搭 13:10 接駁巴士到機場。']
+['交通與人潮', '以 2025–26 為例，南海和大阪 Metro 除夕都沒有通宵電車：跨年住吉大社要趕 0:48 末班車回新今宮，或 4 人分攤計程車（約 15 分）；元' +
+'旦春日大社、1/2 大阪天滿宮人潮多；1/3 一早帶行李搭空港急行去臨空城，逛完搭 13:10 接駁巴士到機場。']
 ]
 };
 // [group key, title, svg icon]; CHECKS[4] points at a group. Keep ids stable: saved ticks live in localStorage.
@@ -3323,9 +3496,252 @@ const CHECKS = [
 ['checkin', '國泰線上報到', '起飛前 48 小時開放，可在國泰 App 或官網辦理', '', 'go'],
 ['shots', '重要資訊截圖', '京都住宿確認碼 HME35DAXW5、大阪 Airbnb 入住說明、Klook 憑證、HARUKA 預約、航班與兩間住宿地址先截圖，沒有網路也能出示',
 '', 'go'],
-['nye', '決定跨年方案並確認回程', '方案 A 住吉大社：查南海「年末年始ダイヤ」住吉大社站往難波方向末班車（2025–26 為 0:48，會停新今宮）；方案 B 四' +
-'天王寺：查官網「除夜の鐘」公告（整理券時間、各鐘堂人數）。兩案都先裝 GO 叫車 App 備用', '', 'go'],
+['nye', '確認跨年回程', '住吉大社：查南海「年末年始ダイヤ」住吉大社站往難波方向末班車（2025–26 為 0:48，會停新今宮），並確認住吉大社除夕開門時間' +
+'；先裝 GO 叫車 App 備用', '', 'go'],
 ['weigh', '行李秤重', '去程托運 1 件 23 kg；伴手禮買多了，回程前再秤一次', '', 'go']
+];
+/* ---------- year-end hours ---------- */
+// cell = 'code text'; o 照常 / s 時間變動 / x 休業 / n 特別營業 / q 未公告; '' = not relevant that day
+const YC_CODE = { o: '照常', s: '時間變動', x: '休業', n: '特別・延長', q: '未公告' };
+const YC_BASIS = { '26': '2026–27 已公告', '25': '2025–26 實績', '24': '2024–25 實績', gen: '常態資訊' };
+const YC_DAYS = { a: [['12/27', '日'], ['12/28', '一'], ['12/29', '二'], ['12/30', '三']], o: [['12/30', '三'], ['12/31', '四'], ['1/1', '五'], ['1' +
+'/2', '六'], ['1/3', '日']] };
+const YC_TIPS = [
+['alert', '1/2 梅田百貨全休', '阪急、阪神、大丸 1/1、1/2 都休，1/3 才初賣；1/2 改逛 LUCUA、Grand Front 和心齋橋 PARCO（2025–26 這天都有開）'],
+['alert', '1/1 商場幾乎都休', '百貨與商場元旦全休；神社寺廟、通天閣、海遊館、臨空城 Outlet、唐吉訶德和新世界串炸照常'],
+['train', '小火車 12/29 是年內最後一天', '12/27 照常行駛；12/30 起冬季停駛，2027/3/1 新車上線才恢復'],
+['info', '很多是去年的實績', '標「2025–26 實績」的項目今年還沒公告，12 月中各家公告後再核對；點項目名稱看來源']
+];
+// [chapter, group, name, source url, default cell, {day: cell}, visit days, basis, note]
+const CLOSURES = [
+['a', '景點', '嵯峨野觀光小火車', 'https://www.sagano-kanko.co.jp/news/6066/', 'o 照常行駛', { '12/29': 's 年內最後一天', '12/30': 'x 冬季停駛' },
+['12/27'], '26', '1/1–2/28 全面停駛'],
+['a', '景點', '天龍寺', 'https://www.tenryuji.com/visit/', 'o 8:30–16:45', { '12/27': 'o 8:30–16:45・雲龍圖有開' }, ['12/27'], '26', '雲龍圖只' +
+'在週末假日開放'],
+['a', '景點', '三千院', 'https://www.sanzenin.or.jp/guide/info', 'o 9:00–16:30', {}, ['12/28'], 'gen', '全年無休'],
+['a', '景點', '貴船神社', 'https://kifunejinja.jp/info/', 'o 授與所 9–17', {}, ['12/28'], 'gen', '12 月閉門時間官網未寫'],
+['a', '景點', '清水寺', 'https://www.kiyomizudera.or.jp/access.php', 'o 6:00–18:00', {}, ['12/29'], '26', '12 月沒有夜間特別拜觀'],
+['a', '景點', '伏見稻荷大社', 'https://fushimiinaritaisha.org/ja/sanpai-jikan/', 'n 24 小時', {}, ['12/29'], 'gen', '授與所約 8:00–18:00'],
+['a', '景點', '吉伊卡哇 伏見店', 'https://www.chiikawamogumogu.jp/stores/fushimi/', 'o 9:30–17:30', {}, ['12/29'], '26', '平日原則自由入店，人多' +
+'時可能發整理券'],
+['a', '景點', '京都站拉麵小路', 'https://www.kyoto-station-building.co.jp/ramen_koji/', 'o 11:00–22:00', {}, ['12/29'], 'gen', '12/31 起縮短營業' +
+'（2025–26）'],
+['a', '交通', '京都市巴士・地鐵', 'https://www.city.kyoto.lg.jp/kotsu/page/0000347827.html', 's 假日班表', { '12/27': 'o 週日班表' }, [], '25',
+'平日也跑假日班表，班次較少；除夕無通宵'],
+['a', '交通', '京都巴士（大原・貴船）', 'https://kakure-kyoto.com/other/7054/', 's 假日班表', { '12/27': 'o 週日班表', '12/28': 'o 平日班表' },
+['12/28'], '25', '二手資料；貴船線 1/1–1/3 加開'],
+['a', '交通', '叡山電車', 'https://eizandensha.co.jp/news/info/3771/', 'o 照常', {}, ['12/28'], '25', '無延長；各日班表 12 月中公告'],
+['a', '天橋立', '伊根灣遊覽船', 'https://www.tankai.jp/news/31930/', '', { '12/30': 'o 9:00–16:00' }, ['12/30'], '24', '風速 10 m/s 或浪高 0.8 m' +
+' 以上停航'],
+['a', '天橋立', '天橋立 View Land', 'https://www.viewland.jp/', '', { '12/30': 'o 最後下山 16:50' }, [], '25', '積雪或警報時變更'],
+['o', '景點', '通天閣', 'https://www.tsutenkaku.co.jp/annai/index.html', 'o 9:00–21:45', { '12/31': 's 9:00–19:00', '1/1': 's 10:00–20:00' },
+['12/31'], '26', '12/30–1/3 展望台 ¥1,800，全時段預約制'],
+['o', '景點', '海遊館', 'https://www.kaiyukan.com/info/hours/', 'o 照常', { '1/1': 'o 9:30–20:00' }, ['12/31'], '25', '年末有 8:30 提早開館日，' +
+'閉館時間看官網日曆'],
+['o', '景點', '住吉大社', 'https://sumiyoshitaisha.net/newyear/', '', { '12/31': 'n 22:00 開門・通宵', '1/1': 'n 通宵到 20:00', '1/2': 'o 6:00–1' +
+'9:00', '1/3': 'o 6:00–19:00' }, ['12/31', '1/1'], '25', '停車場關閉、無露店'],
+['o', '景點', '東大寺', 'https://narashikanko.or.jp/event/detail_10275.html', '', { '1/1': 'n 0–8 時中門免費' }, ['1/1'], '26', '15:00 到訪是一' +
+'般參拜，要買票'],
+['o', '景點', '春日大社', 'https://rurubu.jp/andmore/spot/80031310/hatsumode', '', { '12/31': 'n 23:45 再開門', '1/1': 'n 開到 20:00', '1/2': 'o ' +
+'6:30–19:00', '1/3': 'o 6:30–19:00' }, ['1/1'], '25', '本殿特別參拜 12/20–1/7 暫停'],
+['o', '景點', '興福寺', 'https://rurubu.jp/andmore/spot/80031360/hatsumode', '', { '1/1': 'o 國寶館 9–17' }, ['1/1'], '25', '境內自由參觀'],
+['o', '景點', '大阪天滿宮', 'https://osakatemmangu.or.jp/3988', '', { '12/31': 'o 6:00–21:00', '1/1': 'n 0:00–20:00', '1/2': 'o 6:00–19:00',
+'1/3': 'o 6:00–19:00' }, ['1/2'], '25', '少量攤販到 1/3'],
+['o', '景點', '梅田空中庭園', 'https://www.skybldg.co.jp/observatory/information/', 'o 9:30–22:30', { '1/1': 'n 加開 6–8 時初日出' }, ['1/2'],
+'25', '2026–27 未公告'],
+['o', '百貨・商場', '阪急梅田本店', 'https://www.hankyu-dept.co.jp/honten/map/', 'o 照常', { '12/31': 's 10:00–18:00', '1/1': 'x 休', '1/2': 'x ' +
+'休', '1/3': 'n 初賣 10:00–19:00' }, ['1/2'], '26', ''],
+['o', '百貨・商場', '阪神梅田本店', 'https://www.lmaga.jp/news/2025/12/1005032/', 'o 照常', { '12/31': 's 10:00–18:00', '1/1': 'x 休', '1/2': 'x' +
+' 休', '1/3': 'n 初賣 9:30 開' }, ['1/2'], '25', ''],
+['o', '百貨・商場', '大丸梅田・心齋橋', 'https://www.daimaru.co.jp/umedamise/hours.html', 'o 照常', { '12/31': 'q', '1/1': 'x 休', '1/2': 'x 休',
+'1/3': 'q' }, ['1/2'], '26', '1/1、1/2 休已公告；2025–26 的 12/31 為 10–18'],
+['o', '百貨・商場', '高島屋大阪店', 'https://www.diningmaison.jp/information/detail.php?id=1319', 'o 照常', { '12/31': 'q', '1/1': 'x 休', '1/2':
+'x 休', '1/3': 'o 營業' }, [], '26', ''],
+['o', '百貨・商場', '近鐵 HARUKAS', 'https://www.lmaga.jp/news/2025/12/1007997/', 'o 照常', { '12/31': 's 10:00–18:00', '1/1': 'x 休', '1/2': 'o' +
+' 9:30–19:00' }, [], '25', '1/3 起照常'],
+['o', '百貨・商場', 'LUCUA・Grand Front・KITTE', 'https://www.lmaga.jp/news/2025/12/1005032/', 'o 照常', { '12/31': 's 到約 18:00', '1/1': 'x 休' },
+['1/2'], '25', ''],
+['o', '百貨・商場', '心齋橋 PARCO', 'https://www.lmaga.jp/news/2025/12/1007997/', 'o 照常', { '12/31': 's 10:00–18:00', '1/1': 'x 休' }, ['1/2'],
+'25', ''],
+['o', '百貨・商場', 'なんばパークス', 'https://www.lmaga.jp/news/2025/12/1007997/', 'o 照常', { '12/31': 'x 休', '1/1': 'x 休', '1/2': 'o 10:00–' +
+'21:00' }, [], '25', ''],
+['o', '百貨・商場', '臨空城 Premium Outlets', 'https://www.premiumoutlets.co.jp/rinku/', '', { '1/1': 'n 9:00–20:00', '1/2': 'n 9:00–20:00',
+'1/3': 'n 9:00–20:00' }, ['1/3'], '25', '1/1–1/4 福袋與初賣'],
+['o', '交通', 'JR 西日本', 'https://www.jr-odekake.net/', 'o 照常', { '12/31': 'n 環狀線延到約 3:00' }, ['1/1'], '26', '二手彙整；JR 京都線、阪和' +
+'線不延長'],
+['o', '交通', '近鐵', 'https://www.kintetsu.co.jp/', 'o 照常', { '12/31': 'n 多條路線通宵' }, [], '26', '二手彙整'],
+['o', '交通', '南海電鐵', 'https://railf.jp/news/2025/11/29/003000.html', 's 假日班表', { '12/31': 's 無通宵・末班 0:48', '1/1': 'n 急行臨停住吉' +
+'大社', '1/2': 'n 急行臨停住吉大社', '1/3': 'n 急行臨停住吉大社' }, ['12/31', '1/3'], '25', '臨停限 10:00–16:20；0:48 是住吉大社往難波末班'],
+['o', '交通', 'Osaka Metro', 'https://subway.osakametro.co.jp/news/news_release/20251201_oomisoka.php', 's 假日班表', { '12/31': 's 假日班表・無' +
+'通宵' }, ['1/2'], '25', ''],
+['o', '生活', '郵局窗口・ATM', 'https://shikitarinote.com/yubin/nenmatsu-nenshi', 'x 窗口休', { '12/30': 'o 年內最後一天' }, [], 'gen', '郵局 ATM' +
+' 12/31 21:00–1/1 7:00 停用'],
+['o', '生活', '7-Eleven ATM', 'https://www.sevenbank.co.jp/', 'o 照常', {}, [], 'gen', '海外卡可提領，單次最多 ¥100,000'],
+['o', '生活', '唐吉訶德', 'https://www.donki.com/', 'o 照常', {}, ['1/1'], 'gen', '道頓堀店 24 小時；MEGA 新世界店約 8:00–翌 5:00；元旦部分店調' +
+'整'],
+['o', '生活', '玉出超市', 'https://www.supertamade.co.jp/', 'o 照常', {}, ['12/30', '1/2'], '25', '元旦也營業'],
+['o', '生活', '新世界串かつだるま', 'https://www.kushikatu-daruma.com/location/', 'o 10:30–22:30', {}, ['12/31', '1/1'], '25', '新世界 4 店年中' +
+'無休']
+];
+/* ---------- weather ---------- */
+// [chapter, place, days, normal high, normal low, estimated?, notes, 10-day forecast, extra link]
+const WEATHER = [
+['a', '京都市區', '12/26–12/29', 10.1, 2.3, 0, ['12 月下雨（\u22651 mm）約 6.6 天，整月降雪合計約 2 cm', '日出 7:04、日落 16:53'], 'https://tenk' +
+'i.jp/forecast/6/29/6110/26100/10days.html'],
+['a', '大原・貴船', '12/28', 7.4, -0.3, 1, ['比市區冷 2.5–3°C（以美山站推估）', '貴船看點燈的 16–18 時約 2–5°C'], 'https://tenki.jp/forecast' +
+'/6/29/6110/26103/10days.html'],
+['a', '天橋立・伊根', '12/30', 9.0, 1.7, 0, ['日本海側，12 月下雨或下雪約 18.9 天', '遊覽船在風速 10 m/s、浪高 0.8 m 以上停航', '日落 16:54'], 'h' +
+'ttps://tenki.jp/forecast/6/29/6120/26205/10days.html', ['遊覽船運航狀況', 'https://www.tankai.jp/category/operation/']],
+['o', '大阪', '12/30–1/3', 10.4, 3.6, 0, ['12 月下雨約 6.1 天', '日出 7:05、日落 16:58', '跨年 0:00 約 5–7°C（推估），寒流時 0–3°C'], 'https' +
+'://tenki.jp/forecast/6/30/6200/27100/10days.html'],
+['o', '奈良', '1/1', 9.8, 1.5, 0, ['五處裡清晨最冷', '春日大社、東大寺大多在戶外走'], 'https://tenki.jp/forecast/6/32/6410/29201/10days.html']
+];
+const WEAR_TIPS = [
+['shirt', '白天 10°C：大衣＋針織', '京都、大阪白天約 10°C，長大衣或厚外套加針織衫，進室內好脫'],
+['snow', '早晚 0–5°C：羽絨＋保暖內搭', '大原、貴船、奈良和跨年夜接近 0°C；羽絨外套加發熱衣，外層要防風'],
+['umbrella', '天橋立：防水外層', '日本海側 12 月一半以上的日子下雨或下雪；帶防水外套或摺傘，不要穿布面鞋'],
+['moon', '跨年排隊：暖暖包＋帽子', '住吉大社 21:40–0:20 都在戶外；貼式暖暖包、毛帽、坐墊和行動電源'],
+['walk', '防滑鞋，走企鵝步', '貴船石階、伏見稻荷山路早晚可能結霜；選有紋路的鞋底，步伐小、重心放前腳'],
+['check', '顧好「三首」', '脖子、手腕、腳踝露出最容易冷；圍巾、手套、長襪最划算']
+];
+/* ---------- emergency ---------- */
+// [display number, tel href, title, description, tone]
+const SOS_CALLS = [
+['110', 'tel:110', '警察', '事故、竊盜、遺失報案；會轉接口譯，接通後不要掛斷', 'red'],
+['119', 'tel:119', '救護車・火警', '先說「Ambulance, English / Chinese please」再講地址或地標；救護車免費', 'red'],
+['#7119', 'tel:%237119', '急救諮詢', '不確定要不要叫救護車時打，護理師接聽，以日語為主；大阪也可撥 06-6582-7119', ''],
+['050-3816-2787', 'tel:+815038162787', 'JNTO 訪日旅客熱線', '24 小時，英、中、韓語；生病、遺失、災害都能問', 'blue'],
+['090-8794-4568', 'tel:+819087944568', '駐大阪辦事處急難救助', '24 小時；只限車禍、重病、被捕、護照遺失等真正緊急狀況', 'blue'],
+['010-800-0885-0885', 'tel:+80008850885', '外交部全球免付費專線', '日本手機先撥 010；撥不通改打 +886-800-085-095', ''],
+['06-6227-8623', 'tel:+81662278623', '駐大阪辦事處', '平日 9:00–18:00；中之島 Festival Tower 17F', ''],
+['06-6693-1199', 'tel:+81666931199', '大阪府救急醫療情報中心', '24 小時，查現在能看診的醫院', '']
+];
+// [chapter, hospital, display number, tel href, note, maps query]
+const SOS_HOSP = [
+['a', '京都第一赤十字病院', '075-561-1121', 'tel:+81755611121', '24 小時救命救急中心；JR・京阪東福寺站步行約 5 分', '京都第一赤十字病院'],
+['a', '京都第二赤十字病院', '075-231-5171', 'tel:+81752315171', '12/29–1/3 不是救護車送來的病人要另付 ¥7,700', '京都第二赤十字病院'],
+['o', '大阪赤十字病院', '06-6774-5111', 'tel:+81667745111', '24 小時急診，約 12 種語言電話口譯', '大阪赤十字病院'],
+['o', '大阪公立大學醫學部附屬病院', '06-6645-2121', 'tel:+81666452121', '救命救急中心；在阿倍野，天王寺站附近', '大阪公立大学医学部附属病院']
+];
+const SOS_STEPS = [
+['', '到<b>警察署</b>（不是派出所「交番」）報案，拿遺失届出証明書或受理號碼'],
+['', '準備 2 張 4.5×3.5 cm 照片、身分證或護照影本，加上報案證明'],
+['', '到駐大阪辦事處申請<b>入國證明書</b>：¥800，約 1 個工作天；收件平日 9:00–11:00、13:00–14:30'],
+['warn', '辦事處 <b>12/29–12/31 休息</b>（已公告），1/1–1/3 推定也休；1/3 回程前遺失會來不及辦，先打急難電話'],
+['', '回台灣憑入國證明書入境，再補辦護照']
+];
+// [name, display, href, note]
+const SOS_LOST = [
+['Osaka Metro 失物', '050-3355-8208', 'tel:+815033558208', '8:00–20:00，可用中文'],
+['京都市地下鐵 失物', '075-213-1650', 'tel:+81752131650', ''],
+['京都市巴士 失物', '075-493-0410', 'tel:+81754930410', '北大路營業所'],
+['JR 西日本 失物', '線上客服', 'https://www.jr-odekake.net/railroad/service/left.html', ''],
+['計程車', '', '', '留收據，上面有車行電話和車號']
+];
+// [name, note, [[label, url]]]
+const SOS_APPS = [
+['Safety tips', '觀光廳的地震、海嘯與警報推播，有中文', [['iOS', 'https://itunes.apple.com/app/safety-tips/id858357174'], ['Android', 'https://pl' +
+'ay.google.com/store/apps/details?id=jp.co.rcsc.safetyTips.android']]],
+['JNTO 醫療機構查詢', '找能用英文、中文看診的醫院', [['網站', 'https://www.jnto.go.jp/emergency/chc/mi_guide.html']]],
+['旅平險救援電話', '保險公司 24 小時海外救援電話和保單號碼存進手機；看診收據、診斷書留著申請理賠', []],
+['證件照片', '出發前把護照、身分證拍照，手機和雲端各存一份', []]
+];
+/* ---------- backup restaurants ---------- */
+// [slot key, day, chapter, meal, area]
+const EAT_SLOTS = [
+['1226d', '12/26', 'a', '晚餐', '京都站・五條'],
+['1227l', '12/27', 'a', '午餐', '嵐山'],
+['1227d', '12/27', 'a', '晚餐', '河原町'],
+['1228l', '12/28', 'a', '午餐', '大原・三千院參道'],
+['1228d', '12/28', 'a', '晚餐', '先斗町客滿時・三條一帶'],
+['1229l', '12/29', 'a', '午餐', '清水寺・二年坂'],
+['1229s', '12/29', 'a', '點心', '伏見稻荷參道'],
+['1229d', '12/29', 'a', '晚餐', '京都站'],
+['1230d', '12/30', 'o', '晚餐', '道頓堀'],
+['1231d', '12/31', 'o', '晚餐・年越蕎麥', '難波・新世界'],
+['0101b', '1/1', 'o', '早午餐', '新世界・難波'],
+['0101l', '1/1', 'o', '輕食', '奈良公園'],
+['0101d', '1/1', 'o', '晚餐', '新世界'],
+['0102l', '1/2', 'o', '午餐', '天神橋筋商店街'],
+['0102d', '1/2', 'o', '晚餐備案', '心齋橋（和牛蟹沒訂到時）'],
+['0103l', '1/3', 'o', '午餐', '臨空城 Outlet・關西機場']
+];
+const EAT_TIPS = [
+['alert', '1/1 最難找', '元旦小店多半休息；新世界的だるま、奈良的ゐざさ已確認有開，其他先當備案'],
+['info', '年末時間多半未公告', '標「年末未公告」的店，前一天看 Google Maps 或店家 IG 再確認'],
+['users', '大阪篇 4 人找大店', '千房、だるま ジャンジャン店、おかべ家座位多，比較好等'],
+['wallet', '帶現金', '美津の、だるま總本店、中村屋只收現金或不收 VISA／Master']
+];
+// [slot, name, type, price, hours, status ok/q/x, status label, booking & payment, note, maps query]
+const EATS = [
+['1226d', '京都拉麵小路', '拉麵・10 家', '約 ¥1,000–1,500', '11:00–22:00（LO 21:30）', 'ok', '12/26 照常', '不能訂位', '京都站大樓 10F，地鐵 1 ' +
+'站', '京都拉麺小路'],
+['1226d', '近江ちゃんぽん亭 四条烏丸店', '近江強棒麵', '約 ¥1,000', '11:00–23:00', 'q', '去前確認', '', '舊資料寫週三休、營業到 22:30，兩說不一' +
+'；12/26 週六', '近江ちゃんぽん亭 四条烏丸店'],
+['1227l', '嵯峨とうふ 稲 北店', '湯豆腐・豆腐套餐', '¥1,000–2,999', '11:00–18:00 LO', 'ok', '每天營業', '不能訂位；不收 QR 支付', '13:00 後最擠' +
+'，早點去', '嵯峨とうふ稲 北店'],
+['1227l', '嵐山よしむら', '蕎麥麵', '¥1,440–1,980', '週末 11:00–17:00', 'ok', '每天營業', '只收 VISA／Master，不收電子支付', '渡月橋北端，50 席',
+'嵐山よしむら'],
+['1227d', '京都勝牛 河原町蛸薬師店', '炸牛排', '約 ¥2,000', '10:00–22:30（LO 22:00）', 'q', '年末未公告', '不能訂位', '阪急河原町 3B 出口步行 3 ' +
+'分', '牛カツ京都勝牛 河原町蛸薬師店'],
+['1227d', '天丼まきの 京都寺町店', '天丼', '約 ¥1,000–2,000', '晚餐 17:00–21:00（LO 20:30）', 'q', '年末未公告', '', '資料較舊，去前確認；阪急' +
+'河原町 9 號出口 4 分', '天丼まきの 京都寺町店'],
+['1227d', '京極スタンド', '大眾酒場・定食', '¥1,000–1,999', '12:00–21:00', 'q', '週二休，12/27 有開', '', '新京極裡，下酒菜和定食都有', '京極ス' +
+'タンド'],
+['1228l', '京美茶屋', '湯葉・蕎麥・豆腐套餐', '套餐約 ¥2,700', '11:00–15:00（湯葉賣完提早收）', 'q', '週四休，12/28 有開', '電話訂位（11 月曾暫' +
+'停）', '就在三千院參道上', '京美茶屋 大原'],
+['1228l', '芹生茶屋', '鯡魚蕎麥・甜點', '', '營業時間不固定', 'q', '資料較舊', '', '三千院門前，現場看有沒有開', '芹生茶屋 大原'],
+['1228l', '里の駅大原 花むらさき', '鄉土料理', '', '午餐 11:00–14:00', 'x', '週一休・不要去', '只收現金', '12/28 是週一', '里の駅大原'],
+['1228d', '京都勝牛 三条河原町店', '炸牛排', '約 ¥2,000', '10:30–22:30（LO 22:00）', 'q', '年末未公告', '', '三條站、市役所前站步行 5 分', '牛カ' +
+'ツ京都勝牛 三条河原町店'],
+['1228d', 'お多福', '京都家常菜・居酒屋', '', '17:30–22:00', 'q', '週四休，12/28 有開', '建議訂位', '木屋町，離三條站約 220 m；資料較舊', 'お多' +
+'福 京都 材木町'],
+['1229l', '清水順正 おかべ家', '湯豆腐', '¥2,000–2,999', '11:00–16:00（LO 15:00）', 'q', '年末未公告', '前一天前可電話訂位', '385 席，三人好入座',
+'清水順正 おかべ家'],
+['1229l', '奥丹清水', '湯豆腐老舖', '¥4,000–4,999', '11:00–16:00', 'q', '週四休，12/29 有開', '電話 075-525-2051', '產寧坂轉角，價位偏高', '総' +
+'本家ゆどうふ 奥丹清水'],
+['1229l', 'ひさご', '親子丼・茶蕎麥', '親子丼 ¥1,060', '11:30–16:00（LO 15:30）', 'q', '週一休，12/29 有開', '', '八坂神社南門附近', 'ひさご 京' +
+'都 東山 親子丼'],
+['1229s', '祢ざめ家', '稻荷壽司・鰻魚', '稻荷壽司三種 ¥1,500', '10:00–16:00（賣完為止）', 'q', '年末未公告', '電話 075-641-0802 可訂', '稻荷站前' +
+'，1540 年創業', '祢ざめ家 伏見稲荷'],
+['1229d', '京都拉麵小路', '拉麵・10 家', '約 ¥1,000–1,500', '11:00–22:00（LO 21:30）', 'ok', '12/29 照常', '不能訂位', '京都站大樓 10F', '京都' +
+'拉麺小路'],
+['1229d', 'Porta Dining', '京都站地下街餐廳', '', '約 11:00–22:00', 'ok', '12/29 照常（2025–26）', '', '各店時間不同，以現場為準', '京都ポルタ'],
+['1230d', '千房 道頓堀ビル店', '大阪燒・鐵板燒', '¥1,000–1,999', '11:00–23:00（LO 22:00）', 'q', '年末未公告', '可線上訂位；收信用卡、PayPay',
+'1–6 樓整棟，4 人好入座', '千房 道頓堀ビル店'],
+['1230d', '美津の', '大阪燒（山芋燒）', '', '11:00–22:00（LO 21:00）', 'ok', '12/30 照常', '不收 VISA／Master，帶現金', '38 席，常排隊；官網：1/' +
+'1 休', '美津の 道頓堀'],
+['1230d', 'たこ家道頓堀くくる 本店', '章魚燒', '', '', 'ok', '12/30 照常（2025–26）', '', '邊走邊吃當前菜', 'たこ家道頓堀くくる 道頓堀本店'],
+['1230d', '道頓堀今井 本店', '烏龍麵', '', '', 'x', '週三休・不要去', '', '12/30 是週三，改到 12/31 吃', '道頓堀今井 本店'],
+['1231d', '道頓堀今井 本店', '烏龍麵・年越蕎麥', '小田巻むし ¥1,750', '12/31 11:30–21:00 LO（2023–24）', 'q', '今年未公告', '只接受電話訂位 06-' +
+'6211-0319', '以高湯出名；1/1 休', '道頓堀今井 本店'],
+['1231d', '串かつだるま ジャンジャン店', '串炸（不是蕎麥）', '', '10:30–22:30', 'ok', '年末照常（2025–26）', '可刷卡；年末不接受訂位', '47 席，' +
+'比總本店好等', '串かつだるま ジャンジャン店'],
+['1231d', '美々卯 なんば店', '烏龍麵鍋・蕎麥', '', '12/31 17:00 收單（2023）', 'x', '18:30 太晚', '', '想吃要改到下午', '美々卯 なんば店'],
+['0101b', '串かつだるま 新世界總本店', '串炸', '¥1,500–2,500', '1/1 10:30 開', 'ok', '元旦有開', '只收現金；不能訂位', '12 席，4 人可能要排',
+'串かつだるま 新世界総本店'],
+['0101b', '一蘭 道頓堀店別館', '豚骨拉麵', '', '24 小時（人手不足時調整）', 'q', '1/1 未確認', '', '一人一格的味集中座位', '一蘭 道頓堀店別館'],
+['0101b', 'たこ家道頓堀くくる 本店', '章魚燒', '', '', 'ok', '1/1 照常（2025–26）', '', '', 'たこ家道頓堀くくる 道頓堀本店'],
+['0101l', 'ゐざさ茶屋 夢風ひろば店', '柿葉壽司・素麵套餐', '', '1/1 11:00–17:00（LO 16:00）', 'ok', '1/1 營業已公告', 'AutoReserve 可線上訂',
+'東大寺門前', 'ゐざさ茶屋 夢風ひろば'],
+['0101l', 'ゐざさ 近鐵奈良站賣店', '柿葉壽司外帶', '', '1/1 10:00–18:00', 'ok', '1/1 營業已公告', '外帶', '邊走邊吃或帶回大阪', 'ゐざさ 近鉄奈良' +
+'駅'],
+['0101l', '志津香 公園店', '釜飯', '', '', 'x', '1/1–1/2 休・不要去', '', '2025–26 實績；今年月曆未出', '志津香 公園店'],
+['0101d', '串かつだるま ジャンジャン店', '串炸', '', '10:30–22:30', 'ok', '年末照常（2025–26）', '可刷卡；年末不接受訂位', '47 席', '串かつだる' +
+'ま ジャンジャン店'],
+['0101d', '串かつだるま 通天閣店', '串炸', '', '10:30–22:30', 'ok', '年末照常（2025–26）', '', '', '串かつだるま 通天閣店'],
+['0102l', '春駒 本店', '壽司', '', '11:00–21:30', 'q', '週二休，1/2 未公告', '', '天神橋 5 丁目', '春駒 本店 天神橋'],
+['0102l', '天神橋 中村屋', '可樂餅外帶', '約 ¥70–80', '週六 9:00–16:00 或 18:00', 'q', '週日休，1/2 未公告', '只收現金', '邊走邊吃', '天神橋 中' +
+'村屋 コロッケ'],
+['0102l', 'うまい屋', '章魚燒', '', '11:30–19:00（賣完為止）', 'q', '週二休，1/2 未公告', '', '', 'うまい屋 天神橋'],
+['0102d', '串かつだるま 心斎橋店', '串炸', '', '10:30–22:30', 'ok', '年末照常（2025–26）', '', '', '串かつだるま 心斎橋店'],
+['0102d', '千房 道頓堀ビル店', '大阪燒', '¥1,000–1,999', '11:00–23:00', 'q', '年末未公告', '可線上訂位', '心齋橋步行約 10 分', '千房 道頓堀ビル' +
+'店'],
+['0102d', 'たこ家道頓堀くくる 心斎橋店', '章魚燒', '', '', 'x', '1/2 休・不要去', '', '2025–26 實績', 'たこ家道頓堀くくる 心斎橋店'],
+['0103l', 'RINKU FOOD PARK', '美食街・8 家', '', '10:00–20:00', 'ok', '照常（2025–26）', '', '513 席；拉麵、天婦羅、章魚燒、肉料理，中午最擠',
+'りんくうプレミアムアウトレット RINKU FOOD PARK'],
+['0103l', '551 蓬萊 關西機場店', '豬肉包・餐廳', '', '外帶 7:00–21:00；內用 11:00–22:00', 'ok', '每天營業', '', 'T1 2F 安檢前，進管制區就買不到',
+'551蓬莱 関西空港店']
 ];
 </script>
 <script>
@@ -3419,8 +3835,8 @@ tick(); setInterval(tick, 1000);
 const OV = {
 a: ['京都篇', '三人連住五條四晚，搭電車慢遊嵐山、大原・貴船、清水寺與伏見稻荷；第一晚入住後等同伴會合，之後每晚都有夜行程，12/30 天橋立・伊根一日' +
 '遊後到大阪。', ['3 人', '4 晚 Garden Hotel', '3 個夜行程']],
-o: ['大阪篇', '道頓堀會合，劉有耘加入隊伍。四人住新今宮一棟貸切，住吉大社或四天王寺跨年、奈良初詣、心齋橋與美國村初賣，1/3 逛完臨空城 Outlet 搭接' +
-'駁巴士去機場。', ['4 人', '4 晚新今宮', '跨年＋初詣']]
+o: ['大阪篇', '道頓堀會合，劉有耘加入隊伍。四人住新今宮一棟貸切，住吉大社跨年、奈良初詣、天滿宮與梅田、心齋橋和牛蟹，1/3 逛完臨空城 Outlet 搭接駁' +
+'巴士去機場。', ['4 人', '4 晚新今宮', '跨年＋初詣']]
 };
 $('#phase').innerHTML = KEYS.map(k => {
 const p = PLANS[k], [t, x, chips] = OV[k];
@@ -4027,6 +4443,142 @@ if (c) f.ch = c.dataset.gfch; else if (v) f.vd = v.dataset.gfvd; else return;
 apply();
 });
 apply();
+}
+/* ---------- year-end hours ---------- */
+{
+const board = $('#ycBoard'), f = { ch: 'all', vs: 'all' };
+const tip = ([i, t, s]) => `<div class="gtip reveal${i === 'alert' ? ' warn' : ''}">${ic(i)}<div><h3>${t}</h3><p>${s}</p></div></div>`;
+$('#ycTips').innerHTML = YC_TIPS.map(tip).join('');
+$('#ycLegend').innerHTML = Object.entries(YC_CODE).map(([k, t]) => `<span><i class="yc-k c-${k}"></i>${t}</span>`).join('') + '<span><i class="yc' +
+'-k yv"></i>行程到訪日</span>';
+const cell = (s, v) => {
+if (!s) return '<td class="yc-c c-0"><span>—</span></td>';
+const [k, ...r] = s.split(' '), cap = { s: '變動', n: '特別' }[k];
+return `<td class="yc-c c-${k}${v ? ' v' : ''}"><span>${v ? '<em>到訪</em>' : ''}${cap ? `<small>${cap}</small>` : ''}${r.join(' ') ||
+YC_CODE[k]}</span></td>`;
+};
+board.innerHTML = KEYS.filter(ch => YC_DAYS[ch]).map(ch => {
+const D = YC_DAYS[ch], rows = CLOSURES.filter(r => r[0] === ch);
+return `<div class="yc reveal" data-ch="${ch}" style="--c:${PLANS[ch].color}">
+<h3><i></i>${PLANS[ch].short}<small>${D[0][0]}–${D[D.length - 1][0]}</small></h3>
+<div class="yc-scroll" role="region" tabindex="0" aria-label="${PLANS[ch].short}年末年始營業表，可左右捲動"><table class="yc-t">
+<thead><tr><th scope="col">項目</th>${D.map(([d, w]) => `<th scope="col">${d}<small>週${w}</small></th>`).join('')}</tr></thead>
+<tbody>${[...new Set(rows.map(r => r[1]))].map(g => `<tr class="yc-g"><th colspan="${D.length + 1}"
+scope="colgroup"><span>${g}</span></th></tr>` + rows.filter(r => r[1] === g).map(([, , n, url, def, ov, vis, b, note]) => `<tr data-vs="${vis.length ?
+1 : 0}">
+<th scope="row"><a href="${url}" target="_blank" rel="noopener">${n}${ic('ext')}</a>${note ? `<span class="yc-n">${note}</span>` : ''}<span
+class="yc-b b${b}">${YC_BASIS[b]}</span></th>
+${D.map(([d]) => cell(d in ov ? ov[d] : def, vis.includes(d))).join('')}</tr>`).join('')).join('')}</tbody></table></div></div>`;
+}).join('');
+const chips = (el, key, opts) => {
+el.innerHTML = opts.map(([v, t, c]) => `<button type="button" data-${key}="${v}" aria-pressed="${v === 'all'}">${c ? `<i
+style="background:${c}"></i>` : ''}${t}<b></b></button>`).join('');
+};
+chips($('#ycCh'), 'ycch', [['all', '全部篇章'], ...KEYS.filter(k => YC_DAYS[k]).map(k => [k, PLANS[k].short, PLANS[k].color])]);
+chips($('#ycVs'), 'ycvs', [['all', '全部項目'], ['1', '只看行程會去的']]);
+const hit = (r, ch, vs) => (ch === 'all' || r[0] === ch) && (vs === 'all' || r[6].length > 0);
+const apply = () => {
+let n = 0;
+$$('.yc', board).forEach(t => {
+const on = f.ch === 'all' || t.dataset.ch === f.ch; t.hidden = !on; if (on) t.classList.add('in');
+let g = null, c = 0;
+const done = () => { if (g) g.hidden = !c; };
+$$('tbody tr', t).forEach(tr => {
+if (tr.classList.contains('yc-g')) { done(); g = tr; c = 0; return; }
+const v = f.vs === 'all' || tr.dataset.vs === '1'; tr.hidden = !v; if (v) { c++; if (on) n++; }
+});
+done();
+});
+$$('[data-ycch]').forEach(b => { b.setAttribute('aria-pressed', b.dataset.ycch === f.ch); $('b', b).textContent = CLOSURES.filter(r => hit(r,
+b.dataset.ycch, f.vs)).length; });
+$$('[data-ycvs]').forEach(b => { b.setAttribute('aria-pressed', b.dataset.ycvs === f.vs); $('b', b).textContent = CLOSURES.filter(r => hit(r,
+f.ch, b.dataset.ycvs)).length; });
+$('#ycCount').textContent = `顯示 ${n} 個項目`;
+};
+$('#ycFilt').addEventListener('click', e => {
+const c = e.target.closest('[data-ycch]'), v = e.target.closest('[data-ycvs]');
+if (c) f.ch = c.dataset.ycch; else if (v) f.vs = v.dataset.ycvs; else return;
+apply();
+});
+apply();
+}
+/* ---------- backup restaurants ---------- */
+{
+const board = $('#eatBoard'), gq = q => `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(q)}`;
+let day = 'all';
+$('#eatTips').innerHTML = EAT_TIPS.map(([i, t, s]) => `<div class="gtip reveal${i === 'alert' ? ' warn' :
+''}">${ic(i)}<div><h3>${t}</h3><p>${s}</p></div></div>`).join('');
+const row = (i, t, v) => v ? `<div><dt>${ic(i)}${t}</dt><dd>${v}</dd></div>` : '';
+board.innerHTML = EAT_SLOTS.map(([key, d, ch, meal, area]) => `<section class="ea-g" data-day="${d}" aria-label="${d} ${meal}・${area}">
+<h3><span class="ch" style="--c:${PLANS[ch].color}">${PLANS[ch].short}</span><b>${d}</b>${meal}<small>${area}</small></h3>
+<div class="bkgrid">${EATS.filter(e => e[0] === key).map(([, n, ty, pr, hr, st, stt, bk, note, q]) => `<article class="bk ea e-${st} reveal">
+<div class="bk-top"><span class="ea-ty">${ty}</span><span class="bk-st">${stt}</span></div>
+<h4>${n}</h4>
+${pr || hr || bk ? `<dl>${row('wallet', '價格', pr)}${row('clock', '營業', hr)}${row('ticket', '須知', bk)}</dl>` : ''}
+<p>${note}</p>
+<a class="bk-a" href="${gq(q)}" target="_blank" rel="noopener" aria-label="在 Google Maps 開啟 ${esc(n)}">${ic('pin')}Google Maps</a>
+</article>`).join('')}</div></section>`).join('');
+const days = [...new Set(EAT_SLOTS.map(s => s[1]))], chOf = d => EAT_SLOTS.find(s => s[1] === d)[2];
+const cnt = d => EATS.filter(e => d === 'all' || EAT_SLOTS.find(s => s[0] === e[0])[1] === d).length;
+$('#eaDay').innerHTML = [['all', '全部日期'], ...days.map(d => [d, d, PLANS[chOf(d)].color])].map(([v, t, c]) => `<button type="button"
+data-eaday="${v}" aria-pressed="${v === 'all'}">${c ? `<i style="background:${c}"></i>` : ''}${t}<b>${cnt(v)}</b></button>`).join('');
+const apply = () => {
+let n = 0;
+$$('.ea-g', board).forEach(g => { const on = day === 'all' || g.dataset.day === day; g.hidden = !on; if (on) { n += $$('.ea', g).length; $$('.ea',
+g).forEach(a => a.classList.add('in')); } });
+$$('[data-eaday]').forEach(b => b.setAttribute('aria-pressed', b.dataset.eaday === day));
+$('#eaCount').textContent = `顯示 ${n} 家`;
+};
+$('#eaFilt').addEventListener('click', e => {
+const b = e.target.closest('[data-eaday]'); if (!b) return;
+day = b.dataset.eaday; apply();
+});
+apply();
+}
+/* ---------- weather ---------- */
+{
+const pct = t => (t + 2) / 14 * 100;
+$('#wxGrid').innerHTML = WEATHER.map(([ch, n, d, hi, lo, est, notes, fc, ex]) => `<article class="wx reveal" style="--c:${PLANS[ch].color}">
+<div class="wx-k"><i></i>${PLANS[ch].short} · ${d}${est ? '<em>推估</em>' : ''}</div>
+<h3>${n}</h3>
+<div class="wx-t"><b class="hi"><small>平年最高</small>${hi.toFixed(1)}°</b><b class="lo"><small>平年最低</small>${lo.toFixed(1)}°</b></div>
+<div class="wx-bar" role="img" aria-label="平年最高 ${hi}°C、最低 ${lo}°C，刻度 -2 到 12°C"><span
+style="left:${pct(lo).toFixed(1)}%;right:${(100 - pct(hi)).toFixed(1)}%"></span><i style="left:${pct(0).toFixed(1)}%"></i></div>
+<ul>${notes.map(x => `<li>${ic('info')}<span>${x}</span></li>`).join('')}</ul>
+<div class="wx-a"><a class="bk-a" href="${fc}" target="_blank" rel="noopener">10 天預報 ${ic('ext')}</a>${ex ? `<a class="bk-a" href="${ex[1]}"
+target="_blank" rel="noopener">${ex[0]} ${ic('ext')}</a>` : ''}</div>
+</article>`).join('');
+$('#wearTips').innerHTML = WEAR_TIPS.map(([i, t, s]) => `<div class="gtip reveal">${ic(i)}<div><h3>${t}</h3><p>${s}</p></div></div>`).join('');
+}
+/* ---------- emergency ---------- */
+{
+const gq = q => `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(q)}`;
+const ext = u => /^https?:/.test(u) ? ' target="_blank" rel="noopener"' : '';
+$('#sosWrap').innerHTML = `<div class="gtip warn sos-warn reveal">${ic('alert')}<div><h3>只能上網的 eSIM 打不了 110、119</h3><p>要用有通話功能` +
+`的 SIM，或請飯店、店員代撥；三人至少一人的門號能打電話。救護車和報警都免費。</p></div></div>
+<div class="sos-calls">${SOS_CALLS.map(([n, t, h, s, k]) => `<a class="sos-c reveal${k ? ' ' + k : ''}${n.length > 6 ? ' sm' : ''}" href="${t}"
+aria-label="撥打 ${h} ${n}">
+<span class="n">${n}</span><b>${h}</b><p>${s}</p><span class="go">${ic('phone')}點這裡撥號</span></a>`).join('')}</div>
+<div class="sos-cols">
+<section class="sos-box reveal" aria-labelledby="so-hp"><h3 id="so-hp">${ic('alert')}24 小時急診醫院</h3>
+${SOS_HOSP.map(([ch, n, d, t, s, q]) => `<div class="sos-h"><h4><span class="ch" style="--c:${PLANS[ch].color}">${ch === 'a' ? '京都' : '大' +
+'阪'}</span>${n}</h4><p>${s}</p>
+<div class="sos-act"><a class="sos-a" href="${t}">${ic('phone')}${d}</a><a class="sos-a" href="${gq(q)}" target="_blank" rel="noopener"
+aria-label="在 Google Maps 開啟 ${n}">${ic('pin')}地圖</a></div></div>`).join('')}
+</section>
+<section class="sos-box reveal" aria-labelledby="so-pp"><h3 id="so-pp">${ic('key')}護照遺失怎麼辦</h3>
+<ol class="sos-ol">${SOS_STEPS.map(([k, s]) => `<li${k ? ' class="' + k + '"' : ''}>${s}</li>`).join('')}</ol>
+</section>
+<section class="sos-box reveal" aria-labelledby="so-lf"><h3 id="so-lf">${ic('bag')}東西掉了</h3>
+<ul class="sos-li">${SOS_LOST.map(([n, d, h, s]) => `<li><div><b>${n}</b>${s ? `<small>${s}</small>` : ''}</div>${h ? `<a class="sos-a"
+href="${h}"${ext(h)}>${ic(/^tel:/.test(h) ? 'phone' : 'ext')}${d}</a>` : ''}</li>`).join('')}</ul>
+</section>
+<section class="sos-box reveal" aria-labelledby="so-ap"><h3 id="so-ap">${ic('check')}出發前先裝好、存好</h3>
+<ul class="sos-li">${SOS_APPS.map(([n, s, L]) => `<li><div><b>${n}</b><small>${s}</small></div>${L.length ? `<span class="sos-act">${L.map(([t,
+u]) => `<a class="sos-a" href="${u}" target="_blank" rel="noopener" aria-label="${n} ${t}">${ic('ext')}${t}</a>`).join('')}</span>` :
+''}</li>`).join('')}</ul>
+</section>
+</div>`;
 }
 /* ---------- appendix: timetables ---------- */
 {
